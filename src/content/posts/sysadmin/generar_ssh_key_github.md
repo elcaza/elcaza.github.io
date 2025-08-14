@@ -5,7 +5,7 @@ description: 'Description'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/kms/como_funcionan_los_activadores_kms.webp'
 tags: [Sysadmin, Linux]
 category: 'Sysadmin'
-draft: true 
+draft: false 
 lang: 'es'
 ---
 

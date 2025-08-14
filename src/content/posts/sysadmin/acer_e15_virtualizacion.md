@@ -5,7 +5,7 @@ description: 'Habilitar la virtualización en ACER E15-553-1786 para windows y l
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/kms/como_funcionan_los_activadores_kms.webp'
 tags: [Sysadmin]
 category: 'Sysadmin'
-draft: true 
+draft: false 
 lang: 'es'
 ---
 

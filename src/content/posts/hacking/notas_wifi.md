@@ -2,7 +2,7 @@
 title: Ataques WiFi
 published: 2020-05-05
 description: 'La colección de notas que me hubiera gustado encontrar sobre ataques WIFI.'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/kms/como_funcionan_los_activadores_kms.webp'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/ataques_wifi/1.jpeg'
 tags: [Hacking, WIFI]
 category: 'Hacking'
 draft: false 
