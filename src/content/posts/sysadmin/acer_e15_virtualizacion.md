@@ -2,12 +2,16 @@
 title: ¿Cómo Habilitar la virtualización en ACER E15-553-1786 para windows y linux?
 published: 2020-04-29
 description: 'Habilitar la virtualización en ACER E15-553-1786 para windows y linux'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/kms/como_funcionan_los_activadores_kms.webp'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/acer_e15/1.jpeg'
 tags: [Sysadmin]
 category: 'Sysadmin'
 draft: false 
 lang: 'es'
 ---
+
+:::tip
+Todos los archivos utilizados se encuentran en el <a href="https://github.com/elcaza/acer_e15_amd-v" target="_blank">repositorio de Github</a>
+:::
 
 # Habilitar la virtualización en ACER E15-553-1786 para windows y linux
 
@@ -25,7 +29,7 @@ lang: 'es'
     * Ejecutar
         * ``Set-MpPreference -DisableRealtimeMonitoring $true``
         * Nota, ya no funciona. Debe hacerse manualmente el apagar Windows Defender.
-2. Descargar los archivos desde https://github.com/elcaza/acer_e15_amd-v/ 
+2. Descargar los archivos desde el <a href="https://github.com/elcaza/acer_e15_amd-v" target="_blank">repositorio de Github</a> 
 3. Con powershell (Con privilegios de administrador) situarse en la carpeta donde está el archivo H2OUVE.exe
 4. Sacar la configuración del BIOS actual
     * Posicionado en la ubicación de **H2OUVE.exe** ejecutar 
