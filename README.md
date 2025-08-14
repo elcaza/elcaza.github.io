@@ -1,3 +1,12 @@
+# Bienvenidos a mi blog 
+Aunque el contenido ha sido creado por mí, nada de esto sería posible sin los creadores del tema.
+
+¡Una joya de template!
+
+<a href="https://elcaza.github.io/" target="_blank">Puedes visitar el contenido del blog aquí</a>
+
+A continuación, todo lo relacionado con el tema.
+
 # 🍥Fuwari  
 ![Node.js >= 20](https://img.shields.io/badge/node.js-%3E%3D20-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue) 
