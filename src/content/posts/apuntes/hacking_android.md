@@ -1,5 +1,5 @@
 ---
-title: Hacking Android
+title: Notas sobre hacking Android
 published: 2025-08-11
 description: 'Description'
 image: ''

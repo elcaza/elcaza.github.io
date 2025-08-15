@@ -1,5 +1,5 @@
 ---
-title: Apuntes
+title: Notas sobre linux
 published: 2025-08-11
 description: 'Description'
 image: ''

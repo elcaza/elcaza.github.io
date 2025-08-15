@@ -1,5 +1,5 @@
 ---
-title: Hacking iOS
+title: Notas sobre hacking iOS
 published: 2025-08-11
 description: 'Description'
 image: ''
