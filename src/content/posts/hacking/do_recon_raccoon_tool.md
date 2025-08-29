@@ -9,7 +9,7 @@ draft: false
 lang: 'es'
 ---
 
-La herramienta se puede encontrar en: + <a href="https://github.com/elcaza/do_recon" target="_blank">Github</a>
+La herramienta se puede encontrar en: <a href="https://github.com/elcaza/do_recon" target="_blank">Github</a>
 
 # Introducción
 
@@ -94,8 +94,8 @@ do_recon.sh input_file.txt
 
 ## ¿Cómo eliminar todos los archivos y carpetas creadas por la herramienta?
 
-:::warning[Importante]
-Sé cuidadoso, pues este comando eliminará todas las carpetas y archivos .log que se encuentren en la ruta actual
+:::caution[Importante]
+Sé cuidadoso, pues este comando eliminará todas las carpetas y archivos `.log` que se encuentren en la ruta actual
 :::
 
 ~~~bash

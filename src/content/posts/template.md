@@ -9,7 +9,7 @@ draft: true
 lang: 'es'
 ---
 
-<a ref="https://www.youtube.com/watch?v=HoVriPxxWH0" target="_blank">link</a>
+<a href="https://www.youtube.com/watch?v=HoVriPxxWH0" target="_blank">link</a>
 
 <img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/kms/1.png" width="100%">
 
