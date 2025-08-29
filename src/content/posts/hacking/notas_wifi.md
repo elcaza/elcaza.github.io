@@ -20,7 +20,7 @@ Esta es la colección de notas sobre ataques WIFI con la que me hubiera gustado 
 + Resolver los retos WIFI planteados en ctf.live
 
 
-:::caution[Advertencia]
+:::warning[Advertencia]
 Este material es meramente educativo. Y claro, debe probarse únicamente con redes que nos pertenecen.
 :::
 
