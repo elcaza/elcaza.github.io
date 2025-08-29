@@ -110,7 +110,7 @@ Si lo queremos modificar solamente cambiamos el punto *“número 3”* especifi
 
 ## 1.3 ¿Cómo comenzar la instalación automatizada?
 
-+ Como primer paso, debes desinstalar el paquete de office que actualmente viene preinstalado en Windows 10. Este suele estar anclado al menú de inicio.
++ Como primer paso, debes desinstalar el paquete de office que viene preinstalado en Windows 10. Este suele estar anclado al menú de inicio.
 
 Para comenzar una instalación automatizada únicamente debemos dirigirnos hacia la carpeta `deploy_office` y hacer doble click en el `install_config.cmd` deseado.
 
