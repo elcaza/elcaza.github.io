@@ -96,7 +96,7 @@ PD. Al más puro estilo de una sitcom, ¿Si nunca más regresas, me heredas tu n
 — El Capitán
 :::
 
-:::tip[Nota final]
+:::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán

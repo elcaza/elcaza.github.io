@@ -422,7 +422,7 @@ Aunque teóricamente es posible, computacionalmente no lo es. Pues esto se debe 
 + <a href="https://www.atareao.es/como/procesos-en-segundo-plano-en-linux/" target="_blank">PROCESOS EN SEGUNDO PLANO EN LINUX</a>
 + <a href="https://www.yeahhub.com/create-fake-ap-dnsmasq-hostapd-kali-linux/" target="_blank">Creando un Fake Access Point con hostapd</a>
 
-:::tip[Nota final]
+:::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán

@@ -207,7 +207,7 @@ docker compose down -v
 + Sitio oficial https://immich.app/
 + Repositorio de Github
 
-:::tip[Nota final]
+:::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán

@@ -393,7 +393,7 @@ Bro, ese no es un problema. La contraseña es `activate` como se mencionó en el
 
 *Pendiente. Quizá exista, quizá no.
 
-:::tip[Nota final]
+:::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán

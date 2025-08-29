@@ -53,9 +53,12 @@ Finalmente, estamos conectados a la red deseada.
 
 <img width=100% src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/linux/wifi_virtualbox/4.webp">
 
-Con esto ya tenemos configurado nuestra máquina virtual en VirtualBox con un adaptador de WIFI via USB y podremos realizar cualquier proceso que deseemos, por ejemplo, utilizar la suite de *aircrack-ng*.
+Con esto ya tenemos configurado nuestra máquina virtual en VirtualBox con un adaptador de WIFI via USB y podremos realizar cualquier proceso que deseemos, por ejemplo, utilizar la suite de *aircrack-ng*. 
 
-:::tip[Nota final]
+
+Si deseas saber más sobre ataques Wifi puedes consultar <a href="https://elcaza.github.io/posts/hacking/notas_wifi/" target="_blank">la colección de notas sobre ataques WIFI con la que me hubiera gustado encontrarme hace algunos años.</a>
+
+:::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán

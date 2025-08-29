@@ -75,7 +75,7 @@ Todos los archivos utilizados se encuentran en el <a href="https://github.com/el
 + <a href="https://www.bios-mods.com/forum/Thread-REQUEST-Acer-Aspire-E5-523-G-BIOS-Unlock?page=2" target="_blank">https://www.bios-mods.com/forum/Thread-REQUEST-Acer-Aspire-E5-523-G-BIOS-Unlock?page=2</a>
 
 
-:::tip[Nota final]
+:::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán

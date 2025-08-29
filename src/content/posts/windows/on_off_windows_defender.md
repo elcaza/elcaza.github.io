@@ -94,8 +94,8 @@ En algunas ocasiones, observaremos una pantalla azul indicando que no se puede e
 3. Vista tras reactivar todas las opciones de seguridad de Windows Defender
 <img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/w_defender/18.webp" width="100%">
 
-:::tip[Nota final]
-*¡Gracias por terminar de leer este artículo! uwur*
+:::note[Nota final]
+¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán
 :::

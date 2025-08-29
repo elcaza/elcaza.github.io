@@ -73,7 +73,7 @@ git clone git@github.com:tu_usuario/tu_repo.git
 <img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/ssh_key_github/9.png" width="100%">
 <img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/ssh_key_github/10.png" width="100%">
 
-:::tip[Nota final]
+:::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán

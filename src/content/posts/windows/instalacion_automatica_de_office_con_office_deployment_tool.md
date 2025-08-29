@@ -131,7 +131,7 @@ Una vez que eso haya finalizado tendremos disponible nuestro Office. Sin embargo
 ### Vídeo sobre este artículo
 <a href="https://youtu.be/18rJjlYeEFk" target="_blank">Youtube</a>
 
-:::tip[Nota final]
+:::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán

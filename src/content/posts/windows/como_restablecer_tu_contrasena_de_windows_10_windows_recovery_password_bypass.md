@@ -258,7 +258,7 @@ Settings de la máquina
 Selección de nuestra imagen ISO de Windows 10 y opción “Connect atpower on”
 <img witdh=100% src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/recovery_pass_w10/29.webp">
 
-:::tip[Nota final]
+:::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán

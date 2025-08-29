@@ -389,7 +389,7 @@ sudo systemctl is-enable apache
 + Guardar los cambios: Presiona F2 para guardar los cambios realizados en el archivo. 
 + Salir del programa: Normalmente, se sale presionando Ctrl-X o cerrando la ventana de la terminal. 
 
-:::tip[Nota final]
+:::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán

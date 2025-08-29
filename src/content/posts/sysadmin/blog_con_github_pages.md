@@ -80,7 +80,7 @@ pnpm preview
 <img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/kms/1.webp" width="100%">
 
 
-:::tip[Nota final]
+:::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán
