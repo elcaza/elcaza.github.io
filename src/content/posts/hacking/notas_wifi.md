@@ -2,7 +2,7 @@
 title: Ataques WiFi
 published: 2020-05-05
 description: 'La colección de notas que me hubiera gustado encontrar sobre ataques WIFI.'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/ataques_wifi/1.jpeg'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/ataques_wifi/mapache_wifi.jpeg'
 tags: [Hacking, WIFI]
 category: 'Hacking'
 draft: false 
@@ -35,12 +35,12 @@ El siguiente contenido está dividido en tres partes y nos permitirán realizar 
 ## 1) Mostrar las intefaces de red
 Para interactuar con cualquier red WIFI es necesario tener una interfaz WIFI. (Esta necesariamente debe tener disponible el modo monitor). En Linux, contamos con diversos comandos para trabajar con nuestra interfaz de red. 
 
-1.- A través de airmon 
+### 1.- A través de airmon 
 ~~~bash
 sudo airmon-ng
 ~~~
 
-2.- A través de iwconfig
+### 2.- A través de iwconfig
 ~~~bash
 iwconfig
 ~~~
@@ -57,25 +57,25 @@ sudo airmon-ng check kill
 ## 3) Habilitar el modo monitor de nuestra tarjeta de red
 El modo monitor/promiscuo es un modo en que nuestra interfaz podrá escuchar el tráfico de red. Nuevamente, tenemos diversas formas de activar este modo.
 
-Opción airmon-ng
+### Opción airmon-ng
 ~~~bash
 sudo airmon-ng start <interfaz>
 ~~~
 * En nuestro caso la interfaz es `wlan0` 
 
-Opción iw
+### Opción iw
 ~~~bash
 iw dev <interfaz> set monitor none
 ~~~
 
-Opción ifconfig
+### Opción ifconfig
 ~~~bash
 ifconfig <interfaz> down
 iw dev <interfaz> set monitor none
 ifconfig <interfaz> up
 ~~~
 
-Opción ifconfig 2
+### Opción ifconfig 2
 ~~~bash
 ifconfig <interfaz> down
 iwconfig <interfaz>  mode monitor
@@ -107,11 +107,11 @@ Este proceso debe ejecutarse hasta obtener el handshake (Forzamos esto en el pas
 1. Dejar esto corriendo y abrir una nueva terminal para seguir con el tutorial
 2. Correr esta tarea en segundo plano. (Anexo 1). 
 
-Opción 1
+### Opción 1
 ~~~bash
 sudo airodump-ng -c 1 --bssid 36:0A:98:80:97:C3 --write nombre_de_archivo <interfaz>
 ~~~
-Opción 2
+### Opción 2
 ~~~bash
 sudo airodump-ng -c 1 --bssid 36:0A:98:80:97:C3 --write nombre_de_archivo <interfaz> &
 ~~~
@@ -175,7 +175,7 @@ Notas:
 ## 8) Quitar el modo monitor y volver a utilizar nuestro WIFI
 Una vez que hemos realizado nuestras labores querremos volver a utilizar nuestro WIFI de la forma habitual. Para esto tenemos las siguientes opciones.
 
-Opción 1
+### Opción 1
 1. Detenemos el modo monitor
 2. Levantamos nuestra interfaz
 3. Inciamos el servicio de red
@@ -186,7 +186,7 @@ sudo ifconfig wlan0 up
 sudo systemctl start NetworkManager
 ~~~
 
-Opción 2
+### Opción 2
 ~~~bash
 ifconfig <interfaz> down
 iwconfig <interfaz> mode managed
@@ -243,15 +243,15 @@ wme_enabled=1
 ~~~
 
 Significado:
-+ interface = Wireless interface to host access point on i.e. wlan0.
-+ driver = nl80211 is the new 802.11 netlink interface public header which is now replaced by cfg80211.
-+ ssid = Name of the wireless network
-+ hw_mode = Sets the operating mode of the interface and the allowed channels. (Generally uses a, b and g)
-+ channel = Sets the channel for hostapd to operate on. (From 1 to 13)
-+ macaddr_acl = Used for Mac Filtering (0 – disable, 1 – enable)
-+ ignore_broadcast_ssid = Used to create hidden AP
-+ auth_algs = Defines Authentication Algorithm (0 – for open, 1 – for shared)
-+ wpa_passphrase = Contains your wireless password
++ **interface** = Wireless interface to host access point on i.e. wlan0.
++ **driver** = nl80211 is the new 802.11 netlink interface public header which is now replaced by cfg80211.
++ **ssid** = Name of the wireless network
++ **hw_mode** = Sets the operating mode of the interface and the allowed channels. (Generally uses a, b and g)
++ **channel** = Sets the channel for hostapd to operate on. (From 1 to 13)
++ **macaddr_acl** = Used for Mac Filtering (0 – disable, 1 – enable)
++ **ignore_broadcast_ssid** = Used to create hidden AP
++ **auth_algs** = Defines Authentication Algorithm (0 – for open, 1 – for shared)
++ **wpa_passphrase** = Contains your wireless password
 
 Para nosotros bastará con cambiar la línea de ssid con el nombre que necesitemos
 
@@ -411,10 +411,8 @@ Aunque teóricamente es posible, computacionalmente no lo es. Pues esto se debe 
 + Puedes buscarlo en internet
 + Puedes realizar uno tu mismo con ayuda de un software (En algún momento publicaré el propio)
 
-### Links de diccionarios. No están probados. Entra bajo tu propio riesgo.
-https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm
-https://hackxcrack.net/foro/criptografia-y-esteneografia/diccionarios-para-brute-force/
-
+### Links de diccionarios. 
++ <a href="https://github.com/danielmiessler/SecLists/tree/master/Passwords" target="_blank">https://github.com/danielmiessler/SecLists/tree/master/Passwords</a>
 
 # Información complementaria
 + <a href="https://medium.com/@Packt_Pub/the-deauthentication-attack-7872c916ed2a" target="_blank">the-deauthentication-attack</a>
@@ -425,10 +423,15 @@ https://hackxcrack.net/foro/criptografia-y-esteneografia/diccionarios-para-brute
 + <a href="https://www.yeahhub.com/create-fake-ap-dnsmasq-hostapd-kali-linux/" target="_blank">Creando un Fake Access Point con hostapd</a>
 
 :::tip[Nota final]
-¡Gracias por terminar de leer este artículo! uwur
+*¡Gracias por terminar de leer este artículo! uwur*
 
 — El Capitán
 :::
 
+**¿Tienes alguna duda o te gustaría comentar algo sobre este artículo?**
++ <a href="https://t.me/elcazablog" target="_blank">Únete a nuestra comunidad en Telegram</a>
+
+**Puedes encontrarme en:**
 + <a href="https://twitter.com/elcaza_" target="_blank">Twitter</a>
 + <a href="https://github.com/elcaza" target="_blank">Github</a>
++ <a href="https://www.linkedin.com/in/elcaza/" target="_blank">LinkedIn</a>

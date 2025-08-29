@@ -2,7 +2,7 @@
 title: Template
 published: 2025-08-11
 description: 'Description'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/kms/como_funcionan_los_activadores_kms.webp'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/kms/como_funcionan_los_activadores_kms.png'
 tags: [Linux]
 category: 'Linux'
 draft: true 
@@ -15,10 +15,15 @@ lang: 'es'
 
 
 :::tip[Nota final]
-¡Gracias por terminar de leer este artículo! uwur
+*¡Gracias por terminar de leer este artículo! uwur*
 
 — El Capitán
 :::
 
+**¿Tienes alguna duda o te gustaría comentar algo sobre este artículo?**
++ <a href="https://t.me/elcazablog" target="_blank">Únete a nuestra comunidad en Telegram</a>
+
+**Puedes encontrarme en:**
 + <a href="https://twitter.com/elcaza_" target="_blank">Twitter</a>
 + <a href="https://github.com/elcaza" target="_blank">Github</a>
++ <a href="https://www.linkedin.com/in/elcaza/" target="_blank">LinkedIn</a>

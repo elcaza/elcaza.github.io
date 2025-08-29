@@ -378,7 +378,7 @@ pause >nul
 Lo que sucede es que windows detecta el script como un activador de Office y por supuesto lo bloquea. De hecho, en la descripción de Windows Defender menciona. *“HackTool:BAT/AutoKMS This program has potentially unwanted behavior”*
 
 + Basta con deshabilitar Windows Defender durante la activación. 
-    + <a href="https://elcaza.github.io/blog/posts/windows/on_off_windows_defender/" target="_blank">Aquí detallamos el proceso</a>
+    + <a href="https://elcaza.github.io/posts/windows/on_off_windows_defender/" target="_blank">Aquí detallamos el proceso</a>
 
 ## Pantalla azul de bloqueo
 
@@ -394,10 +394,15 @@ Bro, ese no es un problema. La contraseña es `activate` como se mencionó en el
 *Pendiente. Quizá exista, quizá no.
 
 :::tip[Nota final]
-Gracias por terminar de leer este artículo, recuerda tener cuidado con lo que le instalas a tu compu :)
+*¡Gracias por terminar de leer este artículo! uwur*
 
 — El Capitán
 :::
 
+**¿Tienes alguna duda o te gustaría comentar algo sobre este artículo?**
++ <a href="https://t.me/elcazablog" target="_blank">Únete a nuestra comunidad en Telegram</a>
+
+**Puedes encontrarme en:**
 + <a href="https://twitter.com/elcaza_" target="_blank">Twitter</a>
 + <a href="https://github.com/elcaza" target="_blank">Github</a>
++ <a href="https://www.linkedin.com/in/elcaza/" target="_blank">LinkedIn</a>

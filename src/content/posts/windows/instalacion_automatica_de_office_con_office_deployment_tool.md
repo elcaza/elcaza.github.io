@@ -14,7 +14,7 @@ lang: 'es'
 Este artículo constará de dos partes:
 
 1. 1ra. Instalación automática de Office con Office Deployment Tool.
-1. 2da. Explicación sobre por qué funciona la activación mediante el script KMS (<a href="https://elcaza.github.io/blog/posts/windows/como_funcionan_los_activadores_kms/" target="_blank">¿Cómo funcionan los activadores KMS?)</a>
+1. 2da. Explicación sobre por qué funciona la activación mediante el script KMS (<a href="https://elcaza.github.io/posts/windows/como_funcionan_los_activadores_kms/" target="_blank">¿Cómo funcionan los activadores KMS?)</a>
 
 :::warning[Advertencia]
 1. Este material es meramente educativo y no se incentiva de ninguna manera a el uso de la piratería. Solamente usted es responsable por sus acciones.
@@ -123,7 +123,7 @@ Una vez ejecutado nuestro `install` aparecerá la típica pantalla de instalaci�
 Una vez que eso haya finalizado tendremos disponible nuestro Office. Sin embargo, este requiere ser activado posteriormente. Para esto, hay dos formas básicas de realizarlo.
 
 1. Compra de licencia de Microsoft Office
-1. Activador KMS del cual se habla en <a href="https://elcaza.github.io/blog/windows/posts/windows/como_funcionan_los_activadores_kms/">¿Cómo funcionan los activadores KMS? </a>
+1. Activador KMS del cual se habla en <a href="https://elcaza.github.io/posts/windows/como_funcionan_los_activadores_kms/">¿Cómo funcionan los activadores KMS? </a>
     + Ventajas y desventajas
     + ¿Es algo seguro?
     + ¿Por qué funciona?
@@ -132,10 +132,15 @@ Una vez que eso haya finalizado tendremos disponible nuestro Office. Sin embargo
 <a href="https://youtu.be/18rJjlYeEFk" target="_blank">Youtube</a>
 
 :::tip[Nota final]
-¡Gracias por terminar de leer este artículo!
+*¡Gracias por terminar de leer este artículo! uwur*
 
 — El Capitán
 :::
 
+**¿Tienes alguna duda o te gustaría comentar algo sobre este artículo?**
++ <a href="https://t.me/elcazablog" target="_blank">Únete a nuestra comunidad en Telegram</a>
+
+**Puedes encontrarme en:**
 + <a href="https://twitter.com/elcaza_" target="_blank">Twitter</a>
 + <a href="https://github.com/elcaza" target="_blank">Github</a>
++ <a href="https://www.linkedin.com/in/elcaza/" target="_blank">LinkedIn</a>

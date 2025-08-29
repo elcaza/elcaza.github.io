@@ -5,7 +5,7 @@ description: 'Description'
 image: ''
 tags: [Apuntes]
 category: 'Apuntes'
-draft: false 
+draft: true 
 lang: 'es'
 ---
 
@@ -390,10 +390,15 @@ sudo systemctl is-enable apache
 + Salir del programa: Normalmente, se sale presionando Ctrl-X o cerrando la ventana de la terminal. 
 
 :::tip[Nota final]
-¡Gracias por terminar de leer este artículo! uwur
+*¡Gracias por terminar de leer este artículo! uwur*
 
 — El Capitán
 :::
 
+**¿Tienes alguna duda o te gustaría comentar algo sobre este artículo?**
++ <a href="https://t.me/elcazablog" target="_blank">Únete a nuestra comunidad en Telegram</a>
+
+**Puedes encontrarme en:**
 + <a href="https://twitter.com/elcaza_" target="_blank">Twitter</a>
 + <a href="https://github.com/elcaza" target="_blank">Github</a>
++ <a href="https://www.linkedin.com/in/elcaza/" target="_blank">LinkedIn</a>

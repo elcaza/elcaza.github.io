@@ -56,10 +56,15 @@ Finalmente, estamos conectados a la red deseada.
 Con esto ya tenemos configurado nuestra máquina virtual en VirtualBox con un adaptador de WIFI via USB y podremos realizar cualquier proceso que deseemos, por ejemplo, utilizar la suite de *aircrack-ng*.
 
 :::tip[Nota final]
-Gracias por terminar de leer este artículo.
+*¡Gracias por terminar de leer este artículo! uwur*
 
 — El Capitán
 :::
 
+**¿Tienes alguna duda o te gustaría comentar algo sobre este artículo?**
++ <a href="https://t.me/elcazablog" target="_blank">Únete a nuestra comunidad en Telegram</a>
+
+**Puedes encontrarme en:**
 + <a href="https://twitter.com/elcaza_" target="_blank">Twitter</a>
 + <a href="https://github.com/elcaza" target="_blank">Github</a>
++ <a href="https://www.linkedin.com/in/elcaza/" target="_blank">LinkedIn</a>
