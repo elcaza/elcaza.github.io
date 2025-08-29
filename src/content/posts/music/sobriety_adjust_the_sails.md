@@ -14,7 +14,9 @@ lang: 'es'
 <a href="https://www.youtube.com/watch?v=DheiLTBid20&list=RDDheiLTBid20" target="_blank">Sobriety - Adjust The Sails
 </a>
 
-# Hackerville — Code Cowboy
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DheiLTBid20?si=85DHEtfMQxWyOLDd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# Adjust The Sails — Sobriety 
 
 ~~~json
 "I stopped taking drugs"
@@ -165,12 +167,12 @@ Amigo realmente odio la sobriedad
 Amigo realmente odio la sobriedad
 ~~~
 
-# Información
+# Portada
 
 Adjust The Sails — Sobriety [Lyrics English & Spanish]
 <img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/music/sobriety/sobriety.jpeg" width="100%">
 
-:::note[Nota]
+:::tip[Nota]
 ~~~
 Este es un vídeo con la traducción de la canción "Sobriety" de "Adjust the Sails". English - Español (EN - ES). Una joya de canción.
 
