@@ -19,7 +19,10 @@ Esta es la colección de notas sobre ataques WIFI con la que me hubiera gustado 
 	+ Ataque a cliente a través de un Fake Access Point
 + Resolver los retos WIFI planteados en ctf.live
 
-**Advertencia:** Este material es meramente educativo. Y claro, debe probarse únicamente con redes que nos pertenecen.
+
+:::note[Advertencia]
+Este material es meramente educativo. Y claro, debe probarse únicamente con redes que nos pertenecen.
+:::
 
 Si usted se encuentra en un ambiente gráfico es posible que pueda correr programas en paralelo desde diversos terminales. Sin embargo, si únicamente tiene una shell disponible tendrá que mirar el **Anexo 1: Comando jobs**
 
@@ -434,5 +437,4 @@ Puedes encontrarme en:
 + <a href="https://twitter.com/elcaza_" target="_blank">Twitter</a>
 + <a href="https://github.com/elcaza" target="_blank">Github</a>
 + <a href="https://www.linkedin.com/in/elcaza/" target="_blank">LinkedIn</a>
-
 :::

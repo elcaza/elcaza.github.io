@@ -190,5 +190,4 @@ Puedes encontrarme en:
 + <a href="https://twitter.com/elcaza_" target="_blank">Twitter</a>
 + <a href="https://github.com/elcaza" target="_blank">Github</a>
 + <a href="https://www.linkedin.com/in/elcaza/" target="_blank">LinkedIn</a>
-
 :::

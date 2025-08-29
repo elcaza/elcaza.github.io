@@ -2,7 +2,7 @@
 title: Instalación automática de Office con Office Deployment Tool
 published: 2020-05-18
 description: '¿Sabías que es posible instalar cualquier versión de office sin la necesidad de hacer configuraciones paso a paso a través del menú de instalación?'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/office_dt/1.webp'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/office_dt/portada.png'
 tags: [Windows, Activadores]
 category: 'Windows'
 draft: false 
@@ -143,5 +143,4 @@ Puedes encontrarme en:
 + <a href="https://twitter.com/elcaza_" target="_blank">Twitter</a>
 + <a href="https://github.com/elcaza" target="_blank">Github</a>
 + <a href="https://www.linkedin.com/in/elcaza/" target="_blank">LinkedIn</a>
-
 :::

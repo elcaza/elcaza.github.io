@@ -30,4 +30,4 @@ Antonio, el vaquero del oeste, cazarrecompensas de la ciudad. Dulce y eterna fic
 > ### Agradecimientos a
 > - Todas las personas que crean y comparten conocimiento
 > - A usted, amable lector
-> - <a href="https://github.com/saicaca/fuwari" target="_blank">Saica</a>, creador del tema <a href="https://fuwari.vercel.app/" target="_blank">Fuwari</a>
+> - <a href="https://github.com/saicaca/fuwari" target="_blank">Saica</a>, creador del tema <a href="https://fuwari.vercel.app/posts/markdown-extended/" target="_blank">Fuwari</a>
