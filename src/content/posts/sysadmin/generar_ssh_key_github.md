@@ -2,7 +2,7 @@
 title: ¿Cómo generar tu ssh key para Github?
 published: 2025-08-13
 description: 'Aprende a generar tu propia ssh key para Github'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/ssh_key_github/portada.jpeg
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/ssh_key_github/portada.jpeg'
 tags: [Sysadmin, Linux]
 category: 'Sysadmin'
 draft: false 
