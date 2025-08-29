@@ -11,7 +11,7 @@ lang: 'es'
 
 # Link de la canción:
 
-+ <a ref="https://youtu.be/HoVriPxxWH0?si=qQBRINqYV0OGj3EZ" target="_blank">Hackerville - Code Cowboy [EN/ES]</a>
++ <a ref="https://www.youtube.com/watch?v=HoVriPxxWH0" target="_blank">Hackerville - Code Cowboy [EN/ES]</a>
 
 # Hackerville — Code Cowboy
 
@@ -78,7 +78,7 @@ Siempre en movimiento, sin dejar rastro
 Circuit Saddles — Code Cowboy
 <img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/music/hackerville/hackerville_code_cowboy.webp" width="100%">
 
-:::note[Nota]
+:::tip[Nota]
 Este es un vídeo de la canción “Hackerville” de “Code Cowboy”. Sin duda alguna, una de mis canciones favoritas.
 
 ¿Qué pasó con Code Cowboy y por qué ahora sus canciones no están disponibles? Ciertamente no lo sé, ahora son tan sólo un doloroso y triste LOST DATA. Afortunadamente pude salvar esta canción gracias a que estaba trabajando en su traducción.
