@@ -55,7 +55,7 @@ cat your_key.pub
 
 # 3. Probamos que todo funcione de manera correcta 
 
-1. Entramos al <a href="https://github.com/settings/profile" target="_blank">repositorio a clonar</a>
+1. Entramos al repositorio a clonar (uno tuyo)
 1. Seleccionamos `Code`
 1. Seleccionamos `el icono de copiar`
 1. Abrimos una terminal y ejecutamos lo siguiente
