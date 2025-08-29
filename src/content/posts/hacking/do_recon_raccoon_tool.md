@@ -113,9 +113,38 @@ Para obtener más información sobre las opciones y configuraciones de la herram
 
 ::github{repo="elcaza/do_recon"}
 
-Algunas de las opciones que puedes elegir ejecutar son las siguientes:
+Algunas de las opciones que puedes elegir para ejecutar son las siguientes:
 
-<img witdh=100% src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/do_recon/2.webp">
+~~~bash
+### Setting log file
+LOGFILE=$(date '+%d-%m-%Y')".log"
+### Setting the new line separator
+NEW_LINE="======================================="
+
+### Scan options (true || false)
+CHECK_INTERFACE=true
+CREATE_DIRECTORY=true
+DO_NSLOOKUP=true
+DO_TRACE=true
+DO_NMAP_TOP_PORTS=true
+DO_NMAP_SV=true
+DO_NMAP_ALL_PORTS=true
+DO_NMAP_SC=true
+DO_NMAP_SCRIPT_VULNES=true
+REPORT_ALL_OPEN_PORTS=true
+
+### Variables for the nmap scan
+NMAP_DELAY=5
+    + Delay in seconds before to run another nmap scan
+NMAP_TIMEOUT=0
+    + Timeout 0 = No timeout. Any else, timeout in seconds
+TOP_PORTS=1000
+MAX_RETRIES=1
+MIN_RATE=500
+T=-T3
+    + -T0, -T1, -T2, -T3, -T4, -T5
+    + Default -T3
+~~~
 
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
