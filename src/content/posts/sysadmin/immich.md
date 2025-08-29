@@ -1,7 +1,7 @@
 ---
 title: Crea tu propio servidor al estilo Google Photos con Immich
 published: 2025-08-23
-description: 'En esta publicación se abordará lo relacionado a la instación y configuración de Immich para diversos casos de uso'
+description: 'Una guía rápida para la configuración y despliegue de Immich'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/immich/immich.png'
 tags: [Sysadmin]
 category: 'Sysadmin'
