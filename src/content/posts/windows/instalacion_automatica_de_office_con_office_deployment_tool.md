@@ -130,9 +130,6 @@ Una vez que eso haya finalizado tendremos disponible nuestro Office. Sin embargo
     + ¿Es algo seguro?
     + ¿Por qué funciona?
 
-### Vídeo sobre este artículo
-<a href="https://youtu.be/18rJjlYeEFk" target="_blank">Youtube</a>
-
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
