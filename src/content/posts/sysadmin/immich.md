@@ -139,7 +139,7 @@ DB_USERNAME=db_username
 
 gunzip --stdout $PATH_BACKUP \
 | sed "s/SELECT pg_catalog.set_config('search_path', '', false);/SELECT pg_catalog.set_config('search_path', 'public, pg_catalog', true);/g" \
-| sudo docker exec -i immich_postgres psql --dbname=$DB_NAME --username=$DB_USERNAME  # Restore Backup
+| sudo docker exec -i immich_postgres psql --dbname=$DB_NAME --username=$DB_USERNAME  
 
 # Inicias de nuevo el contenedor
 sudo docker compose up -d 
@@ -147,7 +147,7 @@ sudo docker compose up -d
 
 # Montado de discos externos con Ext4 con protección LUKS
 
-Es posible que quieras utilizar un disco duro externo para guardar las fotos de tu servidor Immich y es sumamente probable que quieras proteger estas fotos ante un robo del disco duro físico. Para esto puedes utilizar un disco duro `Ext4` con protección `LUKS`. Con lo que tu información estará cifrada.
+Es posible que quieras utilizar un disco duro externo para guardar las fotos de tu servidor Immich y es sumamente probable que quieras proteger estas fotos ante un robo del disco duro físico. Para esto puedes utilizar un disco duro `Ext4` con protección `LUKS`. Por lo que tu información estará cifrada.
 
 ## Montado del disco
 ~~~bash
