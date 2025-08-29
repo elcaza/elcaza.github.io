@@ -15,7 +15,7 @@ lang: 'es'
 
 
 :::tip[Nota final]
-*¡Gracias por terminar de leer este artículo! uwur*
+¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán
 :::

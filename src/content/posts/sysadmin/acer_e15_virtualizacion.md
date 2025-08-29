@@ -76,7 +76,7 @@ Todos los archivos utilizados se encuentran en el <a href="https://github.com/el
 
 
 :::tip[Nota final]
-*¡Gracias por terminar de leer este artículo! uwur*
+¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán
 :::

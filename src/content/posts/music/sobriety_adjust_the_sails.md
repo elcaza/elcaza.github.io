@@ -179,7 +179,7 @@ Quiero agradecer a "ForgottenRoom", "Anglib" y a "Luis Alvarez" por su apoyo dur
 :::
 
 :::tip[Nota final]
-*¡Gracias por terminar de leer este artículo! uwur*
+¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán
 :::

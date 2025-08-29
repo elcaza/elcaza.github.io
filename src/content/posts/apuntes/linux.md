@@ -390,7 +390,7 @@ sudo systemctl is-enable apache
 + Salir del programa: Normalmente, se sale presionando Ctrl-X o cerrando la ventana de la terminal. 
 
 :::tip[Nota final]
-*¡Gracias por terminar de leer este artículo! uwur*
+¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán
 :::

@@ -132,7 +132,7 @@ Una vez que eso haya finalizado tendremos disponible nuestro Office. Sin embargo
 <a href="https://youtu.be/18rJjlYeEFk" target="_blank">Youtube</a>
 
 :::tip[Nota final]
-*¡Gracias por terminar de leer este artículo! uwur*
+¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán
 :::
