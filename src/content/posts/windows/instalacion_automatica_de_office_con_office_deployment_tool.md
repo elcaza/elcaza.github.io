@@ -16,7 +16,7 @@ Este artículo constará de dos partes:
 1. 1ra. Instalación automática de Office con Office Deployment Tool.
 1. 2da. Explicación sobre por qué funciona la activación mediante el script KMS (<a href="https://elcaza.github.io/posts/windows/como_funcionan_los_activadores_kms/" target="_blank">¿Cómo funcionan los activadores KMS?)</a>
 
-:::warning[Advertencia]
+:::CAUTION[Advertencia]
 1. Este material es meramente educativo y no se incentiva de ninguna manera a el uso de la piratería. Solamente usted es responsable por sus acciones.
 1. Como alternativa recomendamos: La compra de licencias originales, Obtener licencias gratuitas para estudiantes, usar software libre.
 1. Puedes consultar el código utilizado a través del repositorio de <a href="https://github.com/elcaza/office_autoinstall_explained" target="_blank">Github</a> 
