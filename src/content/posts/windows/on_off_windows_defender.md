@@ -58,7 +58,7 @@ Por lo que, sin más premura, he aquí los pasos para desactivar y volver a acti
 
 6) Adicionalmente, existen otras opciones de seguridad que permiten no analizar diversos tipos de archivos o directorios en en sistema. Así como opciones de notificación.
 
-Estos temas se verán a fondo en un futuro (Espacio para el link — Se actualizará este post y se añadirá el link al post).
+Estos temas es probable que se vean a fondo en un futuro (Espacio para el link — Se actualizará este post y se añadirá el link al post).
 <img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/w_defender/9.webp" width="100%">
 
 # 4. Desactivar Windows Smart Screen
