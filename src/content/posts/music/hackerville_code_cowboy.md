@@ -11,7 +11,7 @@ lang: 'es'
 
 # Link de la canción:
 
-+ <a ref="https://www.youtube.com/watch?v=HoVriPxxWH0" target="_blank">Hackerville - Code Cowboy [EN/ES]</a>
++ <a href="https://www.youtube.com/watch?v=HoVriPxxWH0" target="_blank">Hackerville - Code Cowboy [EN/ES]</a>
 
 # Hackerville — Code Cowboy
 
@@ -73,7 +73,7 @@ Siempre en movimiento, sin dejar rastro
 Siempre en movimiento, sin dejar rastro
 ~~~
 
-# Información
+# Portada
 
 Circuit Saddles — Code Cowboy
 <img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/music/hackerville/hackerville_code_cowboy.webp" width="100%">
