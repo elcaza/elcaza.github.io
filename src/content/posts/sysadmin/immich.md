@@ -26,7 +26,7 @@ Y todo esto sin límite de almacenamiento (Todo dependerá de tu capacidad en di
 + Al menos 4GB de ram y un procesador de 2 núcleos
 
 # Guia de inicio
-+ <a href="https://immich.app/docs/overview/quick-start" target="_blank">https://immich.app/docs/overview/quick-start</a>
++ <a href="https://immich.app/docs/overview/quick-start" target="_blank">Quick start</a>
 
 
 ## Pasos generales de instalación:
@@ -48,7 +48,7 @@ Y todo esto sin límite de almacenamiento (Todo dependerá de tu capacidad en di
    + `http://<machine-ip-address>:2283`
 
 # Bibliotecas externas
-+ <a href="https://immich.app/docs/guides/external-library/" target="_blank">https://immich.app/docs/guides/external-library/</a>
++ <a href="https://immich.app/docs/guides/external-library/" target="_blank">External library/</a>
 
 
 Una biblioteca externa sirve para cargar tus fotografías sin necesidad de usar la interfaz web o aplicación móvil para subirlas.
@@ -99,12 +99,12 @@ Con la cuenta del administrador:
 + Edit import path
 
 ## Referencias 
-+ <a href="https://www.youtube.com/watch?v=gKgcGloFvgE" target="_blank">https://www.youtube.com/watch?v=gKgcGloFvgE</a>
-+ <a href="https://immich.app/docs/features/libraries/" target="_blank">https://immich.app/docs/features/libraries/</a>
-+ <a href="https://immich.app/docs/guides/external-library/" target="_blank">https://immich.app/docs/guides/external-library/</a>
++ <a href="https://www.youtube.com/watch?v=gKgcGloFvgE" target="_blank">Vídeo en Youtube</a>
++ <a href="https://immich.app/docs/features/libraries/" target="_blank">Libraries/</a>
++ <a href="https://immich.app/docs/guides/external-library/" target="_blank">Eexternal library/</a>
 
 # Respaldos
-+ <a href="https://immich.app/docs/administration/backup-and-restore" target="_blank">https://immich.app/docs/administration/backup-and-restore</a>
++ <a href="https://immich.app/docs/administration/backup-and-restore" target="_blank">Backup and restore</a>
 
 
 ## Creación de un respaldo
@@ -176,7 +176,7 @@ sudo umount /mnt/fotos && sudo cryptsetup luksClose fotos
 # Preguntas frecuentes
 
 ## ¿Cómo recuperar mi password?
-+ <a href="https://immich.app/docs/administration/server-commands" target="_blank">https://immich.app/docs/administration/server-commands</a>
++ <a href="https://immich.app/docs/administration/server-commands" target="_blank">server commands</a>
 
 ~~~bash
 # Entras al contenedor de forma interactiva
@@ -190,7 +190,7 @@ exit
 ~~~
 
 ## ¿Cómo desinstalar immich?
-+ <a href="https://immich.app/docs/FAQ/#how-can-i-purge-data-from-immich" target="_blank">https://immich.app/docs/FAQ/#how-can-i-purge-data-from-immich</a>
++ <a href="https://immich.app/docs/FAQ/#how-can-i-purge-data-from-immich" target="_blank">how can i purge data from immich</a>
 
 
 1. Desde el lugar dónde instalaste tu immich detienes y eliminas los contenedores, redes y volúmenes definidos en tu archivo docker-compose.yml.

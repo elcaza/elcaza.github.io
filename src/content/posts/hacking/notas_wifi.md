@@ -412,7 +412,7 @@ Aunque teóricamente es posible, computacionalmente no lo es. Pues esto se debe 
 + Puedes realizar uno tu mismo con ayuda de un software (En algún momento publicaré el propio)
 
 ### Links de diccionarios. 
-+ <a href="https://github.com/danielmiessler/SecLists/tree/master/Passwords" target="_blank">https://github.com/danielmiessler/SecLists/tree/master/Passwords</a>
++ <a href="https://github.com/danielmiessler/SecLists/tree/master/Passwords" target="_blank">SecList</a>
 
 # Información complementaria
 + <a href="https://medium.com/@Packt_Pub/the-deauthentication-attack-7872c916ed2a" target="_blank">the-deauthentication-attack</a>
@@ -426,7 +426,6 @@ Aunque teóricamente es posible, computacionalmente no lo es. Pues esto se debe 
 ¡Gracias por terminar de leer este artículo! uwur
 
 — El Capitán
-:::
 
 **¿Tienes alguna duda o te gustaría comentar algo sobre este artículo?**
 + <a href="https://t.me/elcazablog" target="_blank">Únete a nuestra comunidad en Telegram</a>
@@ -435,3 +434,5 @@ Aunque teóricamente es posible, computacionalmente no lo es. Pues esto se debe 
 + <a href="https://twitter.com/elcaza_" target="_blank">Twitter</a>
 + <a href="https://github.com/elcaza" target="_blank">Github</a>
 + <a href="https://www.linkedin.com/in/elcaza/" target="_blank">LinkedIn</a>
+
+:::

@@ -7,10 +7,13 @@ Antonio, el vaquero del oeste, cazarrecompensas de la ciudad. Dulce y eterna fic
 + Traducción de canciones [EN-ES/ES-EN]
 + Escritura y reflexiones
 
-## Mis redes
+**¿Tienes alguna duda o te gustaría comentar algo sobre los artículos?**
++ <a href="https://t.me/elcazablog" target="_blank">Únete a nuestra comunidad en Telegram</a>
+
+**Puedes encontrarme en:**
++ <a href="https://twitter.com/elcaza_" target="_blank">Twitter</a>
 + <a href="https://github.com/elcaza" target="_blank">Github</a>
-+ <a href="https://elcaza.medium.com" target="_blank">Medium</a>
-+ <a href="https://x.com/elcaza_" target="_blank">Twitter || X</a>
++ <a href="https://www.linkedin.com/in/elcaza/" target="_blank">LinkedIn</a>
 
 ## Proyectos principales
 
