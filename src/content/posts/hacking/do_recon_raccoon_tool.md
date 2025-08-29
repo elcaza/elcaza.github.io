@@ -1,7 +1,7 @@
 ---
 title: Do Recon Raccoon Tool - Una herramienta para realizar el reconocimiento automatizado en pruebas de penetración
 published: 2025-03-17
-description: 'Una herramienta que te ayuda a analizar la infraestructura. Déjanos hacer la importante, pero tediosa, tarea de mapear la red y realizar el reconocimiento.'
+description: 'Una herramienta que te ayuda a analizar la infraestructura. Delegando la importante, pero tediosa, tarea de mapear la red y realizar el reconocimiento.'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/do_recon/do_recon.jpeg'
 tags: [Hacking]
 category: 'Hacking'

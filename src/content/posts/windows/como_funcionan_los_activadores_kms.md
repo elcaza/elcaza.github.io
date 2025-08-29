@@ -1,7 +1,7 @@
 ---
 title: ¿Cómo funcionan los activadores KMS?
 published: 2020-08-13
-description: '¿Cómo funcionan los activadores KMS?  ¿Sabes por qué el software KMS es capaz de “activar” office con tan solo un simple script?'
+description: '¿Cómo funcionan los activadores KMS?  ¿Por qué el software KMS es capaz de “activar” office con tan solo un simple script?'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/kms/como_funcionan_los_activadores_kms.webp'
 tags: [Windows, Activadores]
 category: 'Windows'

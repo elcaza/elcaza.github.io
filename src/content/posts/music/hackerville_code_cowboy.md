@@ -1,7 +1,7 @@
 ---
 title: Hackerville — Code Cowboy [Lyrics English & Spanish]
 published: 2025-01-25
-description: 'Como coloquialmente se diría: "perate wey, mi rola"'
+description: 'Una increíble canción. Mi canción. LA Canción.'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/music/hackerville/hackerville_code_cowboy.webp'
 tags: [Music]
 category: 'Music'

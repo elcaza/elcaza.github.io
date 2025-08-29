@@ -1,7 +1,7 @@
 ---
 title: ¿Cómo activar y desactivar Windows Defender y Smart Screen?
 published: 2025-07-06
-description: 'En este post aprenderás a activar y desactivar Windows Defender y Smart Screen'
+description: '¿Cómo activar y desactivar Windows Defender y Smart Screen'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/w_defender/6.webp'
 tags: [Windows]
 category: 'Windows'
