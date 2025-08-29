@@ -11,7 +11,7 @@ lang: 'es'
 
 # Link de la canción:
 
-<a ref="https://www.youtube.com/watch?v=HoVriPxxWH0" target="_blank">Hackerville - Code Cowboy</a>
+<a ref="https://youtu.be/HoVriPxxWH0?si=qQBRINqYV0OGj3EZ" target="_blank">Hackerville - Code Cowboy [EN/ES]</a>
 
 # Hackerville — Code Cowboy
 
