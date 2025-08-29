@@ -65,9 +65,9 @@ export const profileConfig: ProfileConfig = {
 			url: "https://twitter.com/elcaza_",
 		},
 		{
-			name: "Steam",
-			icon: "fa6-brands:steam",
-			url: "https://elcaza.medium.com",
+			name: "Linkedin",
+			icon: "fa6-brands:linkedin",
+			url: "https://www.linkedin.com/in/elcaza/",
 		},
 		{
 			name: "GitHub",

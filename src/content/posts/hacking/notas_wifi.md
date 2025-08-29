@@ -427,10 +427,10 @@ Aunque teóricamente es posible, computacionalmente no lo es. Pues esto se debe 
 
 — El Capitán
 
-**¿Tienes alguna duda o te gustaría comentar algo sobre este artículo?**
+¿Tienes alguna duda o te gustaría comentar algo sobre este artículo?
 + <a href="https://t.me/elcazablog" target="_blank">Únete a nuestra comunidad en Telegram</a>
 
-**Puedes encontrarme en:**
+Puedes encontrarme en:
 + <a href="https://twitter.com/elcaza_" target="_blank">Twitter</a>
 + <a href="https://github.com/elcaza" target="_blank">Github</a>
 + <a href="https://www.linkedin.com/in/elcaza/" target="_blank">LinkedIn</a>
