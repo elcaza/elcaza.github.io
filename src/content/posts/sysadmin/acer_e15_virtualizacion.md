@@ -1,5 +1,5 @@
 ---
-title: ¿Cómo Habilitar la virtualización en ACER E15-553-1786 para windows y linux?
+title: ¿Cómo Habilitar la virtualización en una ACER E15-553-1786 para windows y linux?
 published: 2020-04-29
 description: 'Habilitar la virtualización en ACER E15-553-1786 para windows y linux'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/acer_e15/1.jpeg'
@@ -21,20 +21,20 @@ Todos los archivos utilizados se encuentran en el <a href="https://github.com/el
 + Parchar la BIOS con las opciones de hipervirtualización activada. 
 + Esto debe hacerse forzosamente desde un sistema windows, pero al hacerse se preservan los cambios en la configuración BIOS por lo que en Linux también estará activada la hipervirtualización.
 
-# Procedimiento (uwu)
+# Procedimiento 
 1. Apagar windows defender
     + Abrir una consola powershell con privilegios de administrador
         + Puedes hacerlo con (WINDOWS+X+A) o cualquier otro
     + Ejecutar
-        + ``Set-MpPreference -DisableRealtimeMonitoring $true``
-        + Nota, ya no funciona. Debe hacerse manualmente el apagar Windows Defender.
+        + `Set-MpPreference -DisableRealtimeMonitoring $true`
+        + Nota, ya no funciona. Debe hacerse manualmente el apagar Windows Defender. Aprende cómo en <a href="https://elcaza.github.io/posts/windows/on_off_windows_defender/" target="_blank">¿Cómo activar y desactivar Windows Defender y Smart Screen?</a>
 2. Descargar los archivos desde el <a href="https://github.com/elcaza/acer_e15_amd-v" target="_blank">repositorio de Github</a> 
 3. Con powershell (Con privilegios de administrador) situarse en la carpeta donde está el archivo H2OUVE.exe
 4. Sacar la configuración del BIOS actual
     + Posicionado en la ubicación de **H2OUVE.exe*+ ejecutar 
-    + ``.\H2OUVE.exe -gv bios.txt``
-    + Y eso nos entregará un **bios.txt*+ con la configuración de la BIOS
-5. Modificamos el archivo **bios.txt*+ que ahora tenemos en la misma ruta. 
+    + `.\H2OUVE.exe -gv bios.txt`
+    + Y eso nos entregará un **bios.txt* con la configuración de la BIOS
+5. Modificamos el archivo **bios.txt* que ahora tenemos en la misma ruta. 
     + Para esto se recomienda usar un editor de texto como:
         + Visual Studio Code, Sublime Text, Atom ó Notepad ++
     + Buscamos la línea que diga **setup*+ (Ctrl+f) (o su equivalente para buscar) .
@@ -55,7 +55,7 @@ Todos los archivos utilizados se encuentran en el <a href="https://github.com/el
     + Guardamos los cambios en el documento
 6. Cargamos la nueva configuración en la BIOS
     + Desde el powershell de administrador ejecutamos 
-    + ``.\H2OUVE.exe -sv bios.txt``
+    + `.\H2OUVE.exe -sv bios.txt`
     + Nos mostrará en consola varios mensajes diciendo que ha tenido éxito el parche (Podría mandar uno que otro error del que no tenemos que preocuparnos)
 7. Reiniciamos la computadora y disfrutamos de nuestra hipervirtualización activada
 8. Activar nuevamente windows defender
@@ -69,10 +69,10 @@ Todos los archivos utilizados se encuentran en el <a href="https://github.com/el
     + Nada es seguro en este mundo, pero ha resultado efectivo siempre y cuando sigas las instrucciones
 
 ### Referencias y agradecimientos a
-+ <a href="https://www.youtube.com/watch?v=SVK943_upho" target="_blank">https://www.youtube.com/watch?v=SVK943_upho</a>
-+ <a href="https://howtoscomos.blogspot.com/2017/12/no-amd-v-on-a9-9410-acer-e5-523g-958x.html" target="_blank">https://howtoscomos.blogspot.com/2017/12/no-amd-v-on-a9-9410-acer-e5-523g-958x.html</a>
-+ <a href="https://www.geektech.co.nz/how-to-unlock-the-nvme-performance-on-the-lenovo-y700" target="_blank">https://www.geektech.co.nz/how-to-unlock-the-nvme-performance-on-the-lenovo-y700</a>
-+ <a href="https://www.bios-mods.com/forum/Thread-REQUEST-Acer-Aspire-E5-523-G-BIOS-Unlock?page=2" target="_blank">https://www.bios-mods.com/forum/Thread-REQUEST-Acer-Aspire-E5-523-G-BIOS-Unlock?page=2</a>
++ <a href="https://www.youtube.com/watch?v=SVK943_upho" target="_blank">Vídeo de Youtube</a>
++ <a href="https://howtoscomos.blogspot.com/2017/12/no-amd-v-on-a9-9410-acer-e5-523g-958x.html" target="_blank">Tutorial howtoscomos de blogspot</a>
++ <a href="https://www.geektech.co.nz/how-to-unlock-the-nvme-performance-on-the-lenovo-y700" target="_blank">GeetTech</a>
++ <a href="https://www.bios-mods.com/forum/Thread-REQUEST-Acer-Aspire-E5-523-G-BIOS-Unlock?page=2" target="_blank">BIOS Mods</a>
 
 
 :::note[Nota final]
