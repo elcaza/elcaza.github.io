@@ -157,11 +157,12 @@ lsblk
 # Desciframos la información contenida en el disco
 sudo cryptsetup luksOpen /dev/sdXN fotos
 
-sudo mount /dev/mapper/fotos /mnt/ubicacion_para_montar
+sudo mount /dev/mapper/fotos /mnt/fotos
 ~~~
 + X = Letra
 + N = Número
 + fotos = cualquier alias
++ segundo /mnt/fotos = ubicación para montar
 
 ## Desmontado del disco
 
