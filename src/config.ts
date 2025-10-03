@@ -8,7 +8,7 @@ import type {
 import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
-	title: "La Bitácora Del Capitán",
+	title: "La Bitácora del Capitán",
 	subtitle: "Blog",
 	lang: "es", // Language code, e.g. 'en', 'zh-CN', 'ja', etc.
 	themeColor: {
