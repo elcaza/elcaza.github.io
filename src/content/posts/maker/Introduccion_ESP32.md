@@ -10,6 +10,7 @@ lang: 'es'
 ---
 
 Cuando trabajamos con un ESP32 podríamos dudar sobre qué pines deberíamos usar en nuestro proyecto, cuál placa debería usar y si es mejor 38 o 30 pines. Este artículo pretende dar un breve resumen sobre lo que tenemos que tomar en cuenta.
++ Ojo, parte de las imagenes y tablas fueron tomadas de otros sitios. Al final del artículo podrán ver las fuentes.
 
 # ¿Qué es el ESP32?
 
