@@ -59,6 +59,10 @@ El ESP32 cuenta con la "función de multiplexación", la cual permite asignar el
 
 ## Pines GPIO
 
+Los Pines GPIO (General-Purpose Input/Output) son los pines que no tienen un propósito predefinido, sino que pueden ser configurados en tiempo de ejecución de dos maneras:
++ Modo de Salida (Output): El microcontrolador envía una señal digital (un estado lógico ALTO o BAJO). Esto se utiliza para controlar dispositivos externos, como encender un LED, activar un relé o controlar un motor.
++ Modo de Entrada (Input): El microcontrolador lee una señal digital de un dispositivo externo. Esto se utiliza para detectar estados, como si un botón está presionado, o leer datos de un sensor digital.
+
 ### Tabla de pines de uso seguro
 
 <table >
