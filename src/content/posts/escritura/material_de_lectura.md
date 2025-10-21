@@ -39,6 +39,7 @@ Maythom
 
 ## ESP32
 + <a href="https://www.youtube.com/watch?v=BmkBTmLXF9s" target="_blank">Distancia Máxima con NRF24l01</a>
++ <a href="https://www.youtube.com/watch?v=8YIy0IyV4c4" target="_blank">Problemas con NRF24 - Soluciones y Mejoras! Antena, Ruido, Alimentación</a>
 
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
