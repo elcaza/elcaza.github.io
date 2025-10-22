@@ -105,7 +105,7 @@ Los Pines GPIO (General-Purpose Input/Output) son los pines que no tienen un pro
 		<tr>
 			<td>D4</td>
 			<td>4</td>
-			<td><span >YES</span></td>
+			<td><span >SÍ</span></td>
 			<td></td>
 			<td>Derecha</td>
 		</tr>
@@ -114,7 +114,7 @@ Los Pines GPIO (General-Purpose Input/Output) son los pines que no tienen un pro
 			<td>5</td>
 			<td><span >Evitarlo</span></td>
 			<td>must be HIGH during boot</td>
-			<td>must be HIGH during boot</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>D6</td>
@@ -168,14 +168,14 @@ Los Pines GPIO (General-Purpose Input/Output) son los pines que no tienen un pro
 		<tr>
 			<td>D13</td>
 			<td>13</td>
-			<td><span >YES</span></td>
+			<td><span >SÍ</span></td>
 			<td></td>
 			<td>Izquierda</td>
 		</tr>
 		<tr>
 			<td>D14</td>
 			<td>14</td>
-			<td><span >YES</span></td>
+			<td><span >SÍ</span></td>
 			<td></td>
 			<td>Izquierda</td>
 		</tr>
@@ -189,84 +189,84 @@ Los Pines GPIO (General-Purpose Input/Output) son los pines que no tienen un pro
 		<tr>
 			<td>RX2</td>
 			<td>16</td>
-			<td><span >YES</span></td>
+			<td><span >SÍ</span></td>
 			<td></td>
 			<td>Derecha</td>
 		</tr>
 		<tr>
 			<td>TX2</td>
 			<td>17</td>
-			<td><span >YES</span></td>
+			<td><span >SÍ</span></td>
 			<td></td>
 			<td>Derecha</td>
 		</tr>
 		<tr>
 			<td>D18</td>
 			<td>18</td>
-			<td><span >YES</span></td>
+			<td><span >SÍ</span></td>
 			<td></td>
 			<td>Derecha</td>
 		</tr>
 		<tr>
 			<td>D19</td>
 			<td>19</td>
-			<td><span >YES</span></td>
+			<td><span >SÍ</span></td>
 			<td></td>
 			<td>Derecha</td>
 		</tr>
 		<tr>
 			<td>D21</td>
 			<td>21</td>
-			<td><span >YES</span></td>
+			<td><span >SÍ</span></td>
 			<td></td>
 			<td>Derecha</td>
 		</tr>
 		<tr>
 			<td>D22</td>
 			<td>22</td>
-			<td><span >YES</span></td>
+			<td><span >SÍ</span></td>
 			<td></td>
 			<td>Derecha</td>
 		</tr>
 		<tr>
 			<td>D23</td>
 			<td>23</td>
-			<td><span >YES</span></td>
+			<td><span >SÍ</span></td>
 			<td></td>
 			<td>Derecha</td>
 		</tr>
 		<tr>
 			<td>D25</td>
 			<td>25</td>
-			<td><span >YES</span></td>
+			<td><span >SÍ</span></td>
 			<td></td>
 			<td>Izquierda</td>
 		</tr>
 		<tr>
 			<td>D26</td>
 			<td>26</td>
-			<td><span >YES</span></td>
+			<td><span >SÍ</span></td>
 			<td></td>
 			<td>Izquierda</td>
 		</tr>
 		<tr>
 			<td>D27</td>
 			<td>27</td>
-			<td><span >YES</span></td>
+			<td><span >SÍ</span></td>
 			<td></td>
 			<td>Izquierda</td>
 		</tr>
 		<tr>
 			<td>D32</td>
 			<td>32</td>
-			<td><span >YES</span></td>
+			<td><span >SÍ</span></td>
 			<td></td>
 			<td>Izquierda</td>
 		</tr>
 		<tr>
 			<td>D33</td>
 			<td>33</td>
-			<td><span >YES</span></td>
+			<td><span >SÍ</span></td>
 			<td></td>
 			<td>Izquierda</td>
 		</tr>
