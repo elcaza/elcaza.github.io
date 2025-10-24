@@ -14,6 +14,23 @@ lang: 'es'
 # Diagrama nRF24L01 PA LNA
 <img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/rf_diagramas/nrf24l01_pa_lna.png" width="100%">
 
+# Test
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+~~~mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+~~~
 
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
