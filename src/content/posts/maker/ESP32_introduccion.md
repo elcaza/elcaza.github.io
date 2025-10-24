@@ -2,7 +2,7 @@
 title: Introducción al ESP32, consideraciones y referencia de pines
 published: 2025-10-11
 description: '¿Qué es el ESP32? ¿Qué pines debería utilizar en mi proyecto? ¿Cuáles pines debería evitar?'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/introduccion_esp32/esp32s.jpeg'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_introduccion/esp32s.jpeg'
 tags: [Maker]
 category: 'Maker'
 draft: false 
@@ -55,7 +55,7 @@ El ESP32 cuenta con la "función de multiplexación", la cual permite asignar el
 
 ## Pines por defecto
 
-<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/introduccion_esp32/ESP32_board.png" width="100%">
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_introduccion/ESP32_board.png" width="100%">
 
 ## Pines GPIO
 
@@ -303,7 +303,7 @@ Los Pines GPIO (General-Purpose Input/Output) son los pines que no tienen un pro
 
 ## Pines de uso seguro
 
-<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/introduccion_esp32/ESP32-GPIO-Pins-that-are-Safe-to-Use.webp" width="100%">
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_introduccion/ESP32-GPIO-Pins-that-are-Safe-to-Use.webp" width="100%">
 
 ## Pines I2C (Inter-Integrated Circuit)
 
@@ -313,7 +313,7 @@ Los pines I2C (Inter-Integrated Circuit) del ESP32 son los pines de comunicació
 + Cada dispositivo Esclavo en el bus debe tener una dirección única (generalmente de 7 bits), lo que permite al Maestro comunicarse con hasta 127 dispositivos diferentes en el mismo par de cables.
 + Requiere que los pines cuenten con resistencias pull-up (En el ESP32 casi todos los GPIO excepto los de solo entrada)
 
-<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/introduccion_esp32/ESP32-I2C-Pins.webp" width="100%">
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_introduccion/ESP32-I2C-Pins.webp" width="100%">
 
 ## Pines SPI (Serial Peripheral Interface)
 
@@ -430,7 +430,7 @@ Pines SPI por defecto:
 </tbody>
 </table>
 
-<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/introduccion_esp32/ESP32-SPI-Pins.webp" width="100%">
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_introduccion/ESP32-SPI-Pins.webp" width="100%">
 
 ## Pines ADC (Conversor Analógico-Digital)
 
@@ -438,26 +438,26 @@ Los pines ADC (Analog-to-Digital Converter) del ESP32 son los pines GPIO que pue
 + ADC1 - Puede usarse libremente en cualquier momento.
 + ADC2 - Podría generar conflictos, pues se comparte con la funcionalidad WiFi del ESP32.
 
-<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/introduccion_esp32/ESP32-ADC-Pins.webp" width="100%">
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_introduccion/ESP32-ADC-Pins.webp" width="100%">
 
 ## Pines DAC (Convertidor Digital a Analógico) 
 
 Los pines DAC (Digital-to-Analog Converter) del ESP32 son los pines GPIO que pueden convertir un valor digital (un número, generalmente de 0 a 255) en un voltaje analógico de salida correspondiente. Esto permite al ESP32 generar señales de audio simples o formas de onda analógicas arbitrarias sin necesidad de componentes externos.
 
-<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/introduccion_esp32/ESP32-DAC-Pins.webp" width="100%">
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_introduccion/ESP32-DAC-Pins.webp" width="100%">
 
 ## Pines Touch
 
 Los pines Touch del ESP32 son pines GPIO especiales que pueden detectar cambios en la capacitancia eléctrica, lo que permite utilizarlos como sensores táctiles sin la necesidad de componentes adicionales. Cuando un dedo toca un área conductora conectada al pin, el sistema detecta un cambio.
 
-<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/introduccion_esp32/ESP32-Touch-Pins.webp" width="100%">
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_introduccion/ESP32-Touch-Pins.webp" width="100%">
 
 ## Pines UART (Universal Asynchronous Receiver/Transmitter)
 
 Los pines UART (Universal Asynchronous Receiver/Transmitter) del ESP32 son los pines de comunicación serial asíncrona que permiten al microcontrolador enviar y recibir datos en serie a otros dispositivos (como una PC a través de USB/Serial o módulos Bluetooth) utilizando un formato simple de inicio/datos/parada. 
 + Se debe tener extremo cuidado al usar los pines UART que coinciden con los del bus SPI Flash (GPIO 9, 10, 11)
 
-<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/introduccion_esp32/ESP32-UART-Pins.webp" width="100%">
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_introduccion/ESP32-UART-Pins.webp" width="100%">
 
 ## Pines RTC (Real Time Clock)
 
@@ -465,7 +465,7 @@ Los pines RTC (Real-Time Clock) del ESP32 son un subconjunto de pines GPIO que e
 
 El dominio RTC es crucial para las aplicaciones de muy bajo consumo en el ESP32, ya que permite que la mayor parte del chip permanezca apagada mientras una pequeña porción sigue monitoreando los eventos.
 
-<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/introduccion_esp32/ESP32-RTC-GPIO-Pins.webp" width="100%">
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_introduccion/ESP32-RTC-GPIO-Pins.webp" width="100%">
 
 ## Pines Strapping (Sujeción)
 
@@ -473,7 +473,7 @@ Los pines Strapping (o pines de configuración de arranque) del ESP32 son un peq
 + ejecutar el programa ya cargado
 + esperar a recibir un nuevo firmware. 
 
-<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/introduccion_esp32/ESP32-Strapping-Pins.webp" width="100%">
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_introduccion/ESP32-Strapping-Pins.webp" width="100%">
 
 ## Pines de energía
 
@@ -484,7 +484,7 @@ Los Pines de Energía del ESP32 son los pines dedicados a alimentar el microcont
 	+ Suministrar energía a periféricos externos de baja potencia (como sensores o módulos) que operan a 3.3V.
 + **GND (Tierra)**: Es el pin de referencia de potencial eléctrico (0 voltios).
 
-<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/introduccion_esp32/ESP32-Power-Pins.webp" width="100%">
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_introduccion/ESP32-Power-Pins.webp" width="100%">
 
 ## Enable Pin
 
@@ -521,7 +521,7 @@ El uso de la función esp_restart() en el ESP32 no garantiza un reinicio "desde 
 </tbody>
 </table>
 
-<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/introduccion_esp32/ESP32-Enable-Pin.webp" width="100%">
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_introduccion/ESP32-Enable-Pin.webp" width="100%">
 
 # Referencias y más información
 
