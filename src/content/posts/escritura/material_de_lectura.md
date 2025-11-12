@@ -27,6 +27,11 @@ Zero Salarium
 + <a href="https://www.zerosalarium.com/" target="_blank">Blog Zero Salarium</a>
 + <a href="https://www.zerosalarium.com/2025/09/EDR-Freeze-Puts-EDRs-Antivirus-Into-Coma.html" target="_blank">EDR-Freeze: A Tool That Puts EDRs And Antivirus Into A Coma State</a>
 
+## Redes
+
+Redes
++ <a href="https://www.rootzilopochtli.com/configuracion-basica-de-red" target="_blank">Configuración rápida de red</a>
+
 ## ESP32
 + <a href="https://thinkrobotics.com/blogs/learn/introduction-to-freertos-on-esp32" target="_blank">Introduction to FreeRTOS on ESP32</a>
 
