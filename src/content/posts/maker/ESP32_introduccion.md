@@ -3,7 +3,7 @@ title: Introducción al ESP32, consideraciones y referencia de pines
 published: 2025-10-11
 description: '¿Qué es el ESP32? ¿Qué pines debería utilizar en mi proyecto? ¿Cuáles pines debería evitar?'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_introduccion/esp32s.jpeg'
-tags: [Maker]
+tags: [Maker,silence_machine]
 category: 'Maker'
 draft: false 
 lang: 'es'
