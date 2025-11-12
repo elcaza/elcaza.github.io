@@ -3,7 +3,7 @@ title: Diagramas del ESP32 (30 y 38 pines)
 published: 2025-10-24
 description: 'Diagramas del ESP32, diferencias y similitudes entre las placas de 30 y 38 pines'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_diagramas/ESP32_30_pin.png'
-tags: [Maker,silence_machine]
+tags: [Maker]
 category: 'Maker'
 draft: false 
 lang: 'es'
