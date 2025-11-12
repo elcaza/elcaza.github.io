@@ -3,7 +3,7 @@ title: La máquina generadora de silencio
 published: 2025-11-12
 description: 'La máquina generadora de silencio es un dispositivo que te ayuda a recobrar la paz perdida cuando la bocina ruidosa de tu vecino suena a máximo volumen.'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/rf_diagramas/nrf24l01_pa_lna.png'
-tags: [Maker, Silence_Machine]
+tags: [Maker, silence_machine]
 category: 'Maker'
 draft: true 
 lang: 'es'
