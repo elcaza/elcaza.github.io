@@ -3,7 +3,7 @@ title: Diagramas de los módulos de radio frecuencia 2.4
 published: 2025-10-24
 description: 'Los módulos nRF24L01 PA LNA y variantes'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/rf_diagramas/nrf24l01_pa_lna.png'
-tags: [Maker]
+tags: [Maker, Silence_Machine]
 category: 'Maker'
 draft: false 
 lang: 'es'
