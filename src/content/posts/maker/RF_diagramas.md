@@ -23,93 +23,93 @@ lang: 'es'
 + Frecuencia de operación: Banda ISM de 2.4 GHz
 + Alcance: Típicamente hasta 1 km en línea de vista (a 250 Kbps)
 + Velocidad de datos: Seleccionable entre 250 Kbps, 1 Mbps y 2 Mbps
-    + A mayor velocidad de datos, menor es el alcance efectivo
+	+ A mayor velocidad de datos, menor es el alcance efectivo
 + Interfaz: Utiliza el bus SPI (Serial Peripheral Interface) para la comunicación con microcontroladores
 + Antena: Suele incluir un conector SMA y una antena externa (a diferencia de la antena PCB integrada del modelo estándar)
 + Voltaje de alimentación: Funciona a 3.3V 
-    + **Es importante. Si se conecta a 5v se quema.**
+	+ **Es importante. Si se conecta a 5v se quema.**
 
 # Diagrama nRF24L01 PA LNA
 <img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/rf_diagramas/nrf24l01_pa_lna.png" width="100%">
 
 # ¿Qué hace cada PIN?
 <table>
-    <thead>
-        <tr>
-            <th>PIN Number</th>
-            <th>PIN Name</th>
-            <th>Abbreviation</th>
-            <th>Function</th>
-            <th>Comentarios</th>
-            <th>Color de cable</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>GND</td>
-            <td>Ground</td>
-            <td>Connected to the Ground of the system</td>
-            <td>Conexión a tierra</td>
-            <td>Negro ⬛</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>VCC</td>
-            <td>Power</td>
-            <td>Powers the module using 3.3V</td>
-            <td>Alimentación 3.3V</td>
-            <td>Rojo 🔴</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>CE</td>
-            <td>Chip Enable</td>
-            <td>Used to enable SPI communication (Serial Peripheral Interface)</td>
-            <td>Usado principalmente para la transferencia de información entre circuitos integrados en equipos electrónicos</td>
-            <td>Amarillo 🟡</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>CSN</td>
-            <td>Chip Select Not</td>
-            <td>This pin has to be kept high always, else it will disable the SPI</td>
-            <td></td>
-            <td>Naranja 🟠</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>SCK</td>
-            <td>Serial Clock</td>
-            <td>Provides the clock pulse using which the SPI communications works</td>
-            <td>Provee la frecuencia de reloj</td>
-            <td>Verde 🟢</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>MOSI</td>
-            <td>Master Out Slave In</td>
-            <td>Connected to MOSI pin of MCU, for the module to receive data from MCU</td>
-            <td>Recibir información</td>
-            <td>Azul 🔵</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>MISO</td>
-            <td>Master In Slave Out</td>
-            <td>Connected to MISO pin of MCU, for the module to send data from the MCU</td>
-            <td>Enviar información</td>
-            <td>Morado 🟣</td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td>IRQ</td>
-            <td>Interrupt</td>
-            <td>It is an active low pin and is used only if interrupt is required</td>
-            <td>PIN de interrupción</td>
-            <td></td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>PIN Number</th>
+			<th>PIN Name</th>
+			<th>Abbreviation</th>
+			<th>Function</th>
+			<th>Comentarios</th>
+			<th>Color de cable</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>GND</td>
+			<td>Ground</td>
+			<td>Connected to the Ground of the system</td>
+			<td>Conexión a tierra</td>
+			<td>Negro ⬛</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>VCC</td>
+			<td>Power</td>
+			<td>Powers the module using 3.3V</td>
+			<td>Alimentación 3.3V</td>
+			<td>Rojo 🔴</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>CE</td>
+			<td>Chip Enable</td>
+			<td>Used to enable SPI communication (Serial Peripheral Interface)</td>
+			<td>Usado principalmente para la transferencia de información entre circuitos integrados en equipos electrónicos</td>
+			<td>Amarillo 🟡</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>CSN</td>
+			<td>Chip Select Not</td>
+			<td>This pin has to be kept high always, else it will disable the SPI</td>
+			<td></td>
+			<td>Naranja 🟠</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>SCK</td>
+			<td>Serial Clock</td>
+			<td>Provides the clock pulse using which the SPI communications works</td>
+			<td>Provee la frecuencia de reloj</td>
+			<td>Verde 🟢</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>MOSI</td>
+			<td>Master Out Slave In</td>
+			<td>Connected to MOSI pin of MCU, for the module to receive data from MCU</td>
+			<td>Recibir información</td>
+			<td>Azul 🔵</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>MISO</td>
+			<td>Master In Slave Out</td>
+			<td>Connected to MISO pin of MCU, for the module to send data from the MCU</td>
+			<td>Enviar información</td>
+			<td>Morado 🟣</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>IRQ</td>
+			<td>Interrupt</td>
+			<td>It is an active low pin and is used only if interrupt is required</td>
+			<td>PIN de interrupción</td>
+			<td></td>
+		</tr>
+	</tbody>
 </table>
 
 # Comparativa con otros módulos

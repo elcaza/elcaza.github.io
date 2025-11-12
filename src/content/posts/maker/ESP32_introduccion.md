@@ -45,6 +45,11 @@ La diferencia entre la placa con 30 y 38 pines es la siguiente:
 + 1 PIN GPIO 0
 + 1 PIN GND
 
+En el siguiente link tienes una tabla comparativa. La cual puedes usar para desarrollar tus proyectos.
++ <a href="https://docs.google.com/spreadsheets/d/1YNoNZgmX--Lw4E8IRFao4P5vAvbYQ9OI-MIKGRNjCKg/edit?usp=sharing" target="_blank">Tabla comparatia ESP32 38 PIN VS 30 PIN</a>
+
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/esp32_diagramas/ESP32_tabla_comparativa.png" width="100%">
+
 En conclusión, es posible que no extrañes esos pines. 
 
 # Diagrama de pines en el ESP32
