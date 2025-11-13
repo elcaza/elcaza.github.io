@@ -1,16 +1,16 @@
 ---
 title: pyenv vs pipx vs conda
-published: 2024-07-13
+published: 2025-06-21
 description: 'Entornos virtuales en python.'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/pyenv_pipx_conda/portada.jpeg'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/pyenv_pipx_conda/portada.jpg'
 tags: [Sysadmin, Python]
 category: 'Sysadmin'
-draft: true 
+draft: false 
 lang: 'es'
 ---
 
 # Entornos virtuales en python
-Los entornos virtuales en Python son  espacios aislados que contienen su propio intérprete de Python y un conjunto de paquetes o dependencias instaladas, independientes de la instalación global de Python en tu sistema.
+Los entornos virtuales en Python son espacios aislados que contienen su propio intérprete de Python y un conjunto de paquetes o dependencias instaladas, independientes de la instalación global de Python en tu sistema.
 
 ## Ventajas
 + Aislamiento de dependencias: Evitan conflictos entre las bibliotecas. 
@@ -18,7 +18,6 @@ Los entornos virtuales en Python son  espacios aislados que contienen su propio 
 + Portabilidad y replicabilidad: Facilitan compartir tu proyecto. Puedes generar un archivo de requisitos (`requirements.txt`) para que otros desarrolladores puedan replicar exactamente el mismo entorno de trabajo.
 
 ## 
-
 
 # Python Virtual Environment (venv)
 ~~~bash
