@@ -24,8 +24,8 @@ sudo apt -y install linux-headers-$(uname -r)
 ~~~
 
 ## Rutas para nuevos programas en PATH
-+ /usr/local/bin/
-+ /opt/new_program/
++ `/usr/local/bin/`
++ `/opt/new_program/`
 
 ### Amenidades para el sistema operativo
 + touchegg - Linux multi-touch gesture recognizer

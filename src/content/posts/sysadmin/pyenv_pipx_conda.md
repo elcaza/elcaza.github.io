@@ -8,7 +8,7 @@ category: 'Sysadmin'
 draft: false 
 lang: 'es'
 ---
-
+Pendiente
 # Entornos virtuales en python
 Los entornos virtuales en Python son espacios aislados que contienen su propio intérprete de Python y un conjunto de paquetes o dependencias instaladas, independientes de la instalación global de Python en tu sistema.
 
