@@ -2,7 +2,7 @@
 title: Configurando un laboratorio para pruebas de penetración
 published: 2024-12-09
 description: 'Comandos básicos para Docker'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/linux/linux_laboratorio/portada.png'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/linux/linux_laboratorio/portada.jpg'
 tags: [Linux, Hacking]
 category: 'Linux'
 draft: false 
@@ -64,15 +64,15 @@ sudo apt -y install linux-headers-$(uname -r)
 + Docker
 + GenyMotion
 + Android Studio
-	+ https://wiki.debian.org/AndroidStudio
-	+ https://medium.com/@dmaioni/android-studio-62ab2f54911c
+	+ <a href="https://wiki.debian.org/AndroidStudio" target="_blank">Android Studio - Wiki Debian</a>
+	+ <a href="https://medium.com/@dmaioni/android-studio-62ab2f54911c" target="_blank">Android Studio - Medium</a>
 
 ## Visor de bases de datos
 
 ~~~bash
 sudo apt-get install sqlitebrowser
 ~~~
-+ https://sqlitebrowser.org/dl/
++ <a href="https://sqlitebrowser.org/dl/" target="_blank">Sitio web</a>
 
 ## Máquinas virtuales
 + Windows 10
@@ -97,22 +97,23 @@ sudo apt-get install sqlitebrowser
 ## Misc
 + exiftool
 
-# Anexo - Fuentes y más información
+# Anexo - Links
 Amenidades para el sistema operativo
-+ https://github.com/JoseExposito/touchegg?tab=readme-ov-file
-+ https://github.com/priyaranjankumar/touchegg.conf
++ <a href="https://github.com/JoseExposito/touchegg?tab=readme-ov-file" target="_blank">JoseExposito - touchegg</a>
++ <a href="https://github.com/priyaranjankumar/touchegg.conf" target="_blank">priyaranjankumar - touchegg.conf</a>
 
 Manejo de evidencia
-+ https://flameshot.org/
++ <a href="https://flameshot.org/" target="_blank">Flameshot</a>
 
 Editor de texto
-+ https://code.visualstudio.com/
++ <a href="https://code.visualstudio.com/" target="_blank">vscode</a>
 
 Virtualizadores
-+ https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html
-+ https://www.docker.com/
-+ https://www.genymotion.com/ 
-+ https://developer.android.com/studio/?hl=es-419 
++ <a href="https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html" target="_blank">vmware</a>
++ <a href="https://www.docker.com/" target="_blank">Docker</a>
++ <a href="https://www.genymotion.com/" target="_blank">Genymotion</a>
++ <a href="ttps://developer.android.com/studio/?hl=es-419" target="_blank">Android Studio</a>
+
 
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
