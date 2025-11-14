@@ -120,6 +120,11 @@ wget -r ftp://server-address.com/directory
 wget -nd -r -A pdf,doc,docx,xls,xlsx,jpg www.rediris.es
 ~~~
 
+## Buscar archivos
+~~~bash
+find / -name "name" 2> /dev/null
+~~~
+
 ### curl
 
 ~~~bash
