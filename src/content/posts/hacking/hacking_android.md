@@ -2,7 +2,7 @@
 title: Hacking Android
 published: 2024-07-13
 description: 'Notas sobre pruebas de seguridad a Android'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/linux/comandos_linux/portada.png'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/hacking_android/portada.jpg'
 tags: [Hacking, Android]
 category: 'Hacking'
 draft: false 
