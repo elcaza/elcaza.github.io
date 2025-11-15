@@ -1,6 +1,6 @@
 ---
 title: Utilerías y comandos en Linux
-published: 2024-12-12
+published: 2022-09-05
 description: 'Comandos básicos, notas y utilerías en Linux'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/linux/comandos_linux/portada.png'
 tags: [Linux, Hacking]
