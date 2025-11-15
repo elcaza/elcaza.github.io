@@ -2,7 +2,7 @@
 title: Configurando un laboratorio para pruebas de penetración
 published: 2024-12-09
 description: 'Comandos básicos para Docker'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/linux/linux_laboratorio/portada.jpg'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/linux/linux_laboratorio/portada.png'
 tags: [Linux, Hacking]
 category: 'Linux'
 draft: false 
