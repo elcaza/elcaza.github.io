@@ -13,11 +13,11 @@ lang: 'es'
 
 ## Banda 2.4ghz - WIFI (2.412 GHz a 2.484 GHz)​
 + Cada canal tiene un ancho fijo
-+ El ancho de banda nominal (principal) del canal son 20 MHz
-+ Todo se basa en la frecuencia central +-10
++ El ancho de banda nominal (principal) del canal es de 20 MHz
++ Todo se basa en la frecuencia central ±10
 + Se da 1 mhz de tolerancia para temas de ruido
 + Los canales sin solapamiento son 1,6 y 11
-+ Hay 14 canales en total, cada uno de 20 MHz de ancho. En Norteamérica los canales permitidos son del 1 al 11
++ Hay 14 canales en total, cada uno de 20 MHz de ancho. En Norteamérica los canales permitidos son del 1 al 11.
 
 <table>
 	<thead>
@@ -119,7 +119,7 @@ lang: 'es'
 + Salto de Frecuencia (FHSS)​
 	+ 79 canales de forma pseudoaleatoria, hasta 1600 veces por segundo
 
-<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/canales_wifi_bt/2_bt.png" width="100%">
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/canales_wifi_bt/2_bt.jpeg" width="100%">
 
 ## Banda 2.4ghz - BLE (2.402 GHz y 2.480 GHz)​
 Canales

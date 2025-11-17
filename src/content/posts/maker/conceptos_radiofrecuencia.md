@@ -10,7 +10,7 @@ lang: 'es'
 ---
 
 # ¿Qué es la radiofrecuencia?​
-+ Uso de ondas electromagnéticas para transmitir información de forma inalámbrica.​
++ Uso de ondas electromagnéticas para transmitir información de forma inalámbrica
 + Medida de la rapidez con la que algo se repite, por lo que hay infinitas frecuencias posibles
 
 # Espectro Electromagnético​
@@ -33,7 +33,7 @@ lang: 'es'
 # Modulación
 + Es el proceso de "cargar" la información en la onda portadora
 + En la radio AM (Amplitud Modulada), la información se carga variando la amplitud de la onda
-+ En la radio FM (Frecuencia Modulada), se varía la frecuencia de la onda.​
++ En la radio FM (Frecuencia Modulada), se varía la frecuencia de la onda
 
 # Antena
 + Es el componente que convierte las señales eléctricas en ondas electromagnéticas (transmisión y recepción)​
