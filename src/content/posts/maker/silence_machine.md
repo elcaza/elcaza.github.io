@@ -1,11 +1,11 @@
 ---
 title: La máquina generadora de silencio
-published: 2025-11-12
+published: 2025-11-17
 description: 'La máquina generadora de silencio es un dispositivo que te ayuda a recobrar la paz perdida cuando la bocina ruidosa de tu vecino suena a máximo volumen.'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/rf_diagramas/nrf24l01_pa_lna.png'
+image: 'https://raw.githubusercontent.com/elcaza/silence_machine/refs/heads/main/silence_machine.jpeg'
 tags: [Maker, silence_machine]
 category: 'Maker'
-draft: true 
+draft: false 
 lang: 'es'
 ---
 
@@ -15,19 +15,24 @@ Existe la versión de un sólo núcleo y dos núcleos:
 + <a href="https://github.com/elcaza/silence_machine" target="_blank">Silence Machine - Dual Core</a>
 + <a href="https://github.com/elcaza/silence_machine_single_core" target="_blank">Silence Machine - Single Core</a>
 
-# ¿Cómo funciona?
 Para entender su funcionamiento necesitamos entender lo siguiente:
 1. La música es la combinación de sonidos, ritmos y silencios expresados en ondas y frecuencias.
 1. Pese a las reglamentaciones locales, las autoridades informan que no pueden hacer nada en contra de las bocinas ruidosas cuando estas suenan dentro de los domicilios. Dicen que si te molesta, "pongas tu música también".
-1. Dado lo anterior, solo quedaba una cosa por hacer. Poner mi música a todo volumen, siendo mi música una combinación de silencios a un a su máxima potencia.
+1. Dado lo anterior, solo quedaba una cosa por hacer. Poner mi música a todo volumen, siendo mi música una combinación de silencios a su máxima potencia.
 
-Señoras y señores, me complace presentarles a la máquina generadora de silencio.
+Señoras y señores, damas y caballeros, me complace presentarles a la máquina generadora de silencio.
 
 :::note[Nota]
 Puedes leer todos los artículos relacionados a este tema en:
 
 + <a href="https://elcaza.github.io/archive/?tag=silence_machine" target="_blank">Contexto de la máquina generadora de silencio</a>
 :::
+
+# ¿Cómo funciona?
+Puedes ver una explicación profunda en:
++ <a href="https://elcaza.github.io/posts/maker/canales_wifi_bt/" target="_blank">Canales WiFi y Bluetooth</a>
+
+De manera resumida, imagina que para que tu bocina reproduzca música requiere enviar datos a través de una línea teléfonica distinta a una velocidad de 1600 veces por segundo. Este proyecto busca que esas líneas estén ocupadas transmitiendo silencio. Básicamente, como cuando pones dos bocinas a todo volumen y la música se mezcla entre sí.
 
 # Componentes requeridos
 + 1 ESP32 o similar. 30 o 38 pines, son bienvenidos.
@@ -317,14 +322,14 @@ Modo de creación (`custom_mode`)
 1. Creas una función que coincida con el identificador numérico de tu `custom_mode` en `void silence_mode_#() {}`
 1. Añade el `case` correspondiente a tu `custom_mode` en `void generate_silence(int p_index) {}`
 
-## Pautas para el código
+## Pautas para la integración de código
 + Identación por tabuladores de 4 espacios de longitud
-+ Nombres homologados
++ Homologación de nombres
 + Que los modos tengan un propósito definido y útil
 
 ## Diagrama de funcionamiento
 
-
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/silence_machine/diagrama.png" width="100%">
 
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur

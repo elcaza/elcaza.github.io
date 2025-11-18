@@ -10,6 +10,7 @@ lang: 'es'
 ---
 
 # Canales WiFi y Bluetooth
+Los canales de Wi-Fi y Bluetooth son los rangos de frecuencia que utilizan estas tecnologías para transmitir datos en la banda de 2.4 GHz (una de las bandas ISM). Aunque comparten el mismo espectro, su forma de gestionarlo es diferente para evitar interferencia.
 
 ## Banda 2.4ghz - WIFI (2.412 GHz a 2.484 GHz)​
 + Cada canal tiene un ancho fijo
@@ -131,9 +132,26 @@ Salto de Frecuencia (FHSS)​
 + 79 canales de forma pseudoaleatoria, hasta 1600 veces por segundo​
 + 3 Advertising Channels​: 37, 38 y 39
 
-<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/canales_wifi_bt/4_all.png" width="100%">
-
 # Solapamiento de canales
+WIFI ​
++ 2.412 GHz a 2.484 GHz​
++ 14 canales​
++ 20 MHz​
+
+Bluetooth Clásico (BR/EDR) Basic Rate/Enhanced Data Rate o BR/EDR​
++ 2.402 GHz y 2.480 GHz​
++ 79 canales​
++ 1 MHz​
++ Salto de Frecuencia (FHSS) - 1600/s​
+
+Bluetooth LE o BLE​
++ 2.402 GHz y 2.480 GHz​
++ 40 canales​
++ 2 MHz​
++ Salto de Frecuencia (FHSS) - 1600/s​
++ Advertising Channels - 37, 38 y 39​
+
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/canales_wifi_bt/4_all.png" width="100%">
 
 
 :::note[Nota final]
