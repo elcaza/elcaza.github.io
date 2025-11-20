@@ -633,16 +633,19 @@ Salto de Frecuencia (FHSS)​
 + 40 canales​
 + 2 MHz​
 + Salto de Frecuencia (FHSS) - 1600/s​
-+ Advertising Channels - 37, 38 y 39​
++ Advertising Channels
+	+ 37 => 2402 => 2
+	+ 38 => 2426 => 26
+	+ 39​ => 2480 => 80
 
 ## Limites ideales:
 + Inferior 2
 + Superior 79
 
 ## Advertising
-+ 2
-+ 26
-+ 80
++ 37 => 2402 => 2
+	+ 38 => 2426 => 26
+	+ 39​ => 2480 => 80
 
 <img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/canales_wifi_bt/4_all.png" width="100%">
 
