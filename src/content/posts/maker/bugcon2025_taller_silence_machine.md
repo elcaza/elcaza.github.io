@@ -16,7 +16,7 @@ Si te gustaría saber más sobre el proyecto, te recomiendo leer el artículo pr
 En este artículo abordaremos paso a paso la creación de la máquina generadora de silencio.
 
 # Presentación compartida durante la BugCon
-+ <a href="https://github.com/elcaza" target="_blank">Presentación</a>
++ <a href="https://drive.google.com/drive/folders/1whjk0r1jHvVh9JrQjt0LCzw3TOpWxE8V?usp=drive_link" target="_blank">Presentación</a>
 
 # Materiales requeridos para el taller
 
