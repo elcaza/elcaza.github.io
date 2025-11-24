@@ -12,8 +12,10 @@ lang: 'es'
 # ¿Qué es la máquina generadora de silencio (Silence Machine)? 
 La máquina generadora de silencio es un dispositivo que te ayuda a recobrar la paz perdida cuando la bocina ruidosa de tu vecino suena a máximo volumen. 
 Existe la versión de un sólo núcleo y dos núcleos:
-+ <a href="https://github.com/elcaza/silence_machine" target="_blank">Silence Machine - Dual Core</a>
++ <a href="https://github.com/elcaza/silence_machine" target="_blank">Silence Machine - Dual Core (Recomendada)</a>
 + <a href="https://github.com/elcaza/silence_machine_single_core" target="_blank">Silence Machine - Single Core</a>
+	+ La versión de un sólo núcleo es menos eficiente que la versión de dos núcleos, sin embargo cuenta con código más fácil de leer y programar.
+	+ La versión de un sólo núcleo fue la prueba de concepto para crear la versiń dual core.
 
 Para entender su funcionamiento necesitamos entender lo siguiente:
 1. La música es la combinación de sonidos, ritmos y silencios expresados en ondas y frecuencias.
