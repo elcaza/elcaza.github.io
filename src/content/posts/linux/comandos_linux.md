@@ -9,6 +9,20 @@ draft: false
 lang: 'es'
 ---
 
+# Creación de lanzadores (accesos directos)
+`~/.local/share/applications/android_studio.desktop`
+
+~~~bash
+[Desktop Entry]
+Name=Android Studio
+Comment=Android Studio
+Exec=/opt/android-studio/bin/studio.sh
+Icon=/opt/android-studio/bin/studio.png
+Terminal=false
+Type=Application
+Categories=Development;IDE;
+~~~
+
 # Utilidades
 
 ## Compartir carpeta en máquina virtual (Linux host - Linux guest)
