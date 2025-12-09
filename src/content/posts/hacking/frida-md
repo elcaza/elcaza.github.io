@@ -1,0 +1,140 @@
+---
+title: Frida en iOS y Android
+published: 2025-12-09
+description: '¿Cómo usar Frida en iOS y Android?'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/drozer/portada.png'
+tags: [Hacking, Android]
+category: 'Hacking'
+draft: true 
+lang: 'es'
+---
+
+# ¿Qué es Frida?
+Descripción
+
+# Instalación de Frida Client (En computadora)
+Para instalarlo se requieren dos cosas:
+1. Frida Server (Instalado en el celular)
+1. Frida Client (En la computadora)
+
+## 1) Instalación de dependencias
+~~~bash
+sudo apt install python3-venv python3-pip
+~~~
+
+## 2) Creación del entorno virtual
+~~~bash
+# Esto debe hacerse desde el lugar en que quieras tu instalación
+python3 -m venv frida_env
+
+# Para activarlo
+source frida_env/bin/activate
+
+# Para desactivarlo
+deactivate
+~~~
+
+## 3) Instalación de frida-tools y objection
+~~~bash
+# En caso de tener instalado
+pip uninstall frida frida-tools objection
+
+# Define la versión a instalar
+VERSION=16.5.2
+pip install frida==$VERSION frida-tools objection
+
+# Comprobar instalación
+frida --version
+~~~
+
+# Instalación de Frida Server Android (Celular)
+
+## 1) Conoce tu arquitectura
+~~~bash
+adb shell getprop ro.product.cpu.abi
+~~~
++ `arm64-v8a` => use `frida-server-16.5.2-android-arm64.xz`
++ `armeabi-v7a` => use `frida-server-16.5.2-android-arm.xz`
++ `x86_64` => use `frida-server-16.5.2-android-x86_64.xz`
++ `x86` => use `frida-server-16.5.2-android-x86.xz`
+
+## 2.1) Descarga Frida Server para Android
+
+### Forma manual
+~~~bash
+VERSION=16.5.2
+
+# ARM 32bits
+wget https://github.com/frida/frida/releases/download/${VERSION}/frida-server-${VERSION}-android-arm.xz
+
+# ARM 64bits
+wget https://github.com/frida/frida/releases/download/${VERSION}/frida-server-${VERSION}-android-arm64.xz
+
+# Descomprimir 32bits
+xz -dc frida-server-${VERSION}-android-arm.xz > frida-server && chmod +x frida-server
+
+# Descomprimir 64bits
+xz -dc frida-server-${VERSION}-android-arm64.xz > frida-server && chmod +x frida-server
+
+## Push Device
+adb push frida-server /data/local/tmp/
+
+## Permisos y ejecución
+# adb shell chmod 777 /data/local/tmp/frida-server
+adb shell su -c "/data/local/tmp/frida-server &"
+~~~
+
+### Instalación con Frida Launcher
++ <a href="github.com/thecybersandeep/Frida-Launcher" target="_blank">Frida Launcher</a>
+
+# Instalación de Frida Server iOS (Celular)
+
+## 1) Obten la versión
+~~~bash
+frida --version
+~~~
+
+## 2.1) Descarga Frida Server para iOS
+
+### Forma manual
+~~~bash
+VERSION=16.5.2
+
+# ARM 32bits
+curl -LO https://github.com/frida/frida/releases/download/${VERSION}/frida_${VERSION}_iphoneos-arm.deb
+
+# ARM 64bits
+curl -LO https://github.com/frida/frida/releases/download/${VERSION}/frida_${VERSION}_iphoneos-arm64.deb
+
+# Transferir al dispositivo 32bits
+scp frida_${VERSION}_iphoneos-arm.deb root@DEVICE_IP:/tmp/
+
+# Transferir al dispositivo 64bits
+scp frida_${VERSION}_iphoneos-arm64.deb root@DEVICE_IP:/tmp/
+
+# Desde el dispositivo
+~~~
+
+# Links
+## Documentación oficial
+
+## No oficial
+
+https://github.com/frida/frida/issues/2897
+https://infosecwriteups.com/the-frida-objection-setup-guide-solving-version-hell-on-android-ios-timeless-guide-f55eb98459a0
+https://freedium.cfd/https://infosecwriteups.com/the-frida-objection-setup-guide-solving-version-hell-on-android-ios-timeless-guide-f55eb98459a0
+
+:::note[Nota final]
+¡Gracias por terminar de leer este artículo! uwur
+
+— El Capitán
+
+¿Tienes alguna duda o te gustaría comentar algo sobre este artículo?
++ <a href="https://t.me/elcazablog" target="_blank">Únete a nuestra comunidad en Telegram</a>
+
+Puedes encontrarme en:
++ <a href="https://twitter.com/elcaza_" target="_blank">Twitter</a>
++ <a href="https://github.com/elcaza" target="_blank">Github</a>
++ <a href="https://www.linkedin.com/in/elcaza/" target="_blank">LinkedIn</a>
+:::
+

@@ -162,6 +162,15 @@ sudo apt install sqlitebrowser
 + Kali Linux
 + Parrot OS
 
+## Herramientas de programación
++ Java
++ Python env
+~~~
+sudo apt install openjdk-17-jdk
+
+
+~~~
+
 ## Imágenes de Docker
 + MobSF
 	+ `sudo docker run -it --name mobsf -p 8000:8000 opensecurity/mobile-security-framework-mobsf:latest`
@@ -184,6 +193,11 @@ sudo apt install sqlitebrowser
 + exiftool
 
 # Anexo - Links
+
+## Pruebas móviles
++ <a href="https://elcaza.github.io/posts/hacking/hacking_android/" target="_blank">Configuraciones referentes a Android</a>
++ <a href="https://elcaza.github.io/posts/hacking/hacking_ios/" target="_blank">Configuraciones referentes a iOS</a>
+
 ## Amenidades para el sistema operativo
 + <a href="https://github.com/JoseExposito/touchegg?tab=readme-ov-file" target="_blank">JoseExposito - touchegg</a>
 + <a href="https://github.com/priyaranjankumar/touchegg.conf" target="_blank">priyaranjankumar - touchegg.conf</a>

@@ -11,6 +11,10 @@ lang: 'es'
 
 # Android pentest
 
+# Herramientas útiles
++ apktool - <a href="https://elcaza.github.io/posts/hacking/apktool/" target="_blank">Tutorial de uso e instalación</a>
+
+
 # Teoría
 
 ## Rooteando Android
@@ -199,7 +203,7 @@ adb usb
 ### ADB útiles
 ~~~bash
 # Ver logs
-abd logcat
+adb logcat
 
 # Create tcpdump in mobile
 tcpdump -v -s 0 -w my_pcap.pcap
