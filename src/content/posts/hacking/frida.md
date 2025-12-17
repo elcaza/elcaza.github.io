@@ -113,6 +113,7 @@ scp frida_${VERSION}_iphoneos-arm.deb root@DEVICE_IP:/tmp/
 scp frida_${VERSION}_iphoneos-arm64.deb root@DEVICE_IP:/tmp/
 
 # Desde el dispositivo
+
 ~~~
 
 # Links
@@ -137,4 +138,3 @@ Puedes encontrarme en:
 + <a href="https://github.com/elcaza" target="_blank">Github</a>
 + <a href="https://www.linkedin.com/in/elcaza/" target="_blank">LinkedIn</a>
 :::
-

@@ -33,8 +33,11 @@ Y todo esto sin límite de almacenamiento (Todo dependerá de tu capacidad en di
 1. Descarga los archivos requeridos
     + Selecciona el lugar donde vivirá la aplicación. Por ejemplo:
         + `/opt/immich`
+        + `mkdir immich`
     + Descarga `docker-compose.yml`
+        + `wget -O docker-compose.yml https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml`
     + Descarga `.env`
+        + `wget -O .env https://github.com/immich-app/immich/releases/latest/download/example.env`
 2. Ingresa los valores requeridos del archivo .env *(Recuerda cambiar los datos por defecto)*
     + `UPLOAD_LOCATION=./library`. En caso de Raspberry Pi, un disco duro externo
     + `DB_DATA_LOCATION=./postgres`

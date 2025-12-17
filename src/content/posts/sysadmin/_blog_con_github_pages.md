@@ -1,7 +1,7 @@
 ---
 title: Crea tu propio blog con Github Pages
 published: 2025-08-13
-description: 'Description'
+description: 'Crea tu propio blog con Github pages'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/kms/como_funcionan_los_activadores_kms.webp'
 tags: [Sysadmin]
 category: 'Sysadmin'

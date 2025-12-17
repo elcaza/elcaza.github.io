@@ -12,6 +12,8 @@ lang: 'es'
 # Android pentest
 
 # Herramientas útiles
++ adb
+	+ `sudo apt install adb`
 + apktool - <a href="https://elcaza.github.io/posts/hacking/apktool/" target="_blank">Tutorial de uso e instalación</a>
 
 

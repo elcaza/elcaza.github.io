@@ -172,6 +172,14 @@ tar --warning=no-file-changed --exclude={*.mp4,*.mp3,'./public_html'} --ignore-f
 ************************************************************************************************
 # Utilerías
 
+## Ver las configuraciones actuales de algún servicio
+~~~bash
+grep -v "#" /etc/ssh/sshd_config | awk 'NF'
+~~~
++ `-v "#"` todo lo que no tenga `#`
++ `awk 'NF'` Number of Fields
+    + imprimir la línea completa (`{ print }`) solo si la condición es verdadera (`si NF > 0`).
+
 ## Read a do anything
 ~~~bash
 #!/bin/bash

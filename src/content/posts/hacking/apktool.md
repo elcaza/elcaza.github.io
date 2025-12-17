@@ -53,7 +53,7 @@ find / -name "zipalign" 2> /dev/null
 
 ### ¿Cómo usarlo?
 ~~~bash
-/home/elcaza/Android/Sdk/build-tools/36.0.0/zipalign -v 4 patched_app.apk patched_app_aligned.apk
+/home/elcaza/Android/Sdk/build-tools/36.1.0/zipalign -v 4 patched_app.apk patched_app_aligned.apk
 ~~~
 + Cambia `elcaza` por tu `usuario`
 + La ruta es la que salio en la sección de "¿Cómo encontrarlo?"
@@ -80,7 +80,7 @@ find / -name "apksigner" 2> /dev/null
 
 #### ¿Cómo usarlo?
 ~~~bash
-/home/elcaza/Android/Sdk/build-tools/36.0.0/apksigner sign --ks debug.keystore --ks-key-alias androiddebugkey patched_app_aligned.apk
+/home/elcaza/Android/Sdk/build-tools/36.1.0/apksigner sign --ks debug.keystore --ks-key-alias androiddebugkey patched_app_aligned.apk
 ~~~
 + La contraseña establecida en el paso anterior fue `android`
 
