@@ -34,6 +34,14 @@ systemctl restart zerotier-one
 # Descarga los clientes
 + <a href="https://www.zerotier.com/download/" target="_blank">Clientes</a>
 
+# ¿Cómo desinstalar?
+
+~~~bash
+sudo systemctl stop zerotier-one
+sudo apt remove --purge zerotier-one
+sudo rm -rf /var/lib/zerotier-one
+~~~
+
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
