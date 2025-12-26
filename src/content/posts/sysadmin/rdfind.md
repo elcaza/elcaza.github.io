@@ -68,6 +68,12 @@ rdfind -makesymlinks true folder
 + El archivo duplicado se convierte en un pequeño puntero que indica dónde está el archivo original
 + Resultado: El archivo duplicado ahora es solo un "alias". Si borras el archivo original, el enlace simbólico quedará "roto" y no podrás acceder al contenido desde esa ruta
 
+# Cosas a considerar, ¿Cuándo podría fallar?
+1. Permisos de lectura: Si hay archivos que no puede leer, no serán analizados
+1. Sistemas de archivos diferentes: Si intentas crear hardlinks entre dos discos diferentes (por ejemplo, de un disco duro externo a tu disco interno)
+1. Metadatos (Atributos del archivo): Rdfind compara el contenido del archivo, no sus metadatos.
+1. El "Fallo Humano": El orden de los argumentos: Si un archivo está en ambas, el de `carpeta_A` se considera el original y el de `carpeta_B` el duplicado. Si te equivocas en el orden, podrías terminar borrando el archivo de la carpeta que querías mantener limpia.
+    + Por ejemplo, archivos de github o archivos de máquinas virtuales
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
