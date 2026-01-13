@@ -16,6 +16,8 @@ lang: 'es'
 
 # Uso en Docker
 
+## Creación de los siguientes archivos
+
 ### Env
 
 `.env`
@@ -78,7 +80,7 @@ services:
 
 ~~~
 
-Comandos extras
+## Creación de las carpetas requeridas para el sistema
 
 ~~~bash
 # Crear carpetas de sistema (donde está el .yml)
@@ -88,7 +90,27 @@ mkdir -p ./config ./db ./data
 sudo chown -R 33:33 ./config ./db ./data
 
 # Docker
-docker exec -u 33 nextcloud-app php occ files:scan --all
+sudo docker exec -u 33 nextcloud-app php occ files:scan --all
+~~~
+
+## Inicio del contenedor
+
+~~~bash
+sudo docker compose up -d
+~~~
+
+# En caso de migrar el servidor 
+
+Podrías obtener el siguiente mensaje de error: "Access through untrusted domain".
+Para solucionarlo:
+1. Abre el siguiente archivo: `config/config.php`
+1. Modifica lo siguiente
+
+~~~bash
+'trusted_domains' => 
+  array (
+    0 => 'your_domain:8080',
+  ),
 ~~~
 
 :::note[Nota final]
