@@ -3,7 +3,7 @@ title: Borrar archivos duplicados en Linux con rdfind
 published: 2025-12-24
 description: 'rdfind es una herramienta que te ayuda a eliminar tus archivos duplicados'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/rdfind/portada.jpg'
-tags: [sysadmin]
+tags: [Sysadmin]
 category: 'Sysadmin'
 draft: false 
 lang: 'es'

@@ -3,7 +3,7 @@ title: TailScale
 published: 2025-12-21
 description: 'Conecta tus dispositivos a través de una VPN con TailScale'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/tailscale/portada.jpg'
-tags: [sysadmin]
+tags: [Sysadmin]
 category: 'Sysadmin'
 draft: false 
 lang: 'es'
