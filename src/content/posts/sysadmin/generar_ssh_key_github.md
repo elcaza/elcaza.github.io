@@ -1,5 +1,5 @@
 ---
-title: ¿Cómo generar tu ssh key para Github?
+title: Llaves SSH. Github y Servidores
 published: 2025-08-13
 description: 'Aprende a generar tu propia ssh key para Github'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/ssh_key_github/portada.jpeg'
@@ -72,6 +72,37 @@ git clone git@github.com:tu_usuario/tu_repo.git
 <img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/ssh_key_github/8.png" width="100%">
 <img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/ssh_key_github/9.png" width="100%">
 <img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/ssh_key_github/10.png" width="100%">
+
+# SSH para un servidor
+
+## Generación de las llaves
+~~~bash
+ssh-keygen -t ed25519 -C "user@domain.com"
+~~~
++ `ed25519` Es el estándar moderno más seguro y rápido. Si usas un sistema muy antiguo, usa `-t rsa -b 4096`
++ Te preguntará si quieres una "passphrase". Es una contraseña para tu llave
+
+## Copiar la llave al servidor
+### En caso de que solo tengas una llave
+~~~bash
+ssh-copy-id user@server
+~~~
+
+### En caso de que administres varias llaves
+~~~bash
+ssh-copy-id -i ~/.ssh/nombre_de_tu_llave.pub user@domain.com
+~~~
+
+### Conexión
+~~~bash
+ssh -i ~/.ssh/nombre_de_tu_llave user@domain.com
+~~~
+
+## Reiniciar el servidor
+~~~bash
+sudo systemctl restart ssh
+~~~
+
 
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
