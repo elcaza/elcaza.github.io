@@ -3,7 +3,7 @@ title: ZeroTier One
 published: 2025-12-16
 description: 'Conecta tus dispositivos a través de una VPN con ZeroTier One'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/zerotier_one/portada.png'
-tags: [Sysadmim]
+tags: [sysadmin]
 category: 'Sysadmin'
 draft: false 
 lang: 'es'

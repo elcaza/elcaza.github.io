@@ -3,7 +3,7 @@ title: TailScale
 published: 2025-12-21
 description: 'Conecta tus dispositivos a través de una VPN con TailScale'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/tailscale/portada.jpg'
-tags: [Sysadmim]
+tags: [sysadmin]
 category: 'Sysadmin'
 draft: false 
 lang: 'es'
@@ -74,6 +74,35 @@ sudo systemctl disable tailscaled
 sudo apt remove tailscale
 
 sudo rm -rf /var/lib/tailscale  # Aquí se guardan las llaves de la red
+~~~
+
+# Tailscale Funnel
+Con Tailscale Funnel puedes redireccionar puertos expuestos a internet a puertos locales
+
+## Abrir el puerto
+~~~bash
+sudo tailscale funnel 3000
+~~~
+
+## Corroborar servicios
+~~~bash
+tailscale serve status
+~~~
+
+## Cerrar el Funnel (Internet Público)
+~~~bash
+sudo tailscale funnel --off 5000
+~~~
+
+## Dejar de "Servir" el puerto (Privado y Público)
+~~~bash
+sudo tailscale serve --status
+sudo tailscale serve 5000 off
+~~~
+
+## Limpieza total de configuraciones
+~~~bash
+sudo tailscale serve reset
 ~~~
 
 :::note[Nota final]
