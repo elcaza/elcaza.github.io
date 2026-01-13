@@ -2,7 +2,7 @@
 title: Template
 published: 2025-08-11
 description: 'Description'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/kms/como_funcionan_los_activadores_kms.png'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/spotify_distrobox/portada.jpg'
 tags: [Linux]
 category: 'Linux'
 draft: true 
