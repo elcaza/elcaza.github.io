@@ -19,7 +19,7 @@ lang: 'es'
 	+ Linux headers
 
 ~~~bash
-sudo apt -y install build-essential git vim curl gparted cherrytree flameshot net-tools whatweb dirb exiftool
+sudo apt -y install build-essential git vim curl gparted flameshot net-tools whatweb dirb exiftool
 sudo apt -y install linux-headers-$(uname -r)
 ~~~
 
@@ -60,8 +60,8 @@ cp touchegg.conf ~/.config/touchegg/
 ~~~
 
 ## Manejo de evidencia
-+ CherryTree en su versión más reciente
-+ Flameshot
++ <a href="https://obsidian.md/download" target="_blank">Obsidian</a>
++ <a href="https://flameshot.org/" target="_blank">Flameshot</a>
 
 ## Editor de texto
 + <a href="https://code.visualstudio.com/" target="_blank">vsCode</a>

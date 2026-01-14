@@ -1,55 +1,120 @@
 ---
 title: Frida en iOS y Android
-published: 2025-12-09
+published: 2026-01-13
 description: '¿Cómo usar Frida en iOS y Android?'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/drozer/portada.png'
-tags: [Hacking, Android]
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/frida/portada.jpg'
+tags: [Hacking, Android, iOS]
 category: 'Hacking'
 draft: true 
 lang: 'es'
 ---
 
 # ¿Qué es Frida?
-Descripción
+Frida es un toolkit de instrumentación dinámica. Permite "inyectar" código (generalmente scripts en JavaScript) dentro de una aplicación que ya se está ejecutando en un dispositivo Android o iOS, para observar o modificar su comportamiento en tiempo real sin necesidad de tener el código fuente ni de recompilar la app.
 
-# Instalación de Frida Client (En computadora)
-Para instalarlo se requieren dos cosas:
-1. Frida Server (Instalado en el celular)
-1. Frida Client (En la computadora)
+# Detalles importantes a considerar (Errores con algunas versiones)
+Algunas versiones de Frida son incomptatibles con Objection, por lo que debes instalar una versión especifica de Frida.
+Los siguientes enlaces dan más detalles al respecto, pero este post abarcará la instalación que hasta enero del 2026 me ha funcionado.
++ <a href="https://github.com/frida/frida/issues/2897" target="_blank">Github</a>
++ <a href="https://infosecwriteups.com/the-frida-objection-setup-guide-solving-version-hell-on-android-ios-timeless-guide-f55eb98459a0" target="_blank">The Frida & Objection Setup Guide: Solving Version Hell on Android & iOS (Timeless Guide)</a>
++ <a href="https://freedium.cfd/https://infosecwriteups.com/the-frida-objection-setup-guide-solving-version-hell-on-android-ios-timeless-guide-f55eb98459a0" target="_blank">The Frida & Objection Setup Guide: Solving Version Hell on Android & iOS (Timeless Guide) - Freedium</a>
 
-## 1) Instalación de dependencias
+# Instalación de Frida
+Para usar Frida requieres lo siguiente:
+
++ Frida Server
+    + Instalada en el celular (Android o iOS)
++ Frida Client
+    + Instalada en la computadora
++ Ambas versiones deben coincidir y estar ejecutandose en tus dispositivos
+
+## Instalación de Frida Client con UV
+
+### Instalar uv
 ~~~bash
-sudo apt install python3-venv python3-pip
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+    # source $HOME/.local/bin/env (sh, bash, zsh)
+    # source $HOME/.local/bin/env.fish (fish)
 ~~~
 
-## 2) Creación del entorno virtual
+### Instalar Frida
 ~~~bash
-# Esto debe hacerse desde el lugar en que quieras tu instalación
-python3 -m venv frida_env
+mkdir frida_uv && cd frida_uv
 
-# Para activarlo
-source frida_env/bin/activate
+uv venv
 
-# Para desactivarlo
+source .venv/bin/activate
+
+VERSION=16.5.2
+uv pip install frida==$VERSION frida-tools objection
+
+~~~
++ Puedes probar diferentes versiones.
++ La versión 16.5.2 es compatible con objection
+
+### Para salir
+~~~bash
 deactivate
 ~~~
 
-## 3) Instalación de frida-tools y objection
+### Protip
+Puedes correr una especie de contenedor efimero con uv. Por ejemplo, para correr un script.
 ~~~bash
-# En caso de tener instalado
-pip uninstall frida frida-tools objection
-
-# Define la versión a instalar
 VERSION=16.5.2
-pip install frida==$VERSION frida-tools objection
+uv run --with frida==$VERSION --with frida-tools --with objection frida -U -f com.app.app -l script.js
+~~~
 
-# Comprobar instalación
+## iOS - Instalar una versión especifica de Frida
+
+### 1) Obten la versión
+~~~bash
 frida --version
 ~~~
 
-# Instalación de Frida Server Android (Celular)
+### 2) Descarga Frida Server para iOS
 
-## 1) Conoce tu arquitectura
+~~~bash
+VERSION=16.5.2
+
+# ARM 32bits
+curl -LO https://github.com/frida/frida/releases/download/${VERSION}/frida_${VERSION}_iphoneos-arm.deb
+
+# ARM 64bits
+curl -LO https://github.com/frida/frida/releases/download/${VERSION}/frida_${VERSION}_iphoneos-arm64.deb
+
+# Transferir al dispositivo 32bits
+scp frida_${VERSION}_iphoneos-arm.deb root@DEVICE_IP:/tmp/
+
+# Transferir al dispositivo 64bits
+scp frida_${VERSION}_iphoneos-arm64.deb root@DEVICE_IP:/tmp/
+~~~
+
+### 3) Ingresas al dispositivo vía SSH
+~~~bash
+ssh root@DEVICE_IP
+~~~
+
+### 4) Desinstalas cualquier instalación previa de Frida
+~~~bash
+dpkg -r frida
+dpkg -P re.frida.server
+~~~
+
+### 5) Instalas la versión especifica
+~~~bash
+dpkg -i /tmp/frida_16.5.2_iphoneos-arm64.deb
+~~~
++ Verifica que sea tu archivo. Variará acorde a la versión.
+
+### 6) Verifica que el servicio esté corriendo
+~~~bash
+dpkg -L re.frida.server | grep frida-server
+~~~
+
+## Android - Instalar una versión especifica de Frida
+
+### 1) Conoce tu arquitectura
 ~~~bash
 adb shell getprop ro.product.cpu.abi
 ~~~
@@ -58,9 +123,9 @@ adb shell getprop ro.product.cpu.abi
 + `x86_64` => use `frida-server-16.5.2-android-x86_64.xz`
 + `x86` => use `frida-server-16.5.2-android-x86.xz`
 
-## 2.1) Descarga Frida Server para Android
+### 2) Descarga Frida Server para Android
 
-### Forma manual
+#### Forma manual
 ~~~bash
 VERSION=16.5.2
 
@@ -84,46 +149,8 @@ adb push frida-server /data/local/tmp/
 adb shell su -c "/data/local/tmp/frida-server &"
 ~~~
 
-### Instalación con Frida Launcher
+#### Instalación con Frida Launcher
 + <a href="github.com/thecybersandeep/Frida-Launcher" target="_blank">Frida Launcher</a>
-
-# Instalación de Frida Server iOS (Celular)
-
-## 1) Obten la versión
-~~~bash
-frida --version
-~~~
-
-## 2.1) Descarga Frida Server para iOS
-
-### Forma manual
-~~~bash
-VERSION=16.5.2
-
-# ARM 32bits
-curl -LO https://github.com/frida/frida/releases/download/${VERSION}/frida_${VERSION}_iphoneos-arm.deb
-
-# ARM 64bits
-curl -LO https://github.com/frida/frida/releases/download/${VERSION}/frida_${VERSION}_iphoneos-arm64.deb
-
-# Transferir al dispositivo 32bits
-scp frida_${VERSION}_iphoneos-arm.deb root@DEVICE_IP:/tmp/
-
-# Transferir al dispositivo 64bits
-scp frida_${VERSION}_iphoneos-arm64.deb root@DEVICE_IP:/tmp/
-
-# Desde el dispositivo
-
-~~~
-
-# Links
-## Documentación oficial
-
-## No oficial
-
-https://github.com/frida/frida/issues/2897
-https://infosecwriteups.com/the-frida-objection-setup-guide-solving-version-hell-on-android-ios-timeless-guide-f55eb98459a0
-https://freedium.cfd/https://infosecwriteups.com/the-frida-objection-setup-guide-solving-version-hell-on-android-ios-timeless-guide-f55eb98459a0
 
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur

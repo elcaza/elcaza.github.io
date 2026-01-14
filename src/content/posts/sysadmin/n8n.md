@@ -3,7 +3,7 @@ title: n8n en Docker
 published: 2025-12-21
 description: 'Ejecuta n8n en Docker'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/n8n_docker/portada.jpg'
-tags: [Sysadmin]
+tags: [Sysadmin, Contenedores]
 category: 'Sysadmin'
 draft: false 
 lang: 'es'

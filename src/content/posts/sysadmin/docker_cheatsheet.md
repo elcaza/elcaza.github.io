@@ -3,7 +3,7 @@ title: Docker CheatSheet
 published: 2024-07-13
 description: 'Comandos básicos para Docker'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/docker_cheatsheet/portada.png'
-tags: [Sysadmin, Docker]
+tags: [Sysadmin, Contenedores]
 category: 'Sysadmin'
 draft: false 
 lang: 'es'

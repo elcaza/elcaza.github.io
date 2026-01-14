@@ -3,7 +3,7 @@ title: NextCloud con Docker
 published: 2025-12-21
 description: 'Crea tu propia nube virtual, al estilo Google Drive con NextCloud'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/nextcloud/portada.webp'
-tags: [Sysadmin]
+tags: [Sysadmin, Contenedores]
 category: 'Sysadmin'
 draft: false 
 lang: 'es'

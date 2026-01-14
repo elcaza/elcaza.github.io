@@ -3,7 +3,7 @@ title: Pi-hole
 published: 2025-12-16
 description: 'Elimina los anuncios de tu red con Pi-hole y una raspberry pi'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/pi_hole/portada.png'
-tags: [Sysadmin]
+tags: [Sysadmin, Contenedores]
 category: 'Sysadmin'
 draft: false 
 lang: 'es'
