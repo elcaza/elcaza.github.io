@@ -3,7 +3,7 @@ title: Spotify con distrobox
 published: 2026-01-09
 description: 'Crea tu propia nube virtual, al estilo Google Drive con NextCloud'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/spotify_distrobox/portada.jpg'
-tags: [Sysadmin]
+tags: [Sysadmin, Contenedores]
 category: 'Sysadmin'
 draft: false 
 lang: 'es'
