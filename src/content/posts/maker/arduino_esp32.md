@@ -93,7 +93,7 @@ Serial utility for flashing, provisioning, and interacting with Espressif SoCs
 # Instalar pipx
 sudo apt install pipx
 
-# Instalar frida-tools <herramienta>
+# Instalar herramienta
 pipx install esptool
 
 # Solamente si no lo detecta el PATH

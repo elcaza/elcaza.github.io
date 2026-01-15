@@ -185,66 +185,9 @@ Las personas pueden optar por realizar el jailbreak de sus dispositivos para rea
 
 ## Pruebas dinámicas
 
-### Frida
+## Frida & Objection
++ <a href="https://elcaza.github.io/posts/hacking/frida/" target="_blank">Frida & Objection</a>
 
-Frida requiere dos aplicaciones: 
-1. Frida server (instalado en el celular) 
-1. Frida client (Instalado en la computadora)
-+ Nota: Ambos deben tener la misma versión instalada. Por ejemplo: 16.7.13
-
-#### Instalar cliente de Frida en Debian 12
-~~~bash
-# Instalar pipx
-sudo apt install pipx
-
-# Instalar frida-tools
-pipx install frida-tools
-
-# Solamente si no lo detecta el PATH
-pipx ensurepath
-	# Note: '/home/user/.local/bin' is not on your PATH environment variable. These apps will not be globally accessible until your PATH is updated. Run `pipx ensurepath` to automatically add it, or manually
-
-# Obtener la versión de Frida
- frida --version
-	# 16.7.13
-
-# Actualizar Frida
-pipx upgrade frida-tools	
-	# 17.2.11
-
-# Quitar Frida
-pipx uninstall frida-tools
-~~~
-
-#### Instalar Frida Server en iOS
-1. Frida
-	+ Abrir Sileo
-	+ Ir a sources => Añadir
-		+ `https://build.frida.re` 
-	+ Ir a `Search` y buscar `Frida`
-	+ Instalar `Frida`
-		+ En caso de que no instale presionar los botones: Get => Queque => Confirm => Done
-
-#### Corroborando que todo funcione de manera adecuada
-
-1. Conectas el iPhone a la computadora
-1. Desde tu computadora abres la terminal
-~~~bash
-# Show devices
-frida-ls-devices
-
-# Connect Frida to an iPad over USB and list running processes
-frida-ps -U
-
-# List running applications
-frida-ps -Ua
-
-# List installed applications
-frida-ps -Uai
-
-# Connect Frida to the specific device
-frida-ps -D 0216027d1d6d3a03
-~~~
 ** En caso del error:
 + `Failed to enumerate processes: no viable transport found`
 	+ Corrobora que el dispositivo confie en la computadora
@@ -257,26 +200,6 @@ sudo systemctl status usbmuxd
 
 # En caso de que no este activo, iniciarlo
 sudo systemctl start usbmuxd
-~~~
-
-
-### Objection
-
-#### Instalar Objection
-+ Es requerido contar con Frida para hacer uso de este módulo
-
-~~~bash
-# Instalar pipx
-sudo apt install pipx
-
-# Instalar Objection
-pipx install objection
-
-# Actualizar objection
-pipx upgrade objection
-
-# Quitar objection
-pipx uninstall objection
 ~~~
 
 #### Start Objection and Attach to a Process
