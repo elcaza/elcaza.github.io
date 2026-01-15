@@ -1,11 +1,11 @@
 ---
 title: Frida en iOS y Android
-published: 2026-01-13
+published: 2026-01-14
 description: '¿Cómo usar Frida en iOS y Android?'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/frida/portada.jpg'
 tags: [Hacking, Android, iOS]
 category: 'Hacking'
-draft: true 
+draft: false 
 lang: 'es'
 ---
 
@@ -40,14 +40,15 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ### Instalar Frida
 ~~~bash
-mkdir frida_uv && cd frida_uv
+mkdir frida_16.5.2_uv && cd frida_16.5.2_uv
 
 uv venv
 
 source .venv/bin/activate
 
-VERSION=16.5.2
-uv pip install frida==$VERSION frida-tools objection
+FRIDA_VERSION=16.5.2
+OBJECTION_VERSION=1.11.0
+uv pip install frida==$FRIDA_VERSION frida-tools objection==OBJECTION_VERSION
 
 ~~~
 + Puedes probar diferentes versiones.
@@ -61,8 +62,10 @@ deactivate
 ### Protip
 Puedes correr una especie de contenedor efimero con uv. Por ejemplo, para correr un script.
 ~~~bash
-VERSION=16.5.2
-uv run --with frida==$VERSION --with frida-tools --with objection frida -U -f com.app.app -l script.js
+FRIDA_VERSION=16.5.2
+OBJECTION_VERSION=1.11.0
+
+uv run --with frida==$FRIDA_VERSION --with frida-tools --with  objection==OBJECTION_VERSION frida -U -f com.app.app -l script.js
 ~~~
 
 ## iOS - Instalar una versión especifica de Frida
@@ -151,6 +154,112 @@ adb shell su -c "/data/local/tmp/frida-server &"
 
 #### Instalación con Frida Launcher
 + <a href="github.com/thecybersandeep/Frida-Launcher" target="_blank">Frida Launcher</a>
+
+# Logs de versiones
+
+Por si un día falla, como funcionaba era:
++ Python 3.11.2
++ frida v16.5.2
++ frida-tools v13.7.1
++ objection v1.11.0
+
+~~~bash
+# uv pip tree
+objection v1.11.0
+├── click v8.3.1
+├── delegator-py v0.1.1
+│   └── pexpect v4.9.0
+│       └── ptyprocess v0.7.0
+├── flask v3.1.2
+│   ├── blinker v1.9.0
+│   ├── click v8.3.1
+│   ├── itsdangerous v2.2.0
+│   ├── jinja2 v3.1.6
+│   │   └── markupsafe v3.0.3
+│   ├── markupsafe v3.0.3
+│   └── werkzeug v3.1.5
+│       └── markupsafe v3.0.3
+├── frida v16.5.2
+├── frida-tools v13.7.1
+│   ├── colorama v0.4.6
+│   ├── frida v16.5.2
+│   ├── prompt-toolkit v3.0.52
+│   │   └── wcwidth v0.2.14
+│   ├── pygments v2.19.2
+│   └── websockets v13.1
+├── litecli v1.17.0
+│   ├── cli-helpers v2.7.0
+│   │   ├── configobj v5.0.9
+│   │   └── tabulate v0.9.0
+│   ├── click v8.3.1
+│   ├── configobj v5.0.9
+│   ├── llm v0.28
+│   │   ├── click v8.3.1
+│   │   ├── click-default-group v1.2.4
+│   │   │   └── click v8.3.1
+│   │   ├── condense-json v0.1.3
+│   │   ├── openai v2.15.0
+│   │   │   ├── anyio v4.12.1
+│   │   │   │   ├── idna v3.11
+│   │   │   │   └── typing-extensions v4.15.0
+│   │   │   ├── distro v1.9.0
+│   │   │   ├── httpx v0.28.1
+│   │   │   │   ├── anyio v4.12.1 (*)
+│   │   │   │   ├── certifi v2026.1.4
+│   │   │   │   ├── httpcore v1.0.9
+│   │   │   │   │   ├── certifi v2026.1.4
+│   │   │   │   │   └── h11 v0.16.0
+│   │   │   │   └── idna v3.11
+│   │   │   ├── jiter v0.12.0
+│   │   │   ├── pydantic v2.12.5
+│   │   │   │   ├── annotated-types v0.7.0
+│   │   │   │   ├── pydantic-core v2.41.5
+│   │   │   │   │   └── typing-extensions v4.15.0
+│   │   │   │   ├── typing-extensions v4.15.0
+│   │   │   │   └── typing-inspection v0.4.2
+│   │   │   │       └── typing-extensions v4.15.0
+│   │   │   ├── sniffio v1.3.1
+│   │   │   ├── tqdm v4.67.1
+│   │   │   └── typing-extensions v4.15.0
+│   │   ├── pip v25.3
+│   │   ├── pluggy v1.6.0
+│   │   ├── puremagic v1.30
+│   │   ├── pydantic v2.12.5 (*)
+│   │   ├── python-ulid v3.1.0
+│   │   ├── pyyaml v6.0.3
+│   │   ├── setuptools v80.9.0
+│   │   ├── sqlite-migrate v0.1b0
+│   │   │   └── sqlite-utils v3.39
+│   │   │       ├── click v8.3.1
+│   │   │       ├── click-default-group v1.2.4 (*)
+│   │   │       ├── pip v25.3
+│   │   │       ├── pluggy v1.6.0
+│   │   │       ├── python-dateutil v2.9.0.post0
+│   │   │       │   └── six v1.17.0
+│   │   │       ├── sqlite-fts4 v1.0.3
+│   │   │       └── tabulate v0.9.0
+│   │   └── sqlite-utils v3.39 (*)
+│   ├── mypy v1.19.1
+│   │   ├── librt v0.7.8
+│   │   ├── mypy-extensions v1.1.0
+│   │   ├── pathspec v1.0.3
+│   │   └── typing-extensions v4.15.0
+│   ├── pip v25.3
+│   ├── prompt-toolkit v3.0.52 (*)
+│   ├── pygments v2.19.2
+│   ├── setuptools v80.9.0
+│   └── sqlparse v0.5.5
+├── prompt-toolkit v3.0.52 (*)
+├── pygments v2.19.2
+├── requests v2.32.5
+│   ├── certifi v2026.1.4
+│   ├── charset-normalizer v3.4.4
+│   ├── idna v3.11
+│   └── urllib3 v2.6.3
+├── semver v2.13.0
+└── tabulate v0.9.0
+(*) Package tree already displayed
+~~~
 
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
