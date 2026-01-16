@@ -1,7 +1,7 @@
 ---
-title: Añade abrir con vscode en el menú contextual de Gnome
+title: Abre carpetas y documentos con vscode desde el menú contextual de Gnome
 published: 2026-01-15
-description: 'Añade abrir con vscode en el menú contextual (click derecho) de Gnome'
+description: 'Añade la opción de abrir con vscode en el menú contextual (click derecho) de Gnome'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/linux/vscode_contextual/portada.jpg'
 tags: [Linux]
 category: 'Linux'
