@@ -48,7 +48,7 @@ source .venv/bin/activate
 
 FRIDA_VERSION=16.5.2
 OBJECTION_VERSION=1.11.0
-uv pip install frida==$FRIDA_VERSION frida-tools objection==OBJECTION_VERSION
+uv pip install frida==$FRIDA_VERSION frida-tools objection==$OBJECTION_VERSION
 
 ~~~
 + Puedes probar diferentes versiones.
@@ -65,7 +65,7 @@ Puedes correr una especie de contenedor efimero con uv. Por ejemplo, para correr
 FRIDA_VERSION=16.5.2
 OBJECTION_VERSION=1.11.0
 
-uv run --with frida==$FRIDA_VERSION --with frida-tools --with  objection==OBJECTION_VERSION frida -U -f com.app.app -l script.js
+uv run --with frida==$FRIDA_VERSION --with frida-tools --with  objection==$OBJECTION_VERSION frida -U -f com.app.app -l script.js
 ~~~
 
 ## iOS - Instalar una versión especifica de Frida

@@ -1,7 +1,7 @@
 ---
 title: VMware Workstation en Debian 12 (2026)
 published: 2026-01-23
-description: 'Solucionan los múltiples problemas de usar VMware en HOST Linux con GUEST Linux en 2026'
+description: 'Solucionando los múltiples problemas de usar VMware en HOST Linux con GUEST Linux en 2026'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/linux/vmware_linux/portada.jpg'
 tags: [Linux]
 category: 'Linux'
