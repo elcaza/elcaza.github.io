@@ -14,6 +14,7 @@ lang: 'es'
 ## Sistema operativo
 + Debian 12 LTS 
 	+ O el más reciente con un kernel estable. Kernels recientes tienen problemas para virtualizar en vmWare, Android Studio y GenyMotion
+		+ <a href="https://elcaza.github.io/posts/linux/vmware_linux/" target="_blank">VMware Workstation en Debian 12 (2026). Te recomiendo leer mis notas si usas Linux.</a>
 	+ Linux 6.1.0-27
 	+ Instalar build-essential
 	+ Linux headers
@@ -210,6 +211,7 @@ sudo apt install openjdk-17-jdk
 + <a href="https://www.docker.com/" target="_blank">Docker</a>
 + <a href="https://www.genymotion.com/" target="_blank">Genymotion</a>
 + <a href="ttps://developer.android.com/studio/?hl=es-419" target="_blank">Android Studio</a>
++ <a href="https://elcaza.github.io/posts/linux/vmware_linux/" target="_blank">VMware Workstation en Debian 12 (2026). Te recomiendo leer mis notas si usas Linux.</a>
 
 
 :::note[Nota final]

@@ -65,7 +65,12 @@ Puedes correr una especie de contenedor efimero con uv. Por ejemplo, para correr
 FRIDA_VERSION=16.5.2
 OBJECTION_VERSION=1.11.0
 
+uv run --with frida==16.5.2 --with frida-tools --with  objection==1.11.0 frida-ls-devices
+uv run --with frida==17.6.2 --with frida-tools --with  objection frida-ls-devices
+~~~
 uv run --with frida==$FRIDA_VERSION --with frida-tools --with  objection==$OBJECTION_VERSION frida -U -f com.app.app -l script.js
+~~~bash
+
 ~~~
 
 ## iOS - Instalar una versión especifica de Frida
@@ -80,16 +85,16 @@ frida --version
 ~~~bash
 VERSION=16.5.2
 
-# ARM 32bits
+# ARM rootful
 curl -LO https://github.com/frida/frida/releases/download/${VERSION}/frida_${VERSION}_iphoneos-arm.deb
 
-# ARM 64bits
+# ARM 64 rootless
 curl -LO https://github.com/frida/frida/releases/download/${VERSION}/frida_${VERSION}_iphoneos-arm64.deb
 
-# Transferir al dispositivo 32bits
+# Transferir al dispositivo rootful
 scp frida_${VERSION}_iphoneos-arm.deb root@DEVICE_IP:/tmp/
 
-# Transferir al dispositivo 64bits
+# Transferir al dispositivo rootless
 scp frida_${VERSION}_iphoneos-arm64.deb root@DEVICE_IP:/tmp/
 ~~~
 
@@ -106,6 +111,10 @@ dpkg -P re.frida.server
 
 ### 5) Instalas la versión especifica
 ~~~bash
+# Rootful
+dpkg -i /tmp/frida_16.5.2_iphoneos-arm.deb
+
+# Rootless
 dpkg -i /tmp/frida_16.5.2_iphoneos-arm64.deb
 ~~~
 + Verifica que sea tu archivo. Variará acorde a la versión.
@@ -114,6 +123,9 @@ dpkg -i /tmp/frida_16.5.2_iphoneos-arm64.deb
 ~~~bash
 dpkg -L re.frida.server | grep frida-server
 ~~~
+
+## iOS - Frida en iOS 18.7.4 (iPad 7th)
+- Frida versión 17.6.2
 
 ## Android - Instalar una versión especifica de Frida
 

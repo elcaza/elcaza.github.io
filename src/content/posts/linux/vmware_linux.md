@@ -41,6 +41,63 @@ Durante mi investigación encontré las siguientes soluciones
     + Debes cambiar los atajos de vmware `Edit => Preferences => Hotkeys => COMBINACION`
     + A mi me vino bien `CTRL+SUPER` es decir `CTRL+WINDOWS`
 
+# ¿Cómo evitar fallos una vez que ya funciona?
+
+No le dejes que tu Kernel se actualice. ¡Ojo, debes estar atento para evitar bugs graves o vulnes asociadas a tu Kernel actual!
+
+## Kernel hold
+
+### Conocer tu versión de Kernel actual
+~~~bash
+uname -r
+~~~
+
+### Hold a tu kernel actual y al global
+~~~bash
+sudo apt-mark hold linux-image-$(uname -r) linux-headers-$(uname -r)
+sudo apt-mark hold linux-image-amd64 linux-headers-amd64
+~~~
+
+### Verificar si tienes en hold alguna versión de Kernel
+~~~bash
+apt-mark showhold
+~~~
+
+### Si quieres quitarlo y volver a actualizar Kernels más recientes
+~~~bash
+sudo apt-mark unhold linux-image-$(uname -r) linux-headers-$(uname -r)
+sudo apt-mark unhold linux-image-amd64 linux-headers-amd64
+sudo apt update && sudo apt upgrade
+~~~
+
+# ¿Qué hacer si actualicé o falla VMware?
+
+## Opción A: Recompila los módulos (Rápido)
+Si el Kernel cambió o VMware da error de "vmmon", este comando repara la instalación en minutos:
+~~~bash
+sudo vmware-modconfig --console --install-all
+~~~
+
+## Opción B: Reinstalación limpia
+Si lo anterior falla, lo mejor es empezar de cero:
+
+### 1. Desinstalar versión actual
+~~~bash
+vmware-installer -l
+sudo vmware-installer -u vmware-workstation
+~~~
+
+### 2. Preparar el sistema (Headers y Compiladores)
+~~~bash
+sudo apt install build-essential linux-headers-$(uname -r)
+~~~
+
+### 3. Instalar la versión estable
+~~~bash
+chmod +x VMware-Workstation-Full-17.5.2-23775571.x86_64.bundle
+sudo ./VMware-Workstation-Full-17.5.2-23775571.x86_64.bundle
+~~~
+
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
