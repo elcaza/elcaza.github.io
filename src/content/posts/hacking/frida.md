@@ -185,7 +185,7 @@ adb shell su -c "/data/local/tmp/frida-server-${VERSION} &"
 ~~~
 
 #### Instalación con Frida Launcher
-+ <a href="github.com/thecybersandeep/Frida-Launcher" target="_blank">Frida Launcher</a>
++ <a href="https://github.com/thecybersandeep/Frida-Launcher" target="_blank">Frida Launcher</a>
 
 ### Detener frida
 
