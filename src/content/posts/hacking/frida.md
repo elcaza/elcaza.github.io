@@ -39,6 +39,20 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ~~~
 
 ### Instalar Frida
+
+#### Instalar Frida en una versión reciente
+~~~bash
+mkdir 17.7.3 && cd 17.7.3
+
+uv venv
+
+source .venv/bin/activate
+
+uv pip install frida==17.7.3 frida-tools objection
+~~~
+
+
+#### Instalar Frida en una versión en especifico (Compatible con objection 1.11.0)
 ~~~bash
 mkdir frida_16.5.2_uv && cd frida_16.5.2_uv
 
@@ -59,18 +73,24 @@ uv pip install frida==$FRIDA_VERSION frida-tools objection==$OBJECTION_VERSION
 deactivate
 ~~~
 
-### Protip
+### Ejecuciones rápidas
+
+#### Frida + script
 Puedes correr una especie de contenedor efimero con uv. Por ejemplo, para correr un script.
 ~~~bash
 FRIDA_VERSION=16.5.2
 OBJECTION_VERSION=1.11.0
+APP_NAME="com.app.app"
 
-uv run --with frida==16.5.2 --with frida-tools --with  objection==1.11.0 frida-ls-devices
-uv run --with frida==17.6.2 --with frida-tools --with  objection frida-ls-devices
+uv run --with frida==$FRIDA_VERSION --with frida-tools --with  objection==$OBJECTION_VERSION frida -U -f $APP_NAME -l script.js
 ~~~
-uv run --with frida==$FRIDA_VERSION --with frida-tools --with  objection==$OBJECTION_VERSION frida -U -f com.app.app -l script.js
-~~~bash
 
+#### Frida ls devices
+Puedes correr una especie de contenedor efimero con uv. Por ejemplo, para correr un script.
+~~~bash
+FRIDA_VERSION=16.5.2
+
+uv run --with frida==$FRIDA_VERSION --with frida-tools frida-ls-devices -U 
 ~~~
 
 ## iOS - Instalar una versión especifica de Frida
@@ -133,10 +153,10 @@ dpkg -L re.frida.server | grep frida-server
 ~~~bash
 adb shell getprop ro.product.cpu.abi
 ~~~
-+ `arm64-v8a` => use `frida-server-16.5.2-android-arm64.xz`
-+ `armeabi-v7a` => use `frida-server-16.5.2-android-arm.xz`
-+ `x86_64` => use `frida-server-16.5.2-android-x86_64.xz`
-+ `x86` => use `frida-server-16.5.2-android-x86.xz`
++ ARM32 => `armeabi-v7a` => use `frida-server-16.5.2-android-arm.xz`
++ ARM64 => `arm64-v8a` => use `frida-server-16.5.2-android-arm64.xz`
++ 64 => `x86_64` => use `frida-server-16.5.2-android-x86_64.xz`
++ 32 => `x86` => use `frida-server-16.5.2-android-x86.xz`
 
 ### 2) Descarga Frida Server para Android
 
@@ -151,21 +171,32 @@ wget https://github.com/frida/frida/releases/download/${VERSION}/frida-server-${
 wget https://github.com/frida/frida/releases/download/${VERSION}/frida-server-${VERSION}-android-arm64.xz
 
 # Descomprimir 32bits
-xz -dc frida-server-${VERSION}-android-arm.xz > frida-server && chmod +x frida-server
+xz -dc frida-server-${VERSION}-android-arm.xz > frida-server-${VERSION} && chmod +x frida-server-${VERSION}
 
 # Descomprimir 64bits
-xz -dc frida-server-${VERSION}-android-arm64.xz > frida-server && chmod +x frida-server
+xz -dc frida-server-${VERSION}-android-arm64.xz > frida-server-${VERSION} && chmod +x frida-server-${VERSION}
 
 ## Push Device
-adb push frida-server /data/local/tmp/
+adb push frida-server-${VERSION} /data/local/tmp/
 
 ## Permisos y ejecución
 # adb shell chmod 777 /data/local/tmp/frida-server
-adb shell su -c "/data/local/tmp/frida-server &"
+adb shell su -c "/data/local/tmp/frida-server-${VERSION} &"
 ~~~
 
 #### Instalación con Frida Launcher
 + <a href="github.com/thecybersandeep/Frida-Launcher" target="_blank">Frida Launcher</a>
+
+### Detener frida
+
+~~~bash
+adb shell su -c "pkill frida-server"
+~~~
+
+#### Desde adb shell
+~~~bash
+pkill frida-server
+~~~
 
 # Logs de versiones
 
