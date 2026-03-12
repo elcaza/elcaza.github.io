@@ -94,7 +94,7 @@ Las personas pueden optar por realizar el jailbreak de sus dispositivos para rea
 	+ Selecciona rootful o rootless
 	+ 1 Create FakeFS
 	+ 3 Verbose
-	+ 7 Debug
+	+ 8 Debug
 	+ Arguments: -f -c -V -v
 + Conectar tu celular y ponerlo en modo DFU
 + Dejar que trabaje y, una vez finalizado podrás notar que tienes 10Gb menos en tu almacenamiento
@@ -105,12 +105,13 @@ Las personas pueden optar por realizar el jailbreak de sus dispositivos para rea
 + Seleccionar las siguientes opciones
 	+ Selecciona rootful o rootless
 	+ 3 Verbose
-	+ 7 Debug
+	+ 8 Debug
 	+ Arguments: -f -V -v
 + Conectar tu celular y ponerlo en modo DFU
 + Dejar que trabaje y, una vez finalizado, podrás ver que tienes instalado palera1n y podrás instalar Sileo o Zebra.
 
 ### 4. Una vez hecho el jailbreak
++ <a href="https://elcaza.github.io/posts/hacking/ios_herramientas_pentest/" target="_blank">Herramientas para realizar pruebas de seguridad en iOS</a>
 
 ## Problemas y soluciones
 + Reiniciar el programa
