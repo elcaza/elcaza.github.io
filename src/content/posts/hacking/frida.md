@@ -90,7 +90,9 @@ Puedes correr una especie de contenedor efimero con uv. Por ejemplo, para correr
 ~~~bash
 FRIDA_VERSION=16.5.2
 
-uv run --with frida==$FRIDA_VERSION --with frida-tools frida-ls-devices -U 
+uv run --with frida==$FRIDA_VERSION --with frida-tools frida-ls-devices
+
+uv run --with frida==$FRIDA_VERSION --with frida-tools frida-ps -Uai
 ~~~
 
 ## iOS - Instalar una versión especifica de Frida
