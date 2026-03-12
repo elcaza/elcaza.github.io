@@ -25,6 +25,10 @@ sudo dpkg -i obsidian_1.10.6_amd64.deb
 
 <img width=100% src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/obsidian/1.jpeg">
 
+# Plugins recomendados
+1. Code Styler - Mayuran Visakan
+1. Quiet Outline - The_tree
+
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
