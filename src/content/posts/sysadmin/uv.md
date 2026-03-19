@@ -2,7 +2,7 @@
 title: UV Cheatsheet
 published: 2026-03-19
 description: 'UV, la mejor alternativa para gestionar entornos virtuales de python'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/uv_pyenv_pipx_conda/portada.jpg'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/uv/portada.jpg'
 tags: [Sysadmin, Python]
 category: 'Sysadmin'
 draft: false 

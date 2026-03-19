@@ -2,7 +2,7 @@
 title: Laboratorio de pruebas con node y npm
 published: 2026-03-01
 description: 'Genera diccionarios con Crunch'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/crunch/portada.jpg'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/node/portada.jpg'
 tags: [Hacking, Linux]
 category: 'Hacking'
 draft: false 
