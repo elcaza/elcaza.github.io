@@ -2,7 +2,7 @@
 title: iOS Jailbreak
 published: 2026-02-22
 description: 'Notas sobre pruebas de seguridad a iOS'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/ios_jailbreak/portada.png'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/ios_jailbreak/portada.jpg'
 tags: [Hacking, iOS]
 category: 'Hacking'
 draft: false 
