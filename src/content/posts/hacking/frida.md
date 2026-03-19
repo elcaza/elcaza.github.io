@@ -99,51 +99,46 @@ uv run --with frida==$FRIDA_VERSION --with frida-tools frida-ps -Uai
 
 ### 1) Obten la versión
 ~~~bash
-frida --version
-~~~
-
-### 2) Descarga Frida Server para iOS
-
-~~~bash
-VERSION=16.5.2
-
-# ARM rootful
-curl -LO https://github.com/frida/frida/releases/download/${VERSION}/frida_${VERSION}_iphoneos-arm.deb
-
-# ARM 64 rootless
-curl -LO https://github.com/frida/frida/releases/download/${VERSION}/frida_${VERSION}_iphoneos-arm64.deb
-
-# Transferir al dispositivo rootful
-scp frida_${VERSION}_iphoneos-arm.deb root@DEVICE_IP:/tmp/
-
-# Transferir al dispositivo rootless
-scp frida_${VERSION}_iphoneos-arm64.deb root@DEVICE_IP:/tmp/
-~~~
-
-### 3) Ingresas al dispositivo vía SSH
-~~~bash
 ssh root@DEVICE_IP
 ~~~
 
-### 4) Desinstalas cualquier instalación previa de Frida
+### 2) Desinstalas cualquier instalación previa de Frida
 ~~~bash
-dpkg -r frida
-dpkg -P re.frida.server
+sudo dpkg -r frida; sudo dpkg -P re.frida.server
 ~~~
 
-### 5) Instalas la versión especifica
+### 3) Descarga Frida Server para iOS
+
+~~~bash
+# La versión debe coincidir con la que usarás en tu computadora
+VERSION=16.5.2
+
+# ARM rootful
+wget https://github.com/frida/frida/releases/download/${VERSION}/frida_${VERSION}_iphoneos-arm.deb
+
+# ARM 64 rootless
+wget https://github.com/frida/frida/releases/download/${VERSION}/frida_${VERSION}_iphoneos-arm64.deb
+~~~
+- Si no tienes `wget` instalado puedes instalarlo con `sudo apt install wget`
+
+### 4) Instalas la versión especifica
 ~~~bash
 # Rootful
-dpkg -i /tmp/frida_16.5.2_iphoneos-arm.deb
+sudo dpkg -i frida_${VERSION}_iphoneos-arm.deb
 
 # Rootless
-dpkg -i /tmp/frida_16.5.2_iphoneos-arm64.deb
+sudo dpkg -i frida_${VERSION}_iphoneos-arm64.deb
 ~~~
 + Verifica que sea tu archivo. Variará acorde a la versión.
 
-### 6) Verifica que el servicio esté corriendo
+### 5) Verifica que el servicio esté corriendo
 ~~~bash
 dpkg -L re.frida.server | grep frida-server
+~~~
+
+### 6) Ver la versión
+~~~bash
+frida-server --version
 ~~~
 
 ## iOS - Frida en iOS 18.7.4 (iPad 7th)

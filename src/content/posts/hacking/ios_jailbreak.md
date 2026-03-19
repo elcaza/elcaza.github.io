@@ -53,6 +53,8 @@ Las personas pueden optar por realizar el jailbreak de sus dispositivos para rea
 1. Restaura el celular y no actives las opciones de seguridad:
 	- FaceID, Passcode, TouchID, desactivar Find Iphone
 	- Entonces, lo restauras a fabrica y le pones "No usar/Configurar más tarde"
+	- En caso de que uses Ipad 7th debes habilitar el "Developer Mode"
+		- `Settings => Privacy & Security => Developer Mode (Off => ON)`
 
 ## Resumen de dispositivos recomendados
 - iPhone 8 y X
@@ -73,7 +75,12 @@ Las personas pueden optar por realizar el jailbreak de sus dispositivos para rea
 + Iphone 8 - Palera1n (live usb)
 	+ ⬆️ ⬇️ (⏻)_hasta_apagar (⬇️⏻)_5s (⬇️)_hasta_comenzar_el_proceso
 	+ UP, DOWN, SIDE-hasta-apagar, SOLTAR_TODO, SIDE+DOWN-5segundos, DOWN-5segundos (o hasta que se comience el proceso)
-	+ PRESION_RAPIDA, PRESION_RAPIDA, SOSTENER, SOLTAR_TODO, PRESIONAR_AMBOS_SOSTENER, SOLTAR_SOLO_SIDE_BUTTON
+	+ PRESION_RAPIDA, PRESION_RAPIDA, SOSTENER, SOLTAR_TODO, PRESIONAR_AMBOS_SOSTENER, SOLTAR_SOLO_POWER
+
++ IPAD 7 e Iphone 7 - Palera1n (live usb)
+	+ (T)(⏻)_hasta_apagar (T⏻)_5s (T)_hasta_comenzar_el_proceso
+	+ (TOUCH, POWER)_hasta-apagar, SOLTAR_TODO, (TOUCH, POWER)_5segundos, TOUCH-5segundos (o hasta que se comience el proceso)
+	+ SOSTENER, SOLTAR_TODO, PRESIONAR_AMBOS_SOSTENER, SOLTAR_SOLO_POWER
 
 ************************************************************************************************
 
