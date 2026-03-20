@@ -61,6 +61,39 @@ uv pip tree
 uv self update
 ~~~
 
+## Ejecución del comando sin necesidad de activar el entorno
+1. Te situas en la carpeta donde vive tu `.venv`
+1. Inicias la aplicación que requieras
+
+~~~bash
+uv run frida-ls-devices
+~~~
+
+## Crear alias para hacer el source más rápido
+Vamos a crear un alias en el archivo `.bashrc`
+
+### 1. Abrimos el archivo `.bashrc`
+~~~bash
+vim ~/.bashrc
+~~~
+
+### 2. Añadimos al final del archivo nuestro alias
+~~~bash
+alias uvs='source .venv/bin/activate'
+~~~
+
+### 3. Uso
+En una nueva terminal ya podremos ver nuestro alias funcional.
+1. Desde la carpeta con el entorno virtual
+~~~bash
+uvs
+~~~
+
+Si no quieres iniciar una nueva terminal, solo tenemos que actualizar el source manualmente
+~~~bash
+source ~/.bashrc
+~~~
+
 ## Correr en un entorno temporal
 + Por ejemplo un script de Frida
 

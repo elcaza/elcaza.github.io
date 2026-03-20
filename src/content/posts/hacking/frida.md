@@ -195,6 +195,54 @@ adb shell su -c "pkill frida-server"
 pkill frida-server
 ~~~
 
+# Objection y versiones de Frida
+
+Objection no funciona de forma consistente en todas las versiones de Frida y versiones de iOS.
+Según mis pruebas, este es el "resumen confiable"
+
+<table>
+  <thead>
+    <tr>
+      <th>Dispositivo</th>
+      <th>Versión de iOS</th>
+      <th>Jailbreak</th>
+      <th>Passcode</th>
+      <th>Versión Frida</th>
+      <th>Versión Objection</th>
+      <th>ios keychain dump</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>iPad 7th</td>
+      <td>18.7.4</td>
+      <td>rootful palera1n</td>
+      <td>No, nunca</td>
+      <td>17.8.0</td>
+      <td>objection: 1.12.3</td>
+      <td>Solo funcionó una vez</td>
+    </tr>
+    <tr>
+      <td>iPhone 8</td>
+      <td>16.7.14</td>
+      <td>rootful palera1n</td>
+      <td>No, nunca</td>
+      <td>16.5.2</td>
+      <td>objection: 1.12.3</td>
+      <td>Sí</td>
+    </tr>
+    <tr>
+      <td>iPhone 8</td>
+      <td>16.7.11</td>
+      <td>rootful palera1n</td>
+      <td>passcode digits</td>
+      <td>16.5.2</td>
+      <td>objection: 1.12.3</td>
+      <td>Sí</td>
+    </tr>
+  </tbody>
+</table>
+
 # Logs de versiones
 
 Por si un día falla, como funcionaba era:
