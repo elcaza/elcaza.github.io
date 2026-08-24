@@ -11,7 +11,7 @@ lang: 'es'
 
 # Deshabilitar las protecciones TLS en aplicativos hechos con Flutter
 
-Las aplicaciones desarrolladas con Flutter/Dart evaden los métodos tradicionales de intercepción de tráfico. Al ignorar el proxy configurado en los ajustes de iOS y descartar las CAs instaladas en el almacenamiento del sistema operativo (User/System), la interceptación mediante BurpSuite falla debido a que las peticiones nunca llegan al proxy. Este documento detalla el procedimiento para forzar el enrutamiento a nivel de Kernel (`iptables`) y neutralizar la validación TLS en memoria mediante instrumentación dinámica (`Frida`).
+Las aplicaciones desarrolladas con Flutter/Dart evaden los métodos tradicionales de intercepción de tráfico. Al ignorar el proxy configurado en los ajustes de iOS y descartar las CAs instaladas en el almacenamiento del sistema operativo (User/System), la interceptación mediante Burp Suite falla debido a que las peticiones nunca llegan al proxy. Este documento detalla el procedimiento para forzar el enrutamiento a nivel de Kernel (`iptables`) en un Gateway intermedio y neutralizar la validación TLS en memoria mediante instrumentación dinámica (`Frida`).
 
 # Just do it - Breve resumen de la solución
 
@@ -24,7 +24,7 @@ Las aplicaciones desarrolladas con Flutter/Dart evaden los métodos tradicionale
   + <a href="https://github.com/NVISOsecurity/disable-flutter-tls-verification" target="_blank">disable-flutter-tls-verification</a>
 
 ## 1. Proxy en modo invisible
-Configuras Burp en modo "Invisible proxy" y eschando en una interfaz
+Configuras Burp en modo "Invisible proxy" y escuchando en una interfaz
 1. Proxy => HTTP Proxy => Proxy Settings => Proxy listeners => Interface Edit => Request handling => **Support invisible proxying** 
    1. La interfaz NO debe ser localhost
 
@@ -64,7 +64,7 @@ sudo iptables -t nat -D PREROUTING -i $INTERFACE -p tcp --dport 443 -j REDIRECT 
 Variables a configurar
 ~~~bash
 INTERFACE=wlp2s0
-PROXY_IP=10.1.1.5
+PROXY_IP=10.10.10.5
 PROXY_PORT=8888
 ~~~
 
@@ -96,12 +96,12 @@ sudo iptables -D FORWARD -i $INTERFACE -o $INTERFACE -p tcp --dport $PROXY_PORT 
 
 Seleccionas la red WiFi donde vivan tus dispositivos
 1. Configure IP => Manual
-2. IP Address => Una de tu segmento
+2. IP Address => Una de tu segmento (ej. 10.10.10.222)
 3. Subnet Mask => La de tu segmento, comunmente 255.255.255.0
-4. Router => La computadora que va a servir de puente
-5. Configure DNS => Manual (1.1.1.1 u 8.8.8.8)
+4. Router => La IP del Linux que va a servir de puente (ej. 10.10.10.3)
+5. Configure DNS => Manual (Añadir servidor 1.1.1.1 u 8.8.8.8)
 
-Nota: Reconectar dispositivo (Apagar y encender WiFi del celular si es necesario)
+Nota: Reconectar dispositivo (Apagar y encender WiFi del celular en caso de que sea necesario)
 
 ## 4. Usar el script `disable-flutter-tls-verification` de `NVISOsecurity`
 
@@ -122,8 +122,8 @@ Las librerías compiladas de BoringSSL dentro del motor de Flutter (`Flutter.fra
 
 ## ¿Cómo traspasar estas medidas de seguridad?
 
-1. **Forzar el enrutamiento (Capa 3/4):** Mediante reglas de `iptables` a nivel de Kernel, se interceptan los paquetes salientes TCP (puertos 80 y 443) y se redirigen al socket de BurpSuite (configurado en modo Invisible Proxy), obligando a la aplicación a comunicarse con el proxy aunque lo ignore a nivel de aplicación.
-2. **Bypass de la validación TLS (Capa de Aplicación/Memoria):** Se utiliza Frida para escanear en la memoria del proceso cargado (`libflutter.so`) los patrones de bytes (*signatures*) de las funciones nativas de verificación de BoringSSL, alterando su valor de retorno en tiempo de ejecución para forzar que la validación devuelva siempre éxito (`true` / `0x1` / `ssl_verify_ok`).
+1. **Forzar el enrutamiento (Capa 3/4):** Mediante reglas de `iptables` a nivel de Kernel en un Gateway, se interceptan los paquetes salientes TCP (puertos 80 y 443) provenientes del iPhone y se redirigen al socket de Burp Suite (configurado en modo Invisible Proxy), obligando a la aplicación a comunicarse con el proxy aunque lo ignore a nivel de aplicación.
+2. **Bypass de la validación TLS (Capa de Aplicación/Memoria):** Se utiliza Frida para escanear en la memoria del proceso cargado (específicamente en el motor de Flutter compilado) los patrones de bytes (*signatures*) de las funciones nativas de verificación de BoringSSL, alterando su valor de retorno en tiempo de ejecución para forzar que la validación devuelva siempre éxito (`true` / `0x1` / `ssl_verify_ok`).
 
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur

@@ -11,7 +11,7 @@ lang: 'es'
 
 # Deshabilitar las protecciones TLS en aplicativos hechos con Flutter
 
-Las aplicaciones desarrolladas con Flutter/Dart evaden los métodos tradicionales de intercepción de tráfico. Al ignorar el proxy configurado en los ajustes de Android y descartar las CAs instaladas en el almacenamiento del sistema operativo (User/System), la interceptación mediante BurpSuite falla debido a que las peticiones nunca llegan al proxy. Este documento detalla el procedimiento para forzar el enrutamiento a nivel de Kernel (`iptables`) y neutralizar la validación TLS en memoria mediante instrumentación dinámica (`Frida`).
+Las aplicaciones desarrolladas con Flutter/Dart evaden los métodos tradicionales de intercepción de tráfico. Al ignorar el proxy configurado en los ajustes de Android y descartar las CAs instaladas en el almacenamiento del sistema operativo (User/System), la interceptación mediante Burp Suite falla debido a que las peticiones nunca llegan al proxy. Este documento detalla el procedimiento para forzar el enrutamiento a nivel de Kernel (`iptables`) y neutralizar la validación TLS en memoria mediante instrumentación dinámica (`Frida`).
 
 # Just do it - Breve resumen de la solución
 
@@ -23,12 +23,12 @@ Las aplicaciones desarrolladas con Flutter/Dart evaden los métodos tradicionale
   + <a href="https://github.com/NVISOsecurity/disable-flutter-tls-verification" target="_blank">disable-flutter-tls-verification</a>
 
 ## 1. Proxy en modo invisible
-Configuras Burp en modo "Invisible proxy" y eschando en una interfaz
+Configuras Burp en modo "Invisible proxy" y escuchando en una interfaz
 1. Proxy => HTTP Proxy => Proxy Settings => Proxy listeners => Interface Edit => Request handling => **Support invisible proxying** 
    1. La interfaz NO debe ser localhost
 
 ## 2. Configuración de iptables en Android
-Envío de las peticiones locales desde Android hacia BurpSuite mediante iptables
+Envío de las peticiones locales desde Android hacia Burp Suite mediante iptables
 
 ### Ver reglas de iptables actuales dentro de android
 
@@ -80,7 +80,7 @@ Las librerías compiladas de BoringSSL dentro del binario de Flutter (`libflutte
 
 ## ¿Cómo traspasar estas medidas de seguridad?
 
-1. **Forzar el enrutamiento (Capa 3/4):** Mediante reglas de `iptables` a nivel de Kernel, se interceptan los paquetes salientes TCP (puertos 80 y 443) y se redirigen al socket de BurpSuite (configurado en modo Invisible Proxy), obligando a la aplicación a comunicarse con el proxy aunque lo ignore a nivel de aplicación.
+1. **Forzar el enrutamiento (Capa 3/4):** Mediante reglas de `iptables` a nivel de Kernel, se interceptan los paquetes salientes TCP (puertos 80 y 443) y se redirigen al socket de Burp Suite (configurado en modo Invisible Proxy), obligando a la aplicación a comunicarse con el proxy aunque lo ignore a nivel de aplicación.
 2. **Bypass de la validación TLS (Capa de Aplicación/Memoria):** Se utiliza Frida para escanear en la memoria del proceso cargado (`libflutter.so`) los patrones de bytes (*signatures*) de las funciones nativas de verificación de BoringSSL, alterando su valor de retorno en tiempo de ejecución para forzar que la validación devuelva siempre éxito (`true` / `0x1` / `ssl_verify_ok`).
 
 :::note[Nota final]
