@@ -83,6 +83,9 @@ Las librerías compiladas de BoringSSL dentro del binario de Flutter (`libflutte
 1. **Forzar el enrutamiento (Capa 3/4):** Mediante reglas de `iptables` a nivel de Kernel, se interceptan los paquetes salientes TCP (puertos 80 y 443) y se redirigen al socket de Burp Suite (configurado en modo Invisible Proxy), obligando a la aplicación a comunicarse con el proxy aunque lo ignore a nivel de aplicación.
 2. **Bypass de la validación TLS (Capa de Aplicación/Memoria):** Se utiliza Frida para escanear en la memoria del proceso cargado (`libflutter.so`) los patrones de bytes (*signatures*) de las funciones nativas de verificación de BoringSSL, alterando su valor de retorno en tiempo de ejecución para forzar que la validación devuelva siempre éxito (`true` / `0x1` / `ssl_verify_ok`).
 
+# ¿Lo buscabas para iOS?
++ <a href="https://elcaza.github.io/posts/hacking/flutter_ssl_pinning_ios" target="_blank">Deshabilitar la verificación TLS / SSL Pinning de Flutter (iOS)</a>
+
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
 
