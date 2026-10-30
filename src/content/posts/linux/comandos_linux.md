@@ -26,14 +26,24 @@ Categories=Development;IDE;
 # Utilidades
 
 ## Compartir carpeta en máquina virtual (Linux host - Linux guest)
-+ https://www.youtube.com/watch?v=PSG8ka2CkaQ
+
+### Desde ajustes de vmWare:
+- VMware => Settings
+- Options => Shared Folders => Add
+
+### Desde el sistema GUEST
 ~~~bash
+# Creas la carpeta
+sudo mkdir /mnt/hgfs
+
 # Para montaje manual de la carpeta compartida:
 sudo mount -t fuse.vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
 
 # Para averiguar si esta compartida la carpeta: 
 vmware-hgfsclient
 ~~~
+
++ https://www.youtube.com/watch?v=PSG8ka2CkaQ
 
 # Notas generales sobre Linux
 
