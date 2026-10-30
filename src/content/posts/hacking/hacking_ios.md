@@ -126,6 +126,13 @@ Las personas pueden optar por realizar el jailbreak de sus dispositivos para rea
 
 
 ************************************************************************************************
+# Dependencias en PC
+
+~~~bash
+sudo apt update && sudo apt install -y usbmuxd libimobiledevice-utils libimobiledevice6 ideviceinstaller
+~~~
+
+************************************************************************************************
 # Herramientas para realizar pruebas de seguridad:
 
 ## Dependencias

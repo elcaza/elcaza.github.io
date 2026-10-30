@@ -26,6 +26,8 @@ lang: 'es'
 Zero Salarium
 + <a href="https://www.zerosalarium.com/" target="_blank">Blog Zero Salarium</a>
 + <a href="https://www.zerosalarium.com/2025/09/EDR-Freeze-Puts-EDRs-Antivirus-Into-Coma.html" target="_blank">EDR-Freeze: A Tool That Puts EDRs And Antivirus Into A Coma State</a>
++ <a href="https://yashfren.net/category/cybersec/" target="_blank">Blog con recomendaciones para certificaciones de seguridad</a>
++ <a href="https://micahvandeusen.com/blog/burp-suite-certified-practitioner-exam-review/" target="_blank">BSCP recomendaciones</a> 
 
 ## Redes
 
@@ -45,6 +47,16 @@ Maythom
 ## ESP32
 + <a href="https://www.youtube.com/watch?v=BmkBTmLXF9s" target="_blank">Distancia Máxima con NRF24l01</a>
 + <a href="https://www.youtube.com/watch?v=8YIy0IyV4c4" target="_blank">Problemas con NRF24 - Soluciones y Mejoras! Antena, Ruido, Alimentación</a>
+
+## Curso Calude 2026
++ <a href="https://youtu.be/h49d1-d_fYk" target="_blank">CLAUDE CODE 2026: Curso Completo en Español (actualizado) - Benjamín Cordero</a>
+    + https://higgsfield.ai/pricing
+    + https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+    + https://github.com/czlonkowski/n8n-mcp
+    + https://motionsites.ai/
+    + https://skillsmp.com/
+    + https://support.claude.com/en/articles/12512176-what-are-skills
+    + https://agentskills.io/home
 
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
