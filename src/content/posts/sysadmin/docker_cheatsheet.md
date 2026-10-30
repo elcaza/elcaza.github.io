@@ -177,7 +177,7 @@ El cache de Docker es usado para no ejecutar los comandos una vez que estos ya s
 
 ### Ejemplo
 Podria causar problemas en instrucciones como:
-~~~Dockerfile
+~~~dockerfile
 # Config inicial
 FROM debian
 RUN apt-get update
