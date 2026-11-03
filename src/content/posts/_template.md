@@ -2,7 +2,7 @@
 title: Template
 published: 2025-08-11
 description: 'Description'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/spotify_distrobox/portada.jpg'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/linux/spotify_distrobox/portada.jpg'
 tags: [Linux]
 category: 'Linux'
 draft: true 
@@ -11,7 +11,7 @@ lang: 'es'
 
 <a href="https://www.youtube.com/watch?v=HoVriPxxWH0" target="_blank">link</a>
 
-<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/kms/1.png" width="100%">
+<img src="https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/windows/kms/1.webp" width="100%">
 
 
 :::note[Nota final]
