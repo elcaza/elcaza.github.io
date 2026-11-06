@@ -47,29 +47,52 @@ O, si ya estás dentro de la carpeta:
 uv init
 ~~~
 
+Sin autor de git
+
+~~~bash
+uv init --author-from none
+~~~
+
 ## ¿Qué se crea?
 
-~~~
+~~~txt
 mi_proyecto/
 ├── .git/
 ├── .gitignore
 ├── .python-version   # Versión de Python del proyecto
 ├── README.md
-├── main.py           # Script de ejemplo
-└── pyproject.toml    # Metadatos y dependencias
+├── pyproject.toml    # Metadatos y dependencias
+└── src/
+    └── mi_proyecto/
+        └── __init__.py   # Código de ejemplo
 ~~~
 
 El `pyproject.toml` inicial luce así:
 
 ~~~toml
 [project]
-name = "mi_proyecto"
+name = "mi-proyecto"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
+
+[project.scripts]
+mi-proyecto = "mi_proyecto:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
 ~~~
+
+:::caution
+Si tienes configurados `user.name` y `user.email` en Git, `uv init` también añade tu nombre y correo al campo `authors` del `pyproject.toml`. Quedarán visibles si publicas ese archivo. Para evitarlo, crea el proyecto con `uv init --author-from none` o borra el bloque `authors` antes de subirlo.
+:::
+
+:::note
+Esta estructura corresponde a uv 0.12 o superior. Si prefieres un `main.py` en la raíz, sin `src/` ni `[build-system]`, crea el proyecto con `uv init --no-package`.
+:::
 
 :::tip
 El `.venv` y el `uv.lock` **no** se crean con `uv init`. Aparecen la primera vez que ejecutas `uv add`, `uv sync` o `uv run`.
@@ -128,8 +151,12 @@ uv tree
 ## Con `uv run`
 
 ~~~bash
-uv run main.py
+uv run mi-proyecto
+
+# Si eliminaste requests en el paso anterior: uv add requests
 uv run python -c "import requests; print(requests.__version__)"
+
+# Si todavía no tienes pruebas, mostrará "no tests ran"
 uv run pytest
 ~~~
 
@@ -209,7 +236,7 @@ uv add -r requirements.txt
 Si alguien necesita un `requirements.txt` (por ejemplo, una herramienta que no soporta uv):
 
 ~~~bash
-uv export --format requirements-txt > requirements.txt
+uv export --format requirements-txt --no-emit-project > requirements.txt
 ~~~
 
 # Ejemplos
@@ -299,7 +326,7 @@ uv sync --no-dev              # Sincronizar sin dependencias de desarrollo
 uv lock --upgrade             # Actualizar todas las dependencias
 uv lock --upgrade-package p   # Actualizar un paquete
 uv add -r requirements.txt    # Importar requirements.txt
-uv export --format requirements-txt > requirements.txt  # Exportar
+uv export --format requirements-txt --no-emit-project > requirements.txt  # Exportar
 ~~~
 
 :::note[Nota final]
