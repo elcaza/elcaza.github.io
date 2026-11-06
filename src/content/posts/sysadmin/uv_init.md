@@ -3,7 +3,7 @@ title: UV Init - Proyectos y flujos de trabajo
 published: 2026-10-29
 description: 'Gestiona proyectos de Python con uv init, uv add y uv sync: el flujo nativo de uv'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/sysadmin/uv/portada.jpg'
-tags: [Sysadmin, Python]
+tags: [Sysadmin, Python, iOS, Android]
 category: 'Sysadmin'
 draft: false 
 lang: 'es'

@@ -41,9 +41,10 @@ sudo iptables -t nat -L PREROUTING -n -v --line-numbers && sudo iptables -t nat 
 
 Variables a configurar
 ~~~bash
-INTERFACE=wlp2s0
+INTERFACE=wlp0s20f3
 PROXY_PORT=8888
 ~~~
+- Para la interfaz `ip a`
 
 Para crear las reglas
 ~~~bash
@@ -63,10 +64,11 @@ sudo iptables -t nat -D PREROUTING -i $INTERFACE -p tcp --dport 443 -j REDIRECT 
 
 Variables a configurar
 ~~~bash
-INTERFACE=wlp2s0
-PROXY_IP=10.10.10.5
+INTERFACE=wlp0s20f3
+PROXY_IP=10.1.1.5
 PROXY_PORT=8888
 ~~~
+- Para la interfaz `ip a`
 
 Para crear las reglas
 ~~~bash
@@ -96,9 +98,9 @@ sudo iptables -D FORWARD -i $INTERFACE -o $INTERFACE -p tcp --dport $PROXY_PORT 
 
 Seleccionas la red WiFi donde vivan tus dispositivos
 1. Configure IP => Manual
-2. IP Address => Una de tu segmento (ej. 10.10.10.222)
+2. IP Address => Una de tu segmento (ej. 10.1.1.222)
 3. Subnet Mask => La de tu segmento, comunmente 255.255.255.0
-4. Router => La IP del Linux que va a servir de puente (ej. 10.10.10.3)
+4. Router => La IP del Linux que va a servir de puente (ej. 10.1.1.3)
 5. Configure DNS => Manual (Añadir servidor 1.1.1.1 u 8.8.8.8)
 
 Nota: Reconectar dispositivo (Apagar y encender WiFi del celular en caso de que sea necesario)

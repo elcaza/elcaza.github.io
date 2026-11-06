@@ -1,8 +1,8 @@
 ---
 title: La Feria Maker 2026 - Silence Machine - La máquina generadora de silencio
 published: 2026-10-18
-description: 'Todo el material necesario para crear tu propia máquina generadora de silencio.'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/la_feria_maker/portada.jpeg'
+description: 'Conferencia en la Feria Maker sobre la Silence Machine'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/maker/la_feria_maker/portada.png'
 tags: [Maker, silence_machine]
 category: 'Maker'
 draft: false 

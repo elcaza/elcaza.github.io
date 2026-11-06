@@ -272,62 +272,8 @@ find . 2>/dev/null | grep "app_name"
 
 ## Extracción de IPA
 
-~~~bash
-# Te conectas al Iphone
-ssh root@<iPhone_IP>
-
-# Entras al directorio de aplicaciones
-cd /var/containers/Bundle/Application/
-
-# Encuentras el UUID Folder de tu aplicación
-find | grep "<APP_NAME>" | cut -d "/" -f2 | sort -u 
-
-# Entras UUID-Folder
-cd <UUID_Folder>
-
-# Creas una carpeta para almacenar tu app
-mkdir Payload
-
-# Copia la app a la carpeta temporal
-cp -r <APP_NAME>.app/ Payload/
-
-# Crear tu archivo .ipa
-zip -r /var/root/<NAME_TO_EXTRACT_IPA>.ipa Payload/
-
-# Descargas la aplicación
-sftp root@<iPhone-IP>
-get -r /var/root/<NAME_TO_EXTRACT_IPA>.ipa
-
-~~~
-Notas:
-~~~txt
-Why “Payload”? The name ‘Payload’ is part of the standard iOS app bundle structure required for the iOS operating system to correctly recognize and install the app. In the .ipa file format, the app bundle must be placed inside a ‘Payload’ folder containing the .app directory. Failure to follow this structure may prevent the app from being recognized or executed.
-
-Capital letter is important: "Payload" not "payload"
-
-~~~
-Fuente:
-+ https://awesome.hackpuntes.com/ios/how-to-extract-ipa-from-ios-device
-+ https://medium.com/haktrak-cybersecurity-squad/bypassing-ios-jailbreak-detection-by-patching-the-binary-with-ghidra-write-up-of-no-escape-lab-02b417b3a235
-
-## Extracción de IPA automatizada
-+ Este script se debe correr con `bash`, no con `zsh`
-~~~bash
-# Te conectas al Iphone
-ssh root@<iPhone_IP>
-
-# Instala zip, solamente es necesario correrlo la primera vez
-apt install zip
-
-# Indentifica el nombre de tu app. Este debe ser único
-find /var/containers/Bundle/Application/ -iname "*.app" | cut -d "/" -f7 | sort 
-
-# Script Automatizado, reemplaza el valor de APPNAME
-APPNAME="NAME"; cd /var/containers/Bundle/Application/; if [ $(find | grep $APPNAME | cut -d "/" -f2 | sort -u | wc -l) == "1" ]; then echo "Comenzando respaldo" && UUID_Folder=$(find | grep $APPNAME | cut -d "/" -f2 | sort -u); cd $UUID_Folder; rm -rf Payload; mkdir Payload; ls | grep .app; NAME_TO_EXTRACT_IPA=$(ls | grep .app); cp -r $NAME_TO_EXTRACT_IPA Payload/; IPA_FINAL=$(printf '%s' $(cut -d. -f1 <<< $NAME_TO_EXTRACT_IPA)).ipa; zip -r /var/root/$IPA_FINAL Payload && echo "Guardado como:"; ls /var/root/ | grep "ipa"; echo -e "Para descargar:\n"; echo "scp root@IP:/var/root/$IPA_FINAL ."; sleep 5; exit; else echo "Too many apps with that name"; fi;
-
-# Para descargar el IPA se te mostrará el comando que debes introducir. Similar a
-scp root@IP:/var/root/$IPA_FINAL .
-~~~
+Ya tenemos un post que habla solo de esto
++ https://elcaza.github.io/posts/hacking/ios_extraer_ipa/
 
 ************************************************************************************************
 # Análisis de código estático y otros
@@ -465,10 +411,6 @@ DFU Iphone 8
 ## Objection
 + https://www.virtuesecurity.com/kb/ios-frida-objection-pentesting-cheat-sheet/
 	+ jo-ya
-
-## Extraer IPA
-+ https://awesome.hackpuntes.com/ios/how-to-extract-ipa-from-ios-device
-
 
 ************************************************************************************************
 # Tutoriales
