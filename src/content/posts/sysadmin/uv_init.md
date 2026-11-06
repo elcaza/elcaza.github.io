@@ -25,7 +25,7 @@ En este modo ya no instalas paquetes "a mano" en un entorno. Declaras las depend
 
 | Tarea | Interfaz `uv pip` | Modo proyecto |
 |---|---|---|
-| Crear entorno | `uv venv` | `uv init` (el entorno se crea solo) |
+| Crear entorno | `uv venv` | `uv init` + `uv sync` |
 | Instalar paquete | `uv pip install paquete` | `uv add paquete` |
 | Desinstalar | `uv pip uninstall paquete` | `uv remove paquete` |
 | Ver dependencias | `uv pip tree` | `uv tree` |
@@ -47,7 +47,7 @@ O, si ya estás dentro de la carpeta:
 uv init
 ~~~
 
-Sin autor de git
+Para no añadir tu nombre y correo de Git:
 
 ~~~bash
 uv init --author-from none
@@ -91,7 +91,7 @@ Si tienes configurados `user.name` y `user.email` en Git, `uv init` también añ
 :::
 
 :::note
-Esta estructura corresponde a uv 0.12 o superior. Si prefieres un `main.py` en la raíz, sin `src/` ni `[build-system]`, crea el proyecto con `uv init --no-package`.
+Esta estructura corresponde a uv 0.12 o superior. Si prefieres un `main.py` en la raíz, sin `src/` ni `[build-system]`, crea el proyecto con `uv init --no-package`. El rango de `uv_build` cambia según tu versión de uv.
 :::
 
 :::tip
@@ -108,7 +108,7 @@ uv init mi_proyecto --python 3.12
 uv python pin 3.12
 ~~~
 
-Si no tienes esa versión instalada, uv la descarga automáticamente.
+Si no tienes esa versión instalada, uv la descarga automáticamente. Debe ser compatible con `requires-python`; de lo contrario, `uv python pin` muestra un error.
 
 # 2. Gestionar dependencias
 
@@ -250,7 +250,7 @@ El mismo ejemplo del <a href="https://elcaza.github.io/posts/sysadmin/uv/" targe
 uv init 16.5.2 && cd 16.5.2
 
 # Añadimos las herramientas que necesitamos
-uv add frida==16.5.2 frida-tools objection==1.11.0
+uv add frida==16.5.2 frida-tools objection==1.12.3
 
 # Corroboramos que todo funcione
 uv run frida --version
@@ -261,7 +261,7 @@ uv run frida --version
 ~~~
 
 :::tip
-Al fijar `frida==16.5.2`, uv elige automáticamente una versión de `frida-tools` compatible con ella. Con pip, a veces terminas con una versión de `frida-tools` que pide otra versión de `frida`.
+Al fijar `frida==16.5.2`, uv elige automáticamente una versión de `frida-tools` compatible con ella. Si los instalas por separado con pip, puedes terminar con una versión de `frida-tools` que pide otra versión de `frida`.
 :::
 
 ## Ejemplo xcat con una versión específica de Python
@@ -302,8 +302,8 @@ uv añade un bloque como este al inicio del archivo:
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [
-#     "requests",
-#     "rich",
+#     "requests>=2.34.2",
+#     "rich>=15.0.0",
 # ]
 # ///
 ~~~

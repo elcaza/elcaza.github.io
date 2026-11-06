@@ -41,7 +41,7 @@ source .venv/bin/activate
 ## Instalación de los paquetes
 
 ~~~bash
-uv pip install frida==16.5.2 frida-tools objection==1.11.0
+uv pip install frida==16.5.2 frida-tools objection==1.12.3
 ~~~
 
 ## Desactivar 
@@ -99,7 +99,7 @@ source ~/.bashrc
 
 ~~~bash
 VERSION=16.5.2
-uv run --with frida==16.5.2 --with frida-tools --with objection==1.11.0 frida -U -f com.app.app -l script.js
+uv run --with frida==16.5.2 --with frida-tools --with objection==1.12.3 frida -U -f com.app.app -l script.js
 ~~~
 
 # Ejemplos
@@ -116,7 +116,7 @@ uv venv
 source .venv/bin/activate
 
 # Instalamos las herramientas que necesitamos
-uv pip install frida==16.5.2 frida-tools objection==1.11.0
+uv pip install frida==16.5.2 frida-tools objection==1.12.3
 
 # Corroboramos que todo funcione 
 frida --version
