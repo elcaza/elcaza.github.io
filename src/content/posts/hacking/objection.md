@@ -1,7 +1,7 @@
 ---
 title: Objection
 published: 2026-03-15
-description: '¿Cómo usar Frida en iOS y Android?'
+description: '¿Cómo usar Objection en iOS y Android?'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/frida/portada.jpg'
 tags: [Hacking, Android, iOS]
 category: 'Hacking'
@@ -10,7 +10,7 @@ lang: 'es'
 ---
 
 # ¿Qué es Objection?
-Frida es un toolkit de instrumentación dinámica. Permite "inyectar" código (generalmente scripts en JavaScript) dentro de una aplicación que ya se está ejecutando en un dispositivo Android o iOS, para observar o modificar su comportamiento en tiempo real sin necesidad de tener el código fuente ni de recompilar la app.
+Objection es un toolkit de exploración de aplicaciones móviles en tiempo de ejecución, construido sobre Frida. Permite inspeccionar una app en Android o iOS y hacer pruebas comunes de seguridad sin escribir tus propios scripts de Frida.
 
 
 ~~~bash
