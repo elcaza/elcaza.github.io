@@ -31,6 +31,22 @@ Configuras Burp en modo "Invisible proxy" y escuchando en una interfaz
 ## 2. Sistema en modo gateway
 Configurar a tu computadora para que sirva como gateway y realice el reenvio de peticiones
 
+### Habilitar el reenvío de paquetes
+
+Sin esto, Linux no reenvía el tráfico del celular que no va al proxy (por ejemplo, las consultas DNS) y, en la opción 2, tampoco las peticiones redirigidas hacia Burp.
+
+~~~bash
+# Ver el estado actual (1 = activo)
+sysctl net.ipv4.ip_forward
+
+# Activarlo (se pierde al reiniciar)
+sudo sysctl -w net.ipv4.ip_forward=1
+
+# Desactivarlo al terminar
+sudo sysctl -w net.ipv4.ip_forward=0
+~~~
+- Si usas Docker, probablemente ya esté en `1`. En ese caso no lo desactives al terminar, porque Docker lo necesita.
+
 ### Ver reglas de iptables actuales
 
 ~~~bash
