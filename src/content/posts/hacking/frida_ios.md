@@ -1,6 +1,6 @@
 ---
 title: Frida en iOS
-published: 2026-11-04
+published: 2026-01-14
 description: '¿Cómo instalar y usar Frida en iOS?'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/frida/portada.jpg'
 tags: [Hacking, iOS]

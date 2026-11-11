@@ -1,5 +1,5 @@
 ---
-title: Frida en iOS y Android
+title: Frida en iOS y Android (Legacy)
 published: 2026-01-14
 description: '¿Cómo usar Frida en iOS y Android?'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/frida/portada.jpg'
@@ -8,6 +8,12 @@ category: 'Hacking'
 draft: false 
 lang: 'es'
 ---
+
+:::caution[Contenido legacy]
+Este post ya no se actualiza y algunas instrucciones o versiones pueden estar desactualizadas. Te recomiendo revisar los posts actuales:
++ <a href="https://elcaza.github.io/posts/hacking/frida_ios/" target="_blank">Frida en iOS</a>
++ <a href="https://elcaza.github.io/posts/hacking/frida_android/" target="_blank">Frida en Android</a>
+:::
 
 # ¿Qué es Frida?
 Frida es un toolkit de instrumentación dinámica. Permite "inyectar" código (generalmente scripts en JavaScript) dentro de una aplicación que ya se está ejecutando en un dispositivo Android o iOS, para observar o modificar su comportamiento en tiempo real sin necesidad de tener el código fuente ni de recompilar la app.
