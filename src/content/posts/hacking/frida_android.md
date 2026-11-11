@@ -5,7 +5,7 @@ description: '¿Cómo instalar y usar Frida en Android?'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/frida/portada.jpg'
 tags: [Hacking, Android]
 category: 'Hacking'
-draft: true 
+draft: false 
 lang: 'es'
 ---
 
