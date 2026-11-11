@@ -1,7 +1,7 @@
 ---
 title: Frida en Android
 published: 2026-01-14
-description: '¿Cómo usar Frida en Android?'
+description: '¿Cómo instalar y usar Frida en Android?'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/frida/portada.jpg'
 tags: [Hacking, Android]
 category: 'Hacking'
@@ -13,7 +13,7 @@ lang: 'es'
 Frida es un toolkit de instrumentación dinámica. Permite "inyectar" código (generalmente scripts en JavaScript) dentro de una aplicación que ya se está ejecutando en un dispositivo Android o iOS, para observar o modificar su comportamiento en tiempo real sin necesidad de tener el código fuente ni de recompilar la app.
 
 # 2. Detalles importantes a considerar (Errores con algunas versiones)
-Algunas versiones de Frida son incomptatibles con Objection, por lo que debes instalar una versión especifica de Frida.
+Algunas versiones de Frida son incompatibles con Objection, por lo que debes instalar una versión específica de Frida.
 Los siguientes enlaces dan más detalles al respecto, pero este post abarcará la instalación que hasta enero del 2026 me ha funcionado.
 + <a href="https://github.com/frida/frida/issues/2897" target="_blank">Github</a>
 + <a href="https://infosecwriteups.com/the-frida-objection-setup-guide-solving-version-hell-on-android-ios-timeless-guide-f55eb98459a0" target="_blank">The Frida & Objection Setup Guide: Solving Version Hell on Android & iOS (Timeless Guide)</a>
@@ -23,14 +23,12 @@ Los siguientes enlaces dan más detalles al respecto, pero este post abarcará l
 Para usar Frida requieres lo siguiente:
 
 + Frida Server
-    + Instalada en el celular Android
+    + Instalada en el celular (Android con root)
 + Frida Client
     + Instalada en la computadora
-+ Ambas versiones deben coincidir y estar ejecutandose en tus dispositivos
++ Ambas versiones deben coincidir y estar ejecutándose en tus dispositivos
 
-## Instalación de Frida Client con UV
-
-### Instalar uv
+## 3.1 Instalación de UV
 
 ~~~bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -39,60 +37,58 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
     # source $HOME/.local/bin/env.fish (fish)
 ~~~
 
-### Instalar Frida
+## 3.2 Instalación de Frida client (computadora)
 
-Instalar Frida en una versión reciente
-
-~~~bash
-mkdir 17.17.0 && cd 17.17.0
-
-uv init
-
-uv add frida==17.17.0 frida-tools objection
-
-source .venv/bin/activate
-
-~~~
-
-Instalar Frida en una versión en especifico (Compatible con objection 1.11.0)
+Instalar Frida en una versión en específico
++ Compatible con Objection y Frida 16.5.2
 
 ~~~bash
-mkdir frida_16.5.2 && cd frida_16.5.2
+mkdir 16.5.2 && cd 16.5.2
 
-uv init
+# Inicializa el proyecto uv (sin añadir tu nombre y correo de Git)
+uv init --author-from none
 
-FRIDA_VERSION=16.5.2
-OBJECTION_VERSION=1.11.0
-uv add frida==$FRIDA_VERSION frida-tools objection==$OBJECTION_VERSION
+# Añade frida, frida-tools y objection
+uv add frida==16.5.2 frida-tools objection==1.12.3
 
+# Activa el entorno virtual
 source .venv/bin/activate
+
+# Verifica la versión instalada
+frida --version
 ~~~
-+ Puedes probar diferentes versiones.
-+ La versión 16.5.2 es compatible con objection 1.11.0
+- Para una versión de python en específico
+  - `uv init --author-from none --python 3.12`
+- Si no vas a usar Objection, puedes instalar una versión reciente de Frida
+  - `uv add frida frida-tools`
 
-### Para salir del entorno virtual
+Opcionalmente puedes crear un alias
 
+~~~bash
+echo "alias uvs='source .venv/bin/activate'" >> ~/.bashrc
+~~~
+
+Recuerda que estás en un entorno virtual gestionado por `uv`, para salir del entorno virtual
 ~~~bash
 deactivate
 ~~~
 
-## Android - Instalar una versión especifica de Frida
+## 3.3 Instalación de Frida server (celular)
 
 ### 1) Conoce tu arquitectura
 
 ~~~bash
 adb shell getprop ro.product.cpu.abi
 ~~~
-+ ARM32 => `armeabi-v7a` => use `frida-server-16.5.2-android-arm.xz`
-+ ARM64 => `arm64-v8a` => use `frida-server-16.5.2-android-arm64.xz`
-+ 64 => `x86_64` => use `frida-server-16.5.2-android-x86_64.xz`
-+ 32 => `x86` => use `frida-server-16.5.2-android-x86.xz`
++ ARM32 => `armeabi-v7a` => usa `frida-server-${VERSION}-android-arm.xz`
++ ARM64 => `arm64-v8a` => usa `frida-server-${VERSION}-android-arm64.xz`
++ x86_64 => `x86_64` => usa `frida-server-${VERSION}-android-x86_64.xz`
++ x86 => `x86` => usa `frida-server-${VERSION}-android-x86.xz`
 
 ### 2) Descarga Frida Server para Android
 
-Forma manual
-
 ~~~bash
+# La versión debe coincidir con la que usarás en tu computadora
 VERSION=16.5.2
 
 # ARM 32bits
@@ -100,23 +96,43 @@ wget https://github.com/frida/frida/releases/download/${VERSION}/frida-server-${
 
 # ARM 64bits
 wget https://github.com/frida/frida/releases/download/${VERSION}/frida-server-${VERSION}-android-arm64.xz
+~~~
++ Descarga solo el de tu arquitectura.
 
+### 3) Descomprime y copia al celular
+
+~~~bash
 # Descomprimir 32bits
 xz -dc frida-server-${VERSION}-android-arm.xz > frida-server-${VERSION} && chmod +x frida-server-${VERSION}
 
 # Descomprimir 64bits
 xz -dc frida-server-${VERSION}-android-arm64.xz > frida-server-${VERSION} && chmod +x frida-server-${VERSION}
 
-## Push Device
+# Copiar al celular
 adb push frida-server-${VERSION} /data/local/tmp/
+~~~
 
-## Permisos y ejecución
-# adb shell chmod 777 /data/local/tmp/frida-server
+### 4) Ejecuta Frida server
+
+~~~bash
+# Si no conservó los permisos de ejecución
+adb shell su -c "chmod 755 /data/local/tmp/frida-server-${VERSION}"
+
 adb shell su -c "/data/local/tmp/frida-server-${VERSION} &"
 ~~~
 
 Instalación con Frida Launcher
 + <a href="https://github.com/thecybersandeep/Frida-Launcher" target="_blank">Frida Launcher</a>
+
+### 5) Verifica que el servicio esté corriendo
+~~~bash
+adb shell su -c "pgrep -l frida-server"
+~~~
+
+### 6) Ver la versión
+~~~bash
+adb shell su -c "/data/local/tmp/frida-server-${VERSION} --version"
+~~~
 
 ### Detener frida
 
@@ -124,174 +140,71 @@ Instalación con Frida Launcher
 adb shell su -c "pkill frida-server"
 ~~~
 
-# 4. Comandos con Frida
+# 4. Comandos de Frida
+
+## 4.1 Dentro del entorno virtual
+
+### Listado de dispositivos
 
 ~~~bash
-# Listado de dispositivos
-frida-ls-devices 
-
-# Listado de apps instaladas
-frida-ps -Uai
-
-
+frida-ls-devices
 ~~~
 
+#### En caso de error
 
-# 5. Anexo - Detalles adicionales
+Si tu celular no aparece, verifica que `adb` lo detecte y acepta la autorización de depuración USB en el celular.
 
-## Objection y versiones de Frida
+~~~bash
+adb devices
+~~~
+- vuelves a correr `frida-ls-devices`
 
-Objection no funciona de forma consistente en todas las versiones de Frida y versiones de iOS.
-Según mis pruebas, este es el "resumen confiable"
+### Listado de apps instaladas
 
-<table>
-  <thead>
-    <tr>
-      <th>Dispositivo</th>
-      <th>Versión de iOS</th>
-      <th>Jailbreak</th>
-      <th>Passcode</th>
-      <th>Versión Frida</th>
-      <th>Versión Objection</th>
-      <th>ios keychain dump</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>iPad 7th</td>
-      <td>18.7.4</td>
-      <td>rootful palera1n</td>
-      <td>No, nunca</td>
-      <td>17.8.0</td>
-      <td>objection: 1.12.3</td>
-      <td>Solo funcionó una vez</td>
-    </tr>
-    <tr>
-      <td>iPhone 8</td>
-      <td>16.7.14</td>
-      <td>rootful palera1n</td>
-      <td>No, nunca</td>
-      <td>16.5.2</td>
-      <td>objection: 1.12.3</td>
-      <td>Sí</td>
-    </tr>
-    <tr>
-      <td>iPhone 8</td>
-      <td>16.7.11</td>
-      <td>rootful palera1n</td>
-      <td>passcode digits</td>
-      <td>16.5.2</td>
-      <td>objection: 1.12.3</td>
-      <td>Sí</td>
-    </tr>
-  </tbody>
-</table>
+~~~bash
+frida-ps -Uai
+~~~
 
-## Logs de versiones
+### Ejecución de un script
 
-Por si un día falla, como funcionaba era:
+~~~bash
+frida -U -f com.app.app -l script.js
+~~~
+
+## 4.2 Ejecuciones rápidas - fuera del entorno virtual
+
+### Frida + script
+Puedes usar un entorno efímero con uv. Por ejemplo, para correr un script.
+~~~bash
+FRIDA_VERSION=16.5.2
+OBJECTION_VERSION=1.12.3
+APP_NAME="com.app.app"
+
+uv run --with frida==$FRIDA_VERSION --with frida-tools --with objection==$OBJECTION_VERSION frida -U -f $APP_NAME -l script.js
+~~~
+
+### Frida ls devices
+Puedes usar un entorno efímero con uv. Por ejemplo, para listar dispositivos y apps.
+~~~bash
+FRIDA_VERSION=16.5.2
+
+uv run --with frida==$FRIDA_VERSION --with frida-tools frida-ls-devices
+
+uv run --with frida==$FRIDA_VERSION --with frida-tools frida-ps -Uai
+~~~
+
+# Anexo - Objection y versiones de Frida (probadas)
+
+Objection no funciona de forma consistente en todas las versiones de Frida.
+Las combinaciones probadas en iOS están en <a href="https://elcaza.github.io/posts/hacking/frida_ios/" target="_blank">Frida en iOS</a>.
+
+En Android, la combinación que me funcionó fue:
 + Python 3.11.2
 + frida v16.5.2
 + frida-tools v13.7.1
 + objection v1.11.0
 
-~~~bash
-# uv pip tree
-objection v1.11.0
-├── click v8.3.1
-├── delegator-py v0.1.1
-│   └── pexpect v4.9.0
-│       └── ptyprocess v0.7.0
-├── flask v3.1.2
-│   ├── blinker v1.9.0
-│   ├── click v8.3.1
-│   ├── itsdangerous v2.2.0
-│   ├── jinja2 v3.1.6
-│   │   └── markupsafe v3.0.3
-│   ├── markupsafe v3.0.3
-│   └── werkzeug v3.1.5
-│       └── markupsafe v3.0.3
-├── frida v16.5.2
-├── frida-tools v13.7.1
-│   ├── colorama v0.4.6
-│   ├── frida v16.5.2
-│   ├── prompt-toolkit v3.0.52
-│   │   └── wcwidth v0.2.14
-│   ├── pygments v2.19.2
-│   └── websockets v13.1
-├── litecli v1.17.0
-│   ├── cli-helpers v2.7.0
-│   │   ├── configobj v5.0.9
-│   │   └── tabulate v0.9.0
-│   ├── click v8.3.1
-│   ├── configobj v5.0.9
-│   ├── llm v0.28
-│   │   ├── click v8.3.1
-│   │   ├── click-default-group v1.2.4
-│   │   │   └── click v8.3.1
-│   │   ├── condense-json v0.1.3
-│   │   ├── openai v2.15.0
-│   │   │   ├── anyio v4.12.1
-│   │   │   │   ├── idna v3.11
-│   │   │   │   └── typing-extensions v4.15.0
-│   │   │   ├── distro v1.9.0
-│   │   │   ├── httpx v0.28.1
-│   │   │   │   ├── anyio v4.12.1 (*)
-│   │   │   │   ├── certifi v2026.1.4
-│   │   │   │   ├── httpcore v1.0.9
-│   │   │   │   │   ├── certifi v2026.1.4
-│   │   │   │   │   └── h11 v0.16.0
-│   │   │   │   └── idna v3.11
-│   │   │   ├── jiter v0.12.0
-│   │   │   ├── pydantic v2.12.5
-│   │   │   │   ├── annotated-types v0.7.0
-│   │   │   │   ├── pydantic-core v2.41.5
-│   │   │   │   │   └── typing-extensions v4.15.0
-│   │   │   │   ├── typing-extensions v4.15.0
-│   │   │   │   └── typing-inspection v0.4.2
-│   │   │   │       └── typing-extensions v4.15.0
-│   │   │   ├── sniffio v1.3.1
-│   │   │   ├── tqdm v4.67.1
-│   │   │   └── typing-extensions v4.15.0
-│   │   ├── pip v25.3
-│   │   ├── pluggy v1.6.0
-│   │   ├── puremagic v1.30
-│   │   ├── pydantic v2.12.5 (*)
-│   │   ├── python-ulid v3.1.0
-│   │   ├── pyyaml v6.0.3
-│   │   ├── setuptools v80.9.0
-│   │   ├── sqlite-migrate v0.1b0
-│   │   │   └── sqlite-utils v3.39
-│   │   │       ├── click v8.3.1
-│   │   │       ├── click-default-group v1.2.4 (*)
-│   │   │       ├── pip v25.3
-│   │   │       ├── pluggy v1.6.0
-│   │   │       ├── python-dateutil v2.9.0.post0
-│   │   │       │   └── six v1.17.0
-│   │   │       ├── sqlite-fts4 v1.0.3
-│   │   │       └── tabulate v0.9.0
-│   │   └── sqlite-utils v3.39 (*)
-│   ├── mypy v1.19.1
-│   │   ├── librt v0.7.8
-│   │   ├── mypy-extensions v1.1.0
-│   │   ├── pathspec v1.0.3
-│   │   └── typing-extensions v4.15.0
-│   ├── pip v25.3
-│   ├── prompt-toolkit v3.0.52 (*)
-│   ├── pygments v2.19.2
-│   ├── setuptools v80.9.0
-│   └── sqlparse v0.5.5
-├── prompt-toolkit v3.0.52 (*)
-├── pygments v2.19.2
-├── requests v2.32.5
-│   ├── certifi v2026.1.4
-│   ├── charset-normalizer v3.4.4
-│   ├── idna v3.11
-│   └── urllib3 v2.6.3
-├── semver v2.13.0
-└── tabulate v0.9.0
-(*) Package tree already displayed
-~~~
++ Si no inicia a la primera <a href="https://elcaza.github.io/posts/hacking/objection/" target="_blank">objection</a> puedes abrir la app y volverlo a correr
 
 :::note[Nota final]
 ¡Gracias por terminar de leer este artículo! uwur
