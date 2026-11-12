@@ -3,7 +3,7 @@ title: Deshabilitar la verificación TLS / SSL Pinning de Flutter (Android)
 published: 2026-08-23
 description: 'Deshabilitar el SSL Pinning de Flutter y Dart en Android'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/ios_android_flutter_ssl_pinning/portada.jpeg'
-tags: [Hacking, Android]
+tags: [Hacking, Mobile, Android]
 category: 'Hacking'
 draft: false 
 lang: 'es'

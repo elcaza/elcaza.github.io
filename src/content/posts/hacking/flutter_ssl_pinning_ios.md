@@ -3,7 +3,7 @@ title: Deshabilitar la verificación TLS / SSL Pinning de Flutter (iOS)
 published: 2026-08-23
 description: 'Deshabilitar el SSL Pinning de Flutter y Dart en iOS'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/ios_android_flutter_ssl_pinning/portada.jpeg'
-tags: [Hacking, iOS]
+tags: [Hacking, Mobile, iOS]
 category: 'Hacking'
 draft: false 
 lang: 'es'
