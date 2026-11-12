@@ -3,7 +3,7 @@ title: Decompilar y compilar aplicaciones móviles con apktool
 published: 2025-11-13
 description: 'Decompilar y compilar aplicaciones móviles con apktool'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/apktool/portada.jpg'
-tags: [Hacking, Android]
+tags: [Hacking, Mobile, Android]
 category: 'Hacking'
 draft: false 
 lang: 'es'

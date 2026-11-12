@@ -3,7 +3,7 @@ title: Drozer
 published: 2025-11-13
 description: 'Pruebas de seguridad en Android con Drozer'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/drozer/portada.png'
-tags: [Hacking, Android]
+tags: [Hacking, Mobile, Android]
 category: 'Hacking'
 draft: false 
 lang: 'es'
