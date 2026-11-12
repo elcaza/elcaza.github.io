@@ -1,0 +1,171 @@
+---
+title: Herramientas para realizar pruebas de seguridad en iOS (Dopamine - Roothide)
+published: 2026-09-11
+description: 'Herramientas para realizar pruebas de seguridad en iOS (Dopamine - Roothide)'
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/ios_tools_roothide/portada.jpg'
+tags: [Hacking, Mobile, iOS]
+category: 'Hacking'
+draft: true 
+lang: 'es'
+---
+
+# Herramientas para realizar pruebas de seguridad
+
+Redactar importancia de que debe ser compilado para roothide
+
+## RootHide Pathcer
+
++ Abrir Sileo
++ Ir a `Search` y buscar `RootHide Patcher`
++ Instalar `RootHide Patcher`
++ Abres la aplicación "Patcher"
+
+## Intercepción de tráfico
+
+### Certificado BurpSuite - Añadir certificado de BurpSuite para interceptar tráfico
+
+#### iOS 16.x
+
++ Configura tu celular para pasar por el proxy de BurpSuite
+  + Settings => WiFi => Tu red => Configure Proxy => Manual
++ Visita: http://burpsuite
++ Da click en `CA CERTIFICATE` => `Allow` => `Review the profile in Settings app if you want to install it`
++ Instala el certificado 
+	+ `Settings` => `General` => `VPN & Device Managment` => `Downloaded profile | PortSwigger CA` => Install
++ Habilita la confianza de raíz en el certificado
+	+ `Settings` => `General` => `About` => `Certificate Trust Settings` => Enable
+
+#### iOS 18.x
+
++ Desde tu computadora descarga el certificado de Burpsuite
+	- Visita http://burpsuite
+	- Descarga el certificado
+	- Cambia el nombre de `cacert.der` a `cacert.mobileconfig`
+	- Comparte el archivo con python para descargarlo con el celular
+		- `python3 -m http.server`
++ Desde tu celular visita tu IP:PORT
++ "Configuration profile available" => "Continue" => "Allow"
++ Instala el certificado 
+	+ `Settings` => `General` => `VPN & Device Managment` => `Downloaded profile | PortSwigger CA` => Install => Install
++ Habilita la confianza de raíz en el certificado
+	+ `Settings` => `General` => `About` => `Certificate Trust Settings` => Enable
+
+### SSL Kill Switch 3 - Remover SSL Pinning
+
+#### Opción 1 por medio de SSH:
+
+~~~bash
+ssh mobile@IP
+~~~
+
+#### Opción 2:
+
++ Descargar `SSL Kill Switch 3`
+	+ iphoneos-arm is for rootrw/fakefs ("rootful") jailbreaks
+		+ https://github.com/NyaMisty/ssl-kill-switch3/releases/download/v1.4/moe.misty.sslkillswitch3_1.4+rootful_iphoneos-arm.deb
+	+ iphoneos-arm64 is for rootless jailbreaks
+		+ https://github.com/NyaMisty/ssl-kill-switch3/releases/download/v1.4/moe.misty.sslkillswitch3_1.4+rootless_iphoneos-arm64.deb
++ Abrir en "Files" => "Quick look" => "icono share" => "Open Filza" => "Seleccion de aplicación" => "Install"
+
+
++ Abrir en "Patcher" => "DEB recién descargado" => "Convert .deb" => "Go Sileo"
++ Abrir Sileo => Buscar SSL Kill Switch 3 => Dar añadir repo => volver a intentar el GET => Finalmente lo logra => Permitir el reinicio
++ Genera rerroles con las dependencias
+	+ `apt update`
+	+ `apt install --fix-broken`
+	+ `Y` para aceptar
+	+ Volver a intentar reinstalar
++ Action => Respring o Restart Userspace
++ Lo configuras en
+	+ iOS 16.x => Settings => SSL Kill Switch 3
+	+ iOS 18.x => Settings => General => SSL Kill Switch 3
++ Habilitar 
+	
++ Abrir Sileo
++ Ir a `Search` y buscar `SSL Kill Switch 3`
++ Instalar `SSL Kill Switch 3`
++ Entrar a configuración => "SSL Kill Switch 3" => Disable Certificate Validation
+    + En iOS 18 => Configuración => General => "SSL Kill Switch 3" => Disable Certificate Validation
+
+
+
+
+## Dependencias
+
+### ElleKit - Instalar dependencias
++ Abrir Sileo
++ Ir a sources => Añadir
+	+ `https://ellekit.space/` 
++ Ir a `Search` y buscar `ElleKit`
++ Instalar `ElleKit`
+	+ En caso de que no instale presionar los botones: Get => Queque => Confirm => Done
+
+## Administración de IPAs
+
+### Servidor SSH - Instalar un servidor SSH
++ Abrir Sileo
++ Ir a `Search` y buscar `Openssh`
++ Instalar `openssh` y todas sus dependencias (4)
+	+ En caso de que no instale presionar los botones: Get => Queque => Confirm => Done
++ Obtener la IP del celular (Settings => WIFI => <your_red> => IP Address)
++ `ssh mobile@IP`
+	+ El password es el que hayas preconfigurado al momento de rootear el celular
+
+### Filza - Gestor de archivos
++ Abrir Sileo
++ Ir a sources => Añadir
+	+ `https://tigisoftware.com/cydia/` 
++ Ir a `Search` y buscar `Filza`
++ Instalar `Filza File Manager 64-bit`
+	+ En caso de que no instale presionar los botones: Get => Queque => Confirm => Done
+
+### AppSync Unified - Instalar aplicaciones aunque no se puedan verificar sus firmas
++ Descargar AppSync para evitar el error "Failed to verify code signature of"
+	+ iphoneos-arm is for rootrw/fakefs ("rootful") jailbreaks
+		+ https://github.com/akemin-dayo/AppSync/releases/download/116.0/ai.akemi.appsyncunified_116.0_iphoneos-arm.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb 
+	+ iphoneos-arm64 is for rootless jailbreaks
+		+ https://github.com/akemin-dayo/AppSync/releases/download/116.0/ai.akemi.appsyncunified_116.0_iphoneos-arm64.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb
++ Abrir en "Files" => "Quick look" => "icono share" => "Open Filza" => "Seleccion de aplicación" => "Install"
++ Nota: No funciona en iOS 18
+
+### wget & zip & unzip
++ Inicias vía ssh
+
+~~~bash
+# Inicia vía ssh
+ssh mobile@$IP
+# Actualiza repositorios
+sudo apt update
+# Instala wget zip unzip
+sudo apt install wget zip unzip
+~~~
+
+## Pruebas dinámicas
+
+### Frida & Objection
++ <a href="https://elcaza.github.io/posts/hacking/frida/" target="_blank">https://elcaza.github.io/posts/hacking/frida/</a>
+
+
+# Notas aún no aprobadas
+
+~~~bash
+sudo apt install odcctools
+
+otool --version
+
+otool -l binario_de_la_app | grep -A 4 LC_ENCRYPTION_INFO
+~~~
+
+:::note[Nota final]
+¡Gracias por terminar de leer este artículo! uwur
+
+— El Capitán
+
+¿Tienes alguna duda o te gustaría comentar algo sobre este artículo?
++ <a href="https://t.me/elcazablog" target="_blank">Únete a nuestra comunidad en Telegram</a>
+
+Puedes encontrarme en:
++ <a href="https://twitter.com/elcaza_" target="_blank">Twitter</a>
++ <a href="https://github.com/elcaza" target="_blank">Github</a>
++ <a href="https://www.linkedin.com/in/elcaza/" target="_blank">LinkedIn</a>
+:::
