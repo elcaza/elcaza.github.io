@@ -126,6 +126,8 @@ Las personas pueden optar por realizar el jailbreak de sus dispositivos para rea
 	+ `exit`
 + Se me apagó el celular y ahora no tengo mi celular con Jailbreak
 	+ Solamente haz el paso 3 para volver a inicializar el jailbreak
++ Con rootful se cierran aplicaciones del sistema, como Fotos (probado en un iPad de 7.ª generación con iOS 18.7.4)
+	+ Usa rootless
 
 # Otros recursos
 + <a href="https://theapplewiki.com/wiki/Jailbreak" target="_blank">theapplewiki Jailbreak</a>
