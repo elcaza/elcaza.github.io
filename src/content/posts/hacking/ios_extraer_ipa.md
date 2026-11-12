@@ -3,7 +3,7 @@ title: Extraer IPA en iOS
 published: 2026-09-08
 description: 'Extraer IPAs en iOS'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/ios_extraer_ipa/portada.jpeg'
-tags: [Hacking, iOS]
+tags: [Hacking, Mobile, iOS]
 category: 'Hacking'
 draft: false 
 lang: 'es'

@@ -3,7 +3,7 @@ title: Hacking iOS
 published: 2024-07-13
 description: 'Notas sobre pruebas de seguridad a iOS'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/hacking_ios/portada.png'
-tags: [Hacking, iOS]
+tags: [Hacking, Mobile, iOS]
 category: 'Hacking'
 draft: false 
 lang: 'es'

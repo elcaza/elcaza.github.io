@@ -3,7 +3,7 @@ title: Frida en iOS y Android (Legacy)
 published: 2026-01-14
 description: '¿Cómo usar Frida en iOS y Android?'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/frida/portada.jpg'
-tags: [Hacking, Android, iOS]
+tags: [Hacking, Mobile, Android, iOS]
 category: 'Hacking'
 draft: false 
 lang: 'es'

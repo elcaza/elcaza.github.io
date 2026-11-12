@@ -3,7 +3,7 @@ title: iOS Jailbreak
 published: 2026-02-22
 description: 'Realizando jailbreak en iOS'
 image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/ios_jailbreak/portada.jpg'
-tags: [Hacking, iOS]
+tags: [Hacking, Mobile, iOS]
 category: 'Hacking'
 draft: false 
 lang: 'es'
