@@ -2,8 +2,8 @@
 title: Objection
 published: 2026-03-15
 description: '¿Cómo usar Objection en iOS y Android?'
-image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/frida/portada.jpg'
-tags: [Hacking, Android, iOS]
+image: 'https://raw.githubusercontent.com/elcaza/misc/refs/heads/main/blog/hacking/objection/portada.jpg'
+tags: [Hacking, Mobile, Android, iOS]
 category: 'Hacking'
 draft: false 
 lang: 'es'
@@ -18,8 +18,14 @@ objection version
 #1.12.3
 ~~~
 
+Listado de apps instaladas
+
 ~~~bash
-objection -s -n "com.secops.ios.CMPen" start
+frida-ps -Uai
+~~~
+
+~~~bash
+objection -s -n "com.app.name" start
 ~~~
 
 :::note[Nota final]
